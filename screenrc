@@ -1,0 +1,53 @@
+# .screenrc
+# Borrowed from someone at work
+
+# Fun notification messages
+nethack on
+
+# Use reverse video instead of hardstatus line for system messages
+hardstatus off
+
+# complicated caption: load, day, time, etc.
+caption always "%?%F%{=b Kk}%:%{=u kR}%? %?(%u)%? %?%F%{-b Kw}%:%{-b}%?%h %L>%-121= %H (%1)%{+b} %c:%s %D %d %M %Y"
+
+# hardstatus line: make it look like tabs
+hardstatus alwayslastline "%{= kR} %-Lw%{= Kk} %n*%f %t %{-}%+Lw %=%{= dd}"
+
+# colors in messages and text marking
+sorendition "=b mw"  # bold white on magenta
+
+# form of messages
+activity "[[%c:%s activity in window %n]] (%t) %h"
+
+# display messages for <= 10 sec ...
+msgwait 10
+# ... and >= 3
+msgminwait 3
+
+# no visual bell
+vbell off
+
+# styling for the list of windows
+windowlist title "{%ub}    Title%020=Hardstatus%=Flags%{-}"
+windowlist string "%3n  %t%020=%{.c}%h%{-}%=%f"
+
+# default scrollback buffer size
+defscrollback 10000
+
+# let programs (e.g. man, vim) use the altscreen, so they don't leave ghost
+# stuff upon exit
+altscreen on
+
+# utf-8 encoding
+defutf8 on
+
+# blank screen after 10 min idle
+#idle 600 blanker
+# lock screen after 10 min idle
+#idle 600 lockscreen
+
+silence  # watch each shell for silence ...
+monitor  # ... and activity
+
+# set C-o to special key, not C-a
+escape "^Oo"
