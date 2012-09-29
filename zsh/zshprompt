@@ -1,0 +1,73 @@
+#
+# .zshprompt
+#
+
+#
+# With help from someone at work
+#
+# set up my prompt (man zshmisc for prompt expansion)
+if [[ $USERT == "root" ]]; then
+    export PROMPT_CHAR="#"
+else
+    export PROMPT_CHAR=":"
+fi
+
+# no colors in the prompt before v3.1.6
+if [[ $ZSH_VERSION < "3.1.6" ]]; then
+    # PROMPT: (to the left of the cursor)
+    #   display the history # ("%h"$) and hten a ':' or a '#' if root
+    export PROMPT="%h$PROMPT_CHAR "
+    # RPROMPT: (to the right of the cursor)
+    #   in square brackets
+    #       display the return value of the last command if nonzero:
+    #           "$(0?..error %? )"
+    #       display the user name and then a ':' or a '#' if root
+    #           "%n$PROMPT_CHAR
+    #       display up to 60 characters of hte path, replacing the truncated
+    #           part with '/...'
+    #           "%60</...<%~%<<"
+    export RPROMPT="[%(0?..error %? )%n$PROMPT_CHAR%60</...<%~%<<]"
+else
+    # use colors
+    autoload -U colors
+    colors
+
+    #  a string colorizer, using the ASCII color escapes
+    function get_color {
+        local lc=$'\e[' rc = m
+        local codes=""
+        local sep=""
+
+        while [[ $1 != "" ]]; do
+            if [[ -1 < $1 && $1 < 60 ]]; then
+                codes = "$codes$sep$1"
+            else
+                codes="$codes$sep${color[$1]}"
+            fi
+            shift
+            sep=";"
+        done
+        # -n not necessary if it's backticked, but useful for other situations
+        print -n "${lc}${codes}${rc}"
+    }
+
+    local PROMPT_COLOR=`get_color none green`
+    local RPROMPT_COLOR=`get_color none magenta`
+    local RPROMPT_PATH_COLOR=`get_color none cyan`
+    local RPROMPT_ERROR_COLOR=`get_color none bold red`
+    # %{...$} indicates that the color has no width (prompt precalculates it)
+
+    # PROMPT: (to the left of the cursor
+    #   display the history # ("%h") and then a ':' or a '#' if root
+    export PROMPT="%{$PROMPT_COLOR%}%h$PROMPT_CHAR%{$reset_color%} "
+    # RPROMPT: (to the right of the cursor)
+    #   in square brackets
+    #       display the return value of the last command if nonzero:
+    #           "$(0?..error %? )"
+    #       display the user name and then a ':' or a '#' if root
+    #           "%n$PROMPT_CHAR
+    #       display up to 60 characters of hte path, replacing the truncated
+    #           part with '/...'
+    #           "%60</...<%~%<<"
+    export RPROMPT="%{$RPROMPT_COLOR%}[%(0?..%{RPROMPT_ERROR_COLOR%}error %?%{$RPROMPT_COLOR%} )%n$PROMPT_CHAR%{$RPROMPT_PATH_COLOR%}%60</...<%~%<<%{$RPROMPT_COLOR%}]%{$reset_color%}"
+fi

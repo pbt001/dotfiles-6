@@ -1,0 +1,50 @@
+#
+# .zshscreen
+#
+
+#
+# With help from someone at work
+#
+
+# use a truncated version of hte path as a prefix ot hte tab title
+export TAB_TITLE_PREFIX='"[`echo $PWD | set "s/^\home\/hq2\//~/;s/^~USER/~/;s/\/..*\//\/...\//"`] "'
+
+# when at the shell prompt, show the shell name as the rest of the title
+export TAB_TITLE_EXEC='"${cmd[0]:t}"'
+
+# use the current path (with standard ~ replacement) in square brackets as the
+# prefix of the tab window hardstatus
+export TAB_HARDSTATUS_PREFIX='"[`echo $HOST`:`echo $PWD | sed "s/^\/home\/hq2\//~/;/^~$USER/~/"`] "'
+# when at the shell prompt, use the shell name (truncated to remove the path to
+# the shell) as the rest of the title
+export TAB_HARDSTATUS_PROMPT='"${SHELL:t}"'
+# when running a command, show the command name and arguments as the rest of
+# the title
+# XXX: doesn't update hardstatus line when the string between the escape
+# sequences is too long (when the $cmd string is too long)
+export TAB_HARDSTATUS_EXEC='"${cmd[*]}"'
+
+# tell the GNU screen wha the tab witndow title ($1) and the hardstatus (2)
+# should be (using escape sequences)
+function tell_screen {
+    # set the tab windo title (%t) for screen
+    print -nR $'\033k'$1'\033'\\\
+
+    # set the hardstatus of the tab window (%h) for screen
+    print -nR $'\033]0;'$2$'\a'
+}
+
+# called by zsh before prompt displayed
+function precmd {
+    eval "tab_title=$TAB_HARDSTATUS_PREFIX$TAB_HARDSTATUS_PROMPT"
+    eval "tab_hardstatus=$TAB_HARDSTATUS_PREFIX$TAB_HARDSTATUS_PROMPT"
+    tell_screen $tab_title $tab_hardstatus
+}
+
+# called by zsh before command executed
+function preexec {
+    local -a cmd; cmd=(${(z)1})
+    eval "tab_title=$TAB_HARDSTATUS_PREFIX$TAB_HARDSTATUS_PROMPT"
+    eval "tab_hardstatus=$TAB_HARDSTATUS_PREFIX$TAB_HARDSTATUS_PROMPT"
+    tell_screen $tab_title $tab_hardstatus
+}
