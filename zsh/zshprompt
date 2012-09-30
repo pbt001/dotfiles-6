@@ -34,7 +34,7 @@ else
 
     #  a string colorizer, using the ASCII color escapes
     function get_color {
-        local lc=$'\e[' rc = m
+        local lc=$'\e[' rc=m
         local codes=""
         local sep=""
 
@@ -69,5 +69,5 @@ else
     #       display up to 60 characters of hte path, replacing the truncated
     #           part with '/...'
     #           "%60</...<%~%<<"
-    export RPROMPT="%{$RPROMPT_COLOR%}[%(0?..%{RPROMPT_ERROR_COLOR%}error %?%{$RPROMPT_COLOR%} )%n$PROMPT_CHAR%{$RPROMPT_PATH_COLOR%}%60</...<%~%<<%{$RPROMPT_COLOR%}]%{$reset_color%}"
+    export RPROMPT="%{$RPROMPT_COLOR%}[%(0?..%{$RPROMPT_ERROR_COLOR%}error %?%{$RPROMPT_COLOR%} )%n$PROMPT_CHAR%{$RPROMPT_PATH_COLOR%}%60</...<%~%<<%{$RPROMPT_COLOR%}]%{$reset_color%}"
 fi

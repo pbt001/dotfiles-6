@@ -38,16 +38,15 @@ alias la="ls -aF"
 alias lag="ls -lag"
 alias ll="ls -lF"
 alias rename="mv"
-alias rm="rm-i"
 
 #
 # With help from someone at work
 #
-alias clean="rm-f *{~,.bak} .*.sw{o,p}"
+alias clean="rm -f *{~,.bak} .*.sw{o,p}"
 alias cp="nocorrect cp -i"
 alias h="history"
-alias l="ls-rt"
-alias lll="ls-rtl"
+alias l="ls -rt"
+alias lll="ls -rtl"
 alias mv="nocorrect mv -i"
 alias pls="pwd;ls"
 alias quit=exit

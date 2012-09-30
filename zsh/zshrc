@@ -29,7 +29,7 @@ setopt autonamedirs
 setopt autopushd
 setopt autoresume
 setopt cbases
-setopt complealiases
+setopt completealiases
 setopt correct
 setopt extendedglob
 setopt globcomplete
