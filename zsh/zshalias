@@ -42,7 +42,7 @@ alias rename="mv"
 #
 # With help from someone at work
 #
-alias clean="rm -f *{~,.bak} .*.sw{o,p}"
+alias clean="rm -f *{~,.bak} .*.sw{o,p} *.hi *.o"
 alias cp="nocorrect cp -i"
 alias h="history"
 alias l="ls -rt"
