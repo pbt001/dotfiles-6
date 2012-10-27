@@ -49,9 +49,10 @@ setopt pushdsilent
 setopt shortloops
 
 if [[ $USER != "root" ]]; then
-    HISTFILE="~HOME/.zsh_history"
+    HISTFILE=~/.zsh_history
     HISTSIZE=6666
     SAVEHIST=6666
+    setopt inc_append_history
 fi
 READNULLCMD="view"
 REPORTTIME=3
