@@ -6,7 +6,7 @@
 # With help from someone at work
 #
 # set up my prompt (man zshmisc for prompt expansion)
-if [[ $USERT == "root" ]]; then
+if [[ $USER == "root" ]]; then
     export PROMPT_CHAR="#"
 else
     export PROMPT_CHAR=":"

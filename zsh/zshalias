@@ -24,6 +24,7 @@ alias gpom="git pull origin master"
 # ls -> ls -FG, to utilize ls with annotations and colors by default
 alias ls="ls -FG"
 # pythons
+alias ipython="/usr/local/share/python/ipython"
 alias py2.5="python2.5"
 alias py2.6="/usr/bin/python2.6"
 alias py2.7="python2.7"
