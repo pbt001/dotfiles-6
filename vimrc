@@ -1,3 +1,21 @@
+"We don't need to be backcompatible with vi
+set nocompatible
+
+""""
+"vundle
+filetype off
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+Bundle 'gmarik/vundle'
+
+filetype plugin indent on
+""""
+
+"Security exploits?
+set modelines=0
+
 "Set encoding to utf-8
 set enc=utf-8
 
@@ -23,7 +41,8 @@ set shiftwidth=4
 set smarttab
 
 "Line numbers
-set number
+"set number
+set relativenumber
 
 "For compatibility with screen
 set numberwidth=8
@@ -33,15 +52,6 @@ set ruler
 
 "Syntax highlighting
 syntax on
-
-"Filetype detection
-filetype on
-
-"Load plugins for specific filetypes
-filetype plugin on
-
-"Load indentation for specific filetypes
-filetype indent on
 
 "Highlight search match(es)
 set hlsearch
@@ -54,9 +64,46 @@ inoremap <S-Tab> <C-D>
 
 "Highlights once a line is past 79 characters
 match ErrorMsg '\%>79v.\+'
+"set colorcolumn=80
 
-" find Doxygen's todo tag
+"find Doxygen's todo tag
 2match Search '\(\\\|@\)todo'
+
+"Perl/Python regexes instead of Vim's
+nnoremap / /\v
+vnoremap / /\v
+
+"Ignore case in searching
+set ignorecase
+
+"Don't go off bottom of screen
+set scrolloff=3
+
+"Decently fast, since we're at home
+set ttyfast
+
+"Follow the leader
+let mapleader = ","
+
+"Quickly get out of searches
+nnoremap <leader><space> :noh<cr>
+
+"Whip you into Vim shape!
+nnoremap <up> <nop>
+nnoremap <down> <nop>
+nnoremap <left> <nop>
+nnoremap <right> <nop>
+inoremap <up> <nop>
+inoremap <down> <nop>
+inoremap <left> <nop>
+inoremap <right> <nop>
+
+"Jump screenlines, not lines of text
+nnoremap j gj
+nnoremap k gk
+
+"Save on losing focus, in case we tab away
+au FocusLost * :wa
 
 """""""
 " Sage settings (from Franco Saliola via wiki.sagemath.org/Tips)
