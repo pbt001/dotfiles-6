@@ -8,8 +8,11 @@ filetype off
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
+"Bundles
 Bundle 'gmarik/vundle'
 Bundle 'scrooloose/nerdtree'
+Bundle 'L9'
+Bundle 'FuzzyFinder'
 
 syntax on
 filetype plugin indent on

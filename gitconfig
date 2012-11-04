@@ -1,0 +1,15 @@
+[user]
+	name = genos
+	email = graham.enos@gmail.com
+[alias]
+	ci = commit
+	di = diff --color-words
+	st = status
+	co = checkout
+[color]
+	ui = auto
+[core]
+	editor = vim
+	excludesfile = /Users/grahamenos/.gitignore
+[push]
+	default = simple
