@@ -9,7 +9,9 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 Bundle 'gmarik/vundle'
+Bundle 'scrooloose/nerdtree'
 
+syntax on
 filetype plugin indent on
 """"
 
@@ -50,9 +52,6 @@ set numberwidth=8
 "Line and column position
 set ruler
 
-"Syntax highlighting
-syntax on
-
 "Highlight search match(es)
 set hlsearch
 
@@ -73,8 +72,9 @@ match ErrorMsg '\%>79v.\+'
 nnoremap / /\v
 vnoremap / /\v
 
-"Ignore case in searching
+"Ignore case in searching (unless specified)
 set ignorecase
+set smartcase
 
 "Don't go off bottom of screen
 set scrolloff=3
@@ -104,6 +104,13 @@ nnoremap k gk
 
 "Save on losing focus, in case we tab away
 au FocusLost * :wa
+
+"Tab-complete commands etc.
+set wildmenu
+set wildmode=longest,full
+
+"Backspace all the things
+set backspace=indent,eol,start
 
 """""""
 " Sage settings (from Franco Saliola via wiki.sagemath.org/Tips)
@@ -135,3 +142,8 @@ endfunction
 set rtp+=/usr/local/go/misc/vim
 au BufRead,BufNewFile *.go set filetype=go
 au BufRead,BufNewFile *.go set noexpandtab
+
+"""""""
+" Qi and Shen
+au BufRead,BufNewFile *.qi,*.shen set filetype=qi
+au BufRead,BufNewFile *.qi,*.shen set sm
