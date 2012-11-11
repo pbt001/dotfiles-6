@@ -3,14 +3,18 @@
 #
 
 #
+# from me
+#
+zmodload "zsh/mathfunc"
+
+#
 # With help from someone at work
 #
 # use vim key bindings
 bindkey -v
 
-autoload -U compinit
+autoload -Uz compinit
 compinit
-
 zstyle ':completion:*' file-sort modification
 
 # setup my prompt (man zshmisc for prompt expansion)
