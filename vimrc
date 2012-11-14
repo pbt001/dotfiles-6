@@ -14,7 +14,8 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'jpalardy/vim-slime'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-repeat'
-Bundle 'tpope/vim-commentary.git'
+Bundle 'tpope/vim-commentary'
+Bundle 'mileszs/ack.vim'
 Bundle 'L9'
 Bundle 'FuzzyFinder'
 
@@ -118,6 +119,19 @@ set wildmode=longest,full
 
 "Backspace all the things
 set backspace=indent,eol,start
+
+"When do you only want to replace the first occurence?
+set gdefault
+
+"Using Ack
+nnoremap <leader>a :Ack
+
+"Less typing to enter a command
+nnoremap ; :
+
+"Quicker escaping?
+inoremap jj <ESC>
+
 
 "slime-vim
 let g:slime_target = "tmux"
