@@ -16,6 +16,7 @@ Readonly my %FILES = (
     hgrc         => '.hgrc',
     irbrc        => '.irbrc',
     ocamlinit    => '.ocamlinit',
+    perlcriticrc => '.perlcriticrc',
     perltidyrc   => '.perltidyrc',
     screenrc     => '.screenrc',
     tmux_conf    => '.tmux.conf',
