@@ -15,6 +15,7 @@ Readonly my @FILES = qw/
     .hgrc
     .irbrc
     .ocamlinit
+    .perlcriticrc
     .perltidyrc
     .screenrc
     .tmux.conf
