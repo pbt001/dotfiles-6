@@ -1,9 +1,8 @@
 #!/usr/bin/env perl
 
-use 5.016;
-use strict;
-use warnings;
+use Modern::Perl '2013';
 use autodie;
+
 use File::HomeDir qw/ home /;
 use File::Spec::Functions qw/ catfile /;
 use Readonly;

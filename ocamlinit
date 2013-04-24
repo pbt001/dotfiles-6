@@ -2,8 +2,6 @@
 #camlp4o
 #thread
 #require "core.top"
-(* Added by OPAM. *)
-let () =
-  try Topdirs.dir_directory (Sys.getenv "OCAML_TOPLEVEL_PATH")
-  with Not_found -> ()
-;;
+#require "core_extended"
+#require "async"
+open Core.Std;;
