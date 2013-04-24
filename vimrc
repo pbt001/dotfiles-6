@@ -51,8 +51,8 @@ set shiftwidth=4
 set smarttab
 
 "Line numbers
-"set number
-set relativenumber
+set number
+"set relativenumber
 
 "For compatibility with screen
 set numberwidth=8
@@ -121,7 +121,7 @@ set wildmode=longest,full
 set backspace=indent,eol,start
 
 "When do you only want to replace the first occurence?
-set gdefault
+"set gdefault
 
 "Using Ack
 nnoremap <leader>a :Ack
@@ -132,9 +132,8 @@ nnoremap ; :
 "Quicker escaping?
 inoremap jj <ESC>
 
-
 "slime-vim
-let g:slime_target = "tmux"
+let g:slime_target = 'tmux'
 let g:slime_no_mappings = 1
 nmap <leader>s <Plug>SlimeSend
 xmap <leader>s <Plug>SlimeRegionSend
@@ -144,6 +143,8 @@ nmap <leader>ss <Plug>SlimeLineSend
 """""""
 " Sage settings (from Franco Saliola via wiki.sagemath.org/Tips)
 autocmd BufRead,BufNewFile *.sage,*.spyx set filetype=python
+" scons, too
+autocmd BufRead,BufNewFile SConstruct set filetype=python
 
 """""""
 " Clojure settings (from Clojure Google group)
@@ -163,6 +164,10 @@ au BufRead,BufNewFile *.go set noexpandtab
 " Qi and Shen
 au BufRead,BufNewFile *.qi,*.shen set filetype=qi
 au BufRead,BufNewFile *.qi,*.shen set sm
+
+"""""""
+" LaTeX
+au BufRead,BufNewFile *.tex set filetype=tex
 
 """""""
 " Use gpg to encipher and decipher what you're working on.

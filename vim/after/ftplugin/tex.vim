@@ -5,9 +5,10 @@
 :iab vph \varphi
 :iab thrf $\therefore$
 :iab aleq \begin{align*}\end{align*}
+:iab ddisp \begin{displaymath}\end{displaymath}
 :iab eenum \begin{enumerate}\end{enumerate}
 :iab iitem \begin{itemize}\end{itemize}
-:iab fframe \begin{frame}{}\end{frame}
+:iab fframe \begin{frame}\end{frame}
 :iab nbb \mathbb{N}
 :iab zbb \mathbb{Z}
 :iab qbb \mathbb{Q}

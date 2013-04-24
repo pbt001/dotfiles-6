@@ -19,10 +19,12 @@ alias gap="/Applications/gap4r4/bin/gap.sh"
 alias gcc="gcc-4.7"
 alias g++="g++-4.7"
 alias gfortran="gfortran-4.7"
+# shortcut to C++11 with warnings, etc.
+alias gpp="g++-4.7 -std=c++11 -Wall -Wextra -Weffc++ -pedantic -O3"
 # gpom -> git pull origin master, to save on keystrokes
 alias gpom="git pull origin master"
-# ls -> ls -FG, to utilize ls with annotations and colors by default
-alias ls="ls -FG"
+# jc -> j console, to bend my brain
+alias jc="/Applications/j64-701/bin/jconsole"
 # pythons
 alias ipython="/usr/local/share/python/ipython"
 alias py2.5="python2.5"
@@ -33,11 +35,13 @@ alias py3="python3"
 alias rm="rm -i"
 # safari
 alias safari="/Applications/Safari.app/Contents/MacOS/Safari"
-# sage -> /Applications/sage/sage, to use sage via terminal
+# sage -> /Applications/.../sage, to use sage via terminal
+# alias sage="/Applications/Sage-5.6-OSX-64bit-10.6.app/Contents/Resources/sage/sage"
 alias sage="/Applications/sage/sage"
 # vless -> long-winded-vim-command, to use vim like less with highlighting
-alias vless="vim -u /usr/share/vim/vim72/macros/less.vim"
+# alias vless="vim -u /usr/share/vim/vim72/macros/less.vim"
 
+alias gmacs="/Users/grahamenos/Applications/Emacs.app/Contents/MacOS/Emacs"
 #
 # From generic work file
 #
@@ -52,7 +56,7 @@ alias rename="mv"
 alias clean="rm -f *{~,.bak} .*.sw{o,p} *.hi *.o"
 alias cp="nocorrect cp -i"
 alias h="history"
-alias l="ls -rt"
+alias l="ls -FG"
 alias lll="ls -rtl"
 alias mv="nocorrect mv -i"
 alias pls="pwd;ls"

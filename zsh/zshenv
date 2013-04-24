@@ -21,8 +21,6 @@ export MANPATH
 # Adding /usr/local/bin and /usr/local/sbin to front of path
 PATH="/usr/local/bin:$PATH"
 PATH="/usr/local/sbin:$PATH"
-# Adding smlnj
-PATH="$PATH:/usr/local/smlnj/bin"
 # Be able to use homemade/other things from cli
 PATH="$PATH:/Users/grahamenos/bin"
 # Get ~/.local/bin on path
@@ -39,11 +37,17 @@ export MKL_NUM_THREADS
 # The orginal version is saved in .bash_profile.pysave
 PATH="$PATH:/Library/Frameworks/Python.framework/Versions/Current/bin"
 export PATH
+# For perlbrew
+source ~/perl5/perlbrew/etc/bashrc
+# For locally installed C (etc.) libraries
+export LD_LIBRARY_PATH="$HOME/lib:${LD_LIBRARY_PATH}"
+export LIBRARY_PATH="$HOME/lib:${LIBRARY_PATH}"
+export C_INCLUDE_PATH="$HOME/include:${C_INCLUDE_PATH}"
 
 #
 # With help from somone at work
 #
-export ZSHEDIT=vim
+export ZSHEDIT=emacs
 export LESS="-ReXi"
 export PAGER="`which less` $LESS"
 export CLICOLOR=1

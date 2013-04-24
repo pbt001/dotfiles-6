@@ -6,6 +6,7 @@
 # from me
 #
 zmodload "zsh/mathfunc"
+setopt braceccl
 
 #
 # With help from someone at work
@@ -54,10 +55,13 @@ setopt shortloops
 
 if [[ $USER != "root" ]]; then
     HISTFILE=~/.zsh_history
-    HISTSIZE=6666
-    SAVEHIST=6666
+    HISTSIZE=5000
+    SAVEHIST=5000
     setopt inc_append_history
 fi
 READNULLCMD="view"
 REPORTTIME=3
 watch="none"
+
+# OPAM configuration
+. /Users/grahamenos/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
