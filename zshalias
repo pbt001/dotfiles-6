@@ -19,6 +19,8 @@ alias gap="/Applications/gap4r4/bin/gap.sh"
 alias gcc="gcc-4.7"
 alias g++="g++-4.7"
 alias gfortran="gfortran-4.7"
+# GUI emacs
+alias gmacs="/Users/grahamenos/Applications/Emacs.app/Contents/MacOS/Emacs"
 # shortcut to C++11 with warnings, etc.
 alias gpp="g++-4.7 -std=c++11 -Wall -Wextra -Weffc++ -pedantic -O3"
 # gpom -> git pull origin master, to save on keystrokes
@@ -36,12 +38,12 @@ alias rm="rm -i"
 # safari
 alias safari="/Applications/Safari.app/Contents/MacOS/Safari"
 # sage -> /Applications/.../sage, to use sage via terminal
-# alias sage="/Applications/Sage-5.6-OSX-64bit-10.6.app/Contents/Resources/sage/sage"
 alias sage="/Applications/sage/sage"
+# todo.txt goodness
+alias t="todo.sh"
 # vless -> long-winded-vim-command, to use vim like less with highlighting
-# alias vless="vim -u /usr/share/vim/vim72/macros/less.vim"
+alias vless="vim -u /usr/share/vim/vim72/macros/less.vim"
 
-alias gmacs="/Users/grahamenos/Applications/Emacs.app/Contents/MacOS/Emacs"
 #
 # From generic work file
 #

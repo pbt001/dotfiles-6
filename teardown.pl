@@ -18,6 +18,7 @@ Readonly my @FILES = qw/
     .perlcriticrc
     .perltidyrc
     .screenrc
+    .todo.cfg
     .tmux.conf
     .vim
     .vimrc
@@ -28,7 +29,8 @@ Readonly my @FILES = qw/
     .zshscreen
 /;
 
+say 'Tearing down...';
 foreach my $file (@FILES) {
     unlink catfile( home(), $file );
 }
-
+say 'Done!';

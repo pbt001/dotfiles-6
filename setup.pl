@@ -20,6 +20,7 @@ Readonly my %FILES = (
     perltidyrc   => '.perltidyrc',
     screenrc     => '.screenrc',
     tmux_conf    => '.tmux.conf',
+    todo_cfg     => '.todo.cfg',
     vim          => '.vim',
     vimrc        => '.vimrc',
     zshalias     => '.zshalias',
@@ -29,6 +30,8 @@ Readonly my %FILES = (
     zshscreen    => '.zshscreen',
 );
 
+say 'Setting up...';
 while ( my ( $old, $new ) = each %FILES ) {
     symlink catfile( getcwd(), $old ), catfile( home(), $new );
 }
+say 'Done!';
