@@ -47,7 +47,7 @@ while ( my ( $old, $new ) = each %MISC_LINKS ) {
     symlink catfile( $DOTFILES, $old ), catfile( $HOME, $new );
 }
 say 'zsh files...';
-while ( my ( $old, $new ) = each %MISC_LINKS ) {
+while ( my ( $old, $new ) = each %ZSH_LINKS ) {
     symlink catfile( $DOTFILES, 'zsh', $old ), catfile( $HOME, $new );
 }
 say 'Done!';

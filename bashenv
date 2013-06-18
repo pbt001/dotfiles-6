@@ -22,7 +22,7 @@ export MANPATH
 PATH="/usr/local/bin:$PATH"
 PATH="/usr/local/sbin:$PATH"
 # Be able to use homemade/other things from cli
-PATH="$PATH:/Users/grahamenos/bin"
+PATH="$HOME/bin:$PATH"
 # Get ~/.local/bin on path
 PATH="$PATH:/Users/grahamenos/.local/bin"
 # Be able to typeset LaTeX from command line
@@ -35,7 +35,7 @@ MKL_NUM_THREADS=1
 export MKL_NUM_THREADS
 # Setting PATH for EPD-7.1-1
 # The orginal version is saved in .bash_profile.pysave
-PATH="$PATH:/Library/Frameworks/Python.framework/Versions/Current/bin"
+#PATH="$PATH:/Library/Frameworks/Python.framework/Versions/Current/bin"
 export PATH
 # For perlbrew
 #source ~/perl5/perlbrew/etc/bashrc
