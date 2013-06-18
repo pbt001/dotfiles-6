@@ -2,17 +2,21 @@
 
 #use Modern::Perl '2013';
 #use autodie;
+use 5.010;
 use strict;
 use warnings;
 
 use Cwd;
-use File::HomeDir qw/ home /;
+use Env;
 use File::Spec::Functions qw/ catfile /;
-#use Readonly;
 
-#Readonly my %FILES = (
-my %FILES = (
+my $HOME       = $ENV{'HOME'};
+my $DOTFILES   = getcwd();
+my %MISC_LINKS = (
+    bashalias    => '.bashalias',
+    bashenv      => '.bashenv',
     bash_profile => '.bash_profile',
+    #bashrc      => '.bashrc',
     emacs        => '.emacs',
     emacs_d      => '.emacs.d',
     gitconfig    => '.gitconfig',
@@ -27,6 +31,9 @@ my %FILES = (
     todo_cfg     => '.todo.cfg',
     vim          => '.vim',
     vimrc        => '.vimrc',
+);
+
+my %ZSH_LINKS = (
     zshalias     => '.zshalias',
     zshenv       => '.zshenv',
     zshprompt    => '.zshprompt',
@@ -35,7 +42,12 @@ my %FILES = (
 );
 
 say 'Setting up...';
-while ( my ( $old, $new ) = each %FILES ) {
-    symlink catfile( getcwd(), $old ), catfile( home(), $new );
+say 'Misc files...';
+while ( my ( $old, $new ) = each %MISC_LINKS ) {
+    symlink catfile( $DOTFILES, $old ), catfile( $HOME, $new );
+}
+say 'zsh files...';
+while ( my ( $old, $new ) = each %MISC_LINKS ) {
+    symlink catfile( $DOTFILES, 'zsh', $old ), catfile( $HOME, $new );
 }
 say 'Done!';

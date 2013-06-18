@@ -3,21 +3,21 @@ set nocompatible
 
 """"
 "vundle
-filetype off
+"filetype off
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+"set rtp+=~/.vim/bundle/vundle/
+"call vundle#rc()
 
 "Bundles
-Bundle 'gmarik/vundle'
-Bundle 'scrooloose/nerdtree'
-Bundle 'jpalardy/vim-slime'
-Bundle 'tpope/vim-surround'
-Bundle 'tpope/vim-repeat'
-Bundle 'tpope/vim-commentary'
-Bundle 'mileszs/ack.vim'
-Bundle 'L9'
-Bundle 'FuzzyFinder'
+"Bundle 'gmarik/vundle'
+"Bundle 'scrooloose/nerdtree'
+"Bundle 'jpalardy/vim-slime'
+"Bundle 'tpope/vim-surround'
+"Bundle 'tpope/vim-repeat'
+"Bundle 'tpope/vim-commentary'
+"Bundle 'mileszs/ack.vim'
+"Bundle 'L9'
+"Bundle 'FuzzyFinder'
 
 syntax on
 filetype plugin indent on
