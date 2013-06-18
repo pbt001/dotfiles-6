@@ -1,18 +1,22 @@
 #!/usr/bin/env perl
 
-use Modern::Perl '2013';
-use autodie;
+#use Modern::Perl '2013';
+#use autodie;
+use strict;
+use warnings;
 
 use File::HomeDir qw/ home /;
 use File::Spec::Functions qw/ catfile /;
-use Readonly;
+#use Readonly;
 
-Readonly my @FILES = qw/
+#Readonly my @FILES = qw/
+my @FILES = qw/
     .bash_profile
     .emacs
     .emacs.d
     .gitconfig
     .hgrc
+    .inputrc
     .irbrc
     .ocamlinit
     .perlcriticrc
