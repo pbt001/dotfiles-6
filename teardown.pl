@@ -1,18 +1,23 @@
 #!/usr/bin/env perl
 
-use Modern::Perl '2013';
-use autodie;
+#use Modern::Perl '2013';
+#use autodie;
+use 5.010;
+use strict;
+use warnings;
 
-use File::HomeDir qw/ home /;
 use File::Spec::Functions qw/ catfile /;
-use Readonly;
 
-Readonly my @FILES = qw/
+my $HOME       = $ENV{'HOME'};
+my @LINKS = qw/
+    .bashalias
+    .bashenv
     .bash_profile
     .emacs
     .emacs.d
     .gitconfig
     .hgrc
+    .inputrc
     .irbrc
     .ocamlinit
     .perlcriticrc
@@ -30,7 +35,7 @@ Readonly my @FILES = qw/
 /;
 
 say 'Tearing down...';
-foreach my $file (@FILES) {
-    unlink catfile( home(), $file );
+foreach my $link (@LINKS) {
+    unlink catfile( $HOME, $link );
 }
 say 'Done!';

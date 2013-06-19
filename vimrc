@@ -3,21 +3,21 @@ set nocompatible
 
 """"
 "vundle
-filetype off
+"filetype off
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+"set rtp+=~/.vim/bundle/vundle/
+"call vundle#rc()
 
 "Bundles
-Bundle 'gmarik/vundle'
-Bundle 'scrooloose/nerdtree'
-Bundle 'jpalardy/vim-slime'
-Bundle 'tpope/vim-surround'
-Bundle 'tpope/vim-repeat'
-Bundle 'tpope/vim-commentary'
-Bundle 'mileszs/ack.vim'
-Bundle 'L9'
-Bundle 'FuzzyFinder'
+"Bundle 'gmarik/vundle'
+"Bundle 'scrooloose/nerdtree'
+"Bundle 'jpalardy/vim-slime'
+"Bundle 'tpope/vim-surround'
+"Bundle 'tpope/vim-repeat'
+"Bundle 'tpope/vim-commentary'
+"Bundle 'mileszs/ack.vim'
+"Bundle 'L9'
+"Bundle 'FuzzyFinder'
 
 syntax on
 filetype plugin indent on
@@ -140,40 +140,17 @@ xmap <leader>s <Plug>SlimeRegionSend
 nmap <leader>s <Plug>SlimeParagraphSend
 nmap <leader>ss <Plug>SlimeLineSend
 
-"""""""
-" Sage settings (from Franco Saliola via wiki.sagemath.org/Tips)
-autocmd BufRead,BufNewFile *.sage,*.spyx set filetype=python
-" scons, too
-autocmd BufRead,BufNewFile SConstruct set filetype=python
-
-"""""""
-" Clojure settings (from Clojure Google group)
-autocmd BufRead,BufNewFile *.clj set filetype=clojure
-
-"""""""
 " Scheme, Lisp, and Clojure: paren-matching
 autocmd BufRead,BufNewFile *.scm,*.lsp,*.lisp,*.cl,*.clj set sm
 
-"""""""
 " Google's Go language
 set rtp+=/usr/local/go/misc/vim
 au BufRead,BufNewFile *.go set filetype=go
 au BufRead,BufNewFile *.go set noexpandtab
 
-"""""""
 " Qi and Shen
-au BufRead,BufNewFile *.qi,*.shen set filetype=qi
 au BufRead,BufNewFile *.qi,*.shen set sm
 
-"""""""
-" LaTeX
-au BufRead,BufNewFile *.tex set filetype=tex
-
-"""""""
-" Rust
-au BufRead,BufNewFile *.rs set filetype=rust
-
-"""""""
 " Use gpg to encipher and decipher what you're working on.
 " NOTE: Not as secure as it could be; swap's not encrypted, still writes to
 " .viminfo, etc.
