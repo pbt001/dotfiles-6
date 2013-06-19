@@ -12,6 +12,8 @@ export GREP_OPTIONS="--color=auto"
 # gnuplot and octave:
 # export GNUTERM="x11"
 export GNUTERM="aqua"
+# virtualenvwrapper
+export WORKON_HOME="~/Envs"
 # ensure 32-bit version of python, so wxpython behaves
 # export VERSIONER_PYTHON_PREFER_32_BIT=yes
 #  PATH/MANPATH

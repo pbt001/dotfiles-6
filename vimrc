@@ -170,6 +170,10 @@ au BufRead,BufNewFile *.qi,*.shen set sm
 au BufRead,BufNewFile *.tex set filetype=tex
 
 """""""
+" Rust
+au BufRead,BufNewFile *.rs set filetype=rust
+
+"""""""
 " Use gpg to encipher and decipher what you're working on.
 " NOTE: Not as secure as it could be; swap's not encrypted, still writes to
 " .viminfo, etc.

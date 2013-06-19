@@ -27,8 +27,10 @@ alias gpp="g++-4.7 -std=c++11 -Wall -Wextra -Weffc++ -pedantic -O3"
 alias gpom="git pull origin master"
 # jc -> j console, to bend my brain
 alias jc="/Applications/j64-701/bin/jconsole"
+# JuliaLang
+alias julia="/Applications/Julia.app/Contents/Resources/julia/bin/julia"
 # pythons
-alias ipython="/usr/local/share/python/ipython"
+alias ipy="/usr/local/share/python/ipython"
 alias py2.5="python2.5"
 alias py2.6="/usr/bin/python2.6"
 alias py2.7="python2.7"
@@ -43,6 +45,8 @@ alias sage="/Applications/sage/sage"
 alias t="todo.sh"
 # vless -> long-winded-vim-command, to use vim like less with highlighting
 alias vless="vim -u /usr/share/vim/vim72/macros/less.vim"
+# venv -> source virtualenvwrapper
+alias venv="source /usr/local/bin/virtualenvwrapper.sh"
 
 #
 # From generic work file
