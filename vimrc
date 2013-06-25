@@ -72,6 +72,19 @@ inoremap <S-Tab> <C-D>
 "Highlights once a line is past 79 characters
 match ErrorMsg '\%>79v.\+'
 "set colorcolumn=80
+" Turn off error matching
+function! NoErrorMsg()
+    match ErrorMsg '867530917294217asdfasdfasdf'
+endfunction
+
+command! -nargs=0 -range=% NoErrorMsg :call NoErrorMsg()<LF>
+
+" Turn error matching back on
+function! ErrorMsg()
+    match ErrorMsg '\%>79v.\+'
+endfunction
+
+command! -nargs=0 -range=% ErrorMsg :call ErrorMsg()<LF>
 
 "find Doxygen's todo tag
 2match Search '\(\\\|@\)todo'
