@@ -12,4 +12,4 @@
 	editor = vim
 	excludesfile = /Users/grahamenos/.gitignore
 [push]
-	default = simple
+    default = matching

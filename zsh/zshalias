@@ -41,12 +41,12 @@ alias rm="rm -i"
 alias safari="/Applications/Safari.app/Contents/MacOS/Safari"
 # sage -> /Applications/.../sage, to use sage via terminal
 alias sage="/Applications/sage/sage"
-# todo.txt goodness
-alias t="todo.sh"
 # vless -> long-winded-vim-command, to use vim like less with highlighting
 alias vless="vim -u /usr/share/vim/vim72/macros/less.vim"
 # venv -> source virtualenvwrapper
 alias venv="source /usr/local/bin/virtualenvwrapper.sh"
+# get rid of deleted stuff from git
+alias grm="git status -s | grep '^[A ]D' | cut -d' ' -f2 | xargs git rm"
 
 #
 # From generic work file
