@@ -21,6 +21,7 @@ my %MISC_LINKS = (
     perltidyrc   => '.perltidyrc',
     tmux_conf    => '.tmux.conf',
     vimrc_after  => '.vimrc.after',
+    zsh_local    => '.zsh.local'
 );
 
 say 'Setting up...';

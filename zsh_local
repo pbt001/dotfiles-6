@@ -1,0 +1,7 @@
+export PATH=$PATH:$HOME/bin:$HOME/.local/bin:/usr/texbin:$HOME/.cabal/bin:$HOME/.rvm/bin:$HOME/perl5/perlbrew/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/usr/local/go/bin:/usr/X11/bin:/usr/local/sbin
+source ~/perl5/perlbrew/etc/bashrc
+alias grm="gst -s | grep '^ D' | cut -d' ' -f3 | xargs git rm"
+alias mux=tmuxinator
+alias l="ls"
+alias sage="/Applications/sage/sage"
+alias vless="vim -u /usr/share/vim/vim72/macros/less.vim"

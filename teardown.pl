@@ -17,6 +17,7 @@ my @LINKS = qw/
     .perltidyrc
     .tmux.conf
     .vimrc.after
+    .zsh.local
 /;
 
 say 'Tearing down...';
