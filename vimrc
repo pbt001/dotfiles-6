@@ -1,31 +1,16 @@
 "We don't need to be backcompatible with vi
 set nocompatible
+
+"Color and powerline
 set background=light
-
-""""
-"vundle
-"filetype off
-
-"set rtp+=~/.vim/bundle/vundle/
-"call vundle#rc()
-
-"Bundles
-"Bundle 'gmarik/vundle'
-"Bundle 'scrooloose/nerdtree'
-"Bundle 'jpalardy/vim-slime'
-"Bundle 'tpope/vim-surround'
-"Bundle 'tpope/vim-repeat'
-"Bundle 'tpope/vim-commentary'
-"Bundle 'mileszs/ack.vim'
-"Bundle 'L9'
-"Bundle 'FuzzyFinder'
-
-syntax on
-filetype plugin indent on
-""""
+let g:Powerline_symbols = 'fancy'
+set t_Co=256
 
 "Security exploits?
 set modelines=0
+
+syntax on
+filetype plugin indent on
 
 "Set encoding to utf-8
 set enc=utf-8

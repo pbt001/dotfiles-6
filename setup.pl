@@ -28,8 +28,8 @@ my %MISC_LINKS = (
     perltidyrc   => '.perltidyrc',
     #screenrc     => '.screenrc',
     tmux_conf    => '.tmux.conf',
-    vim          => '.vim',
-    vimrc        => '.vimrc',
+    #vim          => '.vim',
+    vimrc        => '.vimrc.after',
 );
 
 my %ZSH_LINKS = (
