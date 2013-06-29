@@ -26,9 +26,8 @@ my %MISC_LINKS = (
     ocamlinit    => '.ocamlinit',
     perlcriticrc => '.perlcriticrc',
     perltidyrc   => '.perltidyrc',
-    screenrc     => '.screenrc',
-    tmux_conf    => '.tmux.conf',
-    todo_cfg     => '.todo.cfg',
+    #screenrc     => '.screenrc',
+    #tmux_conf    => '.tmux.conf',
     vim          => '.vim',
     vimrc        => '.vimrc',
 );
@@ -46,8 +45,8 @@ say 'Misc files...';
 while ( my ( $old, $new ) = each %MISC_LINKS ) {
     symlink catfile( $DOTFILES, $old ), catfile( $HOME, $new );
 }
-say 'zsh files...';
-while ( my ( $old, $new ) = each %ZSH_LINKS ) {
-    symlink catfile( $DOTFILES, 'zsh', $old ), catfile( $HOME, $new );
-}
+#say 'zsh files...';
+#while ( my ( $old, $new ) = each %ZSH_LINKS ) {
+    #symlink catfile( $DOTFILES, 'zsh', $old ), catfile( $HOME, $new );
+#}
 say 'Done!';

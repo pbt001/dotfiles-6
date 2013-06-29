@@ -45,8 +45,6 @@ alias sage="/Applications/sage/sage"
 alias vless="vim -u /usr/share/vim/vim72/macros/less.vim"
 # venv -> source virtualenvwrapper
 alias venv="source /usr/local/bin/virtualenvwrapper.sh"
-# get rid of deleted stuff from git
-alias grm="git status -s | grep '^[A ]D' | cut -d' ' -f2 | xargs git rm"
 
 #
 # From generic work file

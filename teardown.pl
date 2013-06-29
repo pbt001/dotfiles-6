@@ -22,17 +22,20 @@ my @LINKS = qw/
     .ocamlinit
     .perlcriticrc
     .perltidyrc
-    .screenrc
-    .todo.cfg
-    .tmux.conf
     .vim
     .vimrc
+/;
+
+my @removed = qw/
+    .screenrc
+    .tmux.conf
     .zshalias
     .zshenv
     .zshprompt
     .zshrc
     .zshscreen
 /;
+
 
 say 'Tearing down...';
 foreach my $link (@LINKS) {
