@@ -27,7 +27,7 @@ my %MISC_LINKS = (
     perlcriticrc => '.perlcriticrc',
     perltidyrc   => '.perltidyrc',
     #screenrc     => '.screenrc',
-    #tmux_conf    => '.tmux.conf',
+    tmux_conf    => '.tmux.conf',
     vim          => '.vim',
     vimrc        => '.vimrc',
 );

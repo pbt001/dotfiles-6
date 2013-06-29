@@ -22,13 +22,13 @@ my @LINKS = qw/
     .ocamlinit
     .perlcriticrc
     .perltidyrc
+    .tmux.conf
     .vim
     .vimrc
 /;
 
 my @removed = qw/
     .screenrc
-    .tmux.conf
     .zshalias
     .zshenv
     .zshprompt

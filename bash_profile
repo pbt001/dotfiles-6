@@ -104,3 +104,5 @@ export MKL_NUM_THREADS=1
 # The orginal version is saved in .bash_profile.pysave
 PATH="$PATH:/Library/Frameworks/Python.framework/Versions/Current/bin"
 export PATH
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
