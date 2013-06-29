@@ -1,5 +1,6 @@
 "We don't need to be backcompatible with vi
 set nocompatible
+set background=light
 
 """"
 "vundle
