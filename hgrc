@@ -1,9 +1,0 @@
-[ui]
-username = Graham Enos <genos@uncc.edu>
-verbose = True
-
-[extensions]
-color =
-
-[color]
-mode = auto
