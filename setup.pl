@@ -1,7 +1,6 @@
 #!/usr/bin/env perl
 
 use Modern::Perl '2013';
-use 5.010;
 use strict;
 use warnings;
 
