@@ -10,6 +10,7 @@ my $HOME       = $ENV{'HOME'};
 my @LINKS = qw/
     .ghci
     .gitconfig
+    .gvimrc
     .inputrc
     .irbrc
     .ocamlinit

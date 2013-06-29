@@ -11,8 +11,9 @@ use File::Spec::Functions qw/ catfile /;
 my $HOME       = $ENV{'HOME'};
 my $DOTFILES   = getcwd();
 my %MISC_LINKS = (
-    ghci        =>  '.ghci',
+    ghci         => '.ghci',
     gitconfig    => '.gitconfig',
+    gvimrc       => '.gvimrc',
     inputrc      => '.inputrc',
     irbrc        => '.irbrc',
     ocamlinit    => '.ocamlinit',

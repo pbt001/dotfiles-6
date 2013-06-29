@@ -1,7 +1,10 @@
-"We don't need to be backcompatible with vi
+"We don't need to be backwards compatible with vi
 set nocompatible
 
-"Colors and powerline
+"Security exploits?
+set modelines=0
+
+"Colors
 set background=light
 set t_Co=256
 
@@ -9,9 +12,7 @@ set t_Co=256
 execute pathogen#infect()
 let g:Powerline_symbols = 'fancy'
 
-"Security exploits?
-set modelines=0
-
+" syntax coloring, other stuff
 syntax on
 filetype plugin indent on
 
@@ -58,25 +59,8 @@ set incsearch
 "Use shift-tab to unindent
 inoremap <S-Tab> <C-D>
 
-"Highlights once a line is past 79 characters
-match ErrorMsg '\%>79v.\+'
-"set colorcolumn=80
-" Turn off error matching
-function! NoErrorMsg()
-    match ErrorMsg '867530917294217asdfasdfasdf'
-endfunction
-
-command! -nargs=0 -range=% NoErrorMsg :call NoErrorMsg()<LF>
-
-" Turn error matching back on
-function! ErrorMsg()
-    match ErrorMsg '\%>79v.\+'
-endfunction
-
-command! -nargs=0 -range=% ErrorMsg :call ErrorMsg()<LF>
-
-"find Doxygen's todo tag
-2match Search '\(\\\|@\)todo'
+"use color column for width warnings
+set cc=79
 
 "Perl/Python regexes instead of Vim's
 nnoremap / /\v
@@ -122,9 +106,6 @@ set wildmode=longest,full
 "Backspace all the things
 set backspace=indent,eol,start
 
-"When do you only want to replace the first occurence?
-"set gdefault
-
 "Using Ack
 nnoremap <leader>a :Ack
 
@@ -142,25 +123,10 @@ xmap <leader>s <Plug>SlimeRegionSend
 nmap <leader>s <Plug>SlimeParagraphSend
 nmap <leader>ss <Plug>SlimeLineSend
 
-" Scheme, Lisp, and Clojure: paren-matching
-autocmd BufRead,BufNewFile *.scm,*.lsp,*.lisp,*.cl,*.clj set sm
+" Scheme, Lisp, Clojure, Qi, & Shen: paren-matching
+autocmd BufRead,BufNewFile *.scm,*.lsp,*.lisp,*.cl,*.clj,*.qi,*.shen set sm
 
 " Google's Go language
 set rtp+=/usr/local/go/misc/vim
 au BufRead,BufNewFile *.go set filetype=go
 au BufRead,BufNewFile *.go set noexpandtab
-
-" Qi and Shen
-au BufRead,BufNewFile *.qi,*.shen set sm
-
-" Use gpg to encipher and decipher what you're working on.
-" NOTE: Not as secure as it could be; swap's not encrypted, still writes to
-" .viminfo, etc.
-" from http://vim.wikia.com/wiki/AES256_encryption_in_Vim
-function! Scramble()
-    %!gpg -q --cipher-algo aes256 --symmetric --armor 2>/dev/null
-endfunction
-
-function! Unscramble()
-    %!gpg -q --cipher-algo aes256 --decrypt --armor 2>/dev/null
-endfunction
