@@ -16,6 +16,7 @@ my @LINKS = qw/
     .perlcriticrc
     .perltidyrc
     .tmux.conf
+    .vim
     .vimrc
     .zsh.local
 /;

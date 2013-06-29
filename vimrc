@@ -1,10 +1,13 @@
 "We don't need to be backcompatible with vi
 set nocompatible
 
-"Color and powerline
+"Colors and powerline
 set background=light
-let g:Powerline_symbols = 'fancy'
 set t_Co=256
+
+" packages 
+execute pathogen#infect()
+let g:Powerline_symbols = 'fancy'
 
 "Security exploits?
 set modelines=0

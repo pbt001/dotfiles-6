@@ -19,6 +19,7 @@ my %MISC_LINKS = (
     perlcriticrc => '.perlcriticrc',
     perltidyrc   => '.perltidyrc',
     tmux_conf    => '.tmux.conf',
+    vim          => '.vim',
     vimrc        => '.vimrc',
     zsh_local    => '.zsh.local'
 );
