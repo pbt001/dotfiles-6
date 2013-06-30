@@ -5,4 +5,5 @@ alias gst="git status"
 alias mux=tmuxinator
 #alias l="ls -G"
 alias sage="/Applications/sage/sage"
+alias screen=tmux
 alias vless="vim -u /usr/share/vim/vim72/macros/less.vim"
