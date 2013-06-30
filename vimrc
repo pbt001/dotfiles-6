@@ -1,16 +1,38 @@
-"We don't need to be backwards compatible with vi
-set nocompatible
+" packages  with vundle
+set nocompatible               " be iMproved
+filetype off                   " required!
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" let Vundle manage Vundle
+" required! 
+Bundle 'gmarik/vundle'
+
+" My Bundles here:
+"
+" original repos on github
+Bundle 'Lokaltog/vim-powerline'
+Bundle 'tomtom/tcomment_vim'
+Bundle 'tpope/vim-repeat'
+Bundle 'tpope/vim-surround'
+Bundle 'vim-scripts/scratch.vim'
+
+filetype plugin indent on     " required!
+
+let g:Powerline_symbols='fancy'
+set laststatus=2  " always
 
 "Security exploits?
 set modelines=0
+
+"encrypt with Blowfish
+set cryptmethod=blowfish
 
 "Colors
 set background=light
 set t_Co=256
 
-" packages 
-execute pathogen#infect()
-let g:Powerline_symbols = 'fancy'
 
 " syntax coloring, other stuff
 syntax on
@@ -44,9 +66,6 @@ set smarttab
 set number
 "set relativenumber
 
-"For compatibility with screen
-set numberwidth=8
-
 "Line and column position
 set ruler
 
@@ -60,7 +79,7 @@ set incsearch
 inoremap <S-Tab> <C-D>
 
 "use color column for width warnings
-set cc=79
+set colorcolumn=79
 
 "Perl/Python regexes instead of Vim's
 nnoremap / /\v
@@ -112,16 +131,8 @@ nnoremap <leader>a :Ack
 "Less typing to enter a command
 nnoremap ; :
 
-"Quicker escaping?
+"Quicker escaping
 inoremap jj <ESC>
-
-"slime-vim
-let g:slime_target = 'tmux'
-let g:slime_no_mappings = 1
-nmap <leader>s <Plug>SlimeSend
-xmap <leader>s <Plug>SlimeRegionSend
-nmap <leader>s <Plug>SlimeParagraphSend
-nmap <leader>ss <Plug>SlimeLineSend
 
 " Scheme, Lisp, Clojure, Qi, & Shen: paren-matching
 autocmd BufRead,BufNewFile *.scm,*.lsp,*.lisp,*.cl,*.clj,*.qi,*.shen set sm
