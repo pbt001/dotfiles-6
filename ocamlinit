@@ -7,6 +7,7 @@ let () =
 #camlp4o
 #thread
 #require "core.top"
+#require "core.syntax"
 #require "core_extended"
 #require "async"
 open Core.Std;;

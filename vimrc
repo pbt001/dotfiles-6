@@ -13,6 +13,7 @@ Bundle 'gmarik/vundle'
 "
 " original repos on github
 Bundle 'Lokaltog/vim-powerline'
+Bundle 'mileszs/ack.vim'
 Bundle 'tomtom/tcomment_vim'
 Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-surround'
@@ -79,7 +80,7 @@ set incsearch
 inoremap <S-Tab> <C-D>
 
 "use color column for width warnings
-set colorcolumn=79
+set colorcolumn=80
 
 "Perl/Python regexes instead of Vim's
 nnoremap / /\v
