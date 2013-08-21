@@ -10,7 +10,7 @@ unbind C-o
 bind C-o send-prefix
 # force a reload of the config file
 unbind r
-bind r source-file ~/.tmux/conf
+bind r source-file ~/.tmux.conf
 # quick pane cycling
 unbind ^O
 bind ^O select-pane -t :.+
