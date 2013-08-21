@@ -1,4 +1,4 @@
-" packages  with vundle
+"Packages with vundle
 set nocompatible               " be iMproved
 filetype off                   " required!
 
@@ -18,6 +18,7 @@ Bundle 'tomtom/tcomment_vim'
 Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-surround'
 Bundle 'vim-scripts/scratch.vim'
+Bundle 'altercation/vim-colors-solarized'
 
 filetype plugin indent on     " required!
 
@@ -31,11 +32,11 @@ set modelines=0
 set cryptmethod=blowfish
 
 "Colors
-set background=light
+colorscheme solarized
+set background=dark
 set t_Co=256
 
-
-" syntax coloring, other stuff
+"syntax coloring, other stuff
 syntax on
 filetype plugin indent on
 
@@ -135,10 +136,18 @@ nnoremap ; :
 "Quicker escaping
 inoremap jj <ESC>
 
-" Scheme, Lisp, Clojure, Qi, & Shen: paren-matching
-autocmd BufRead,BufNewFile *.scm,*.lsp,*.lisp,*.cl,*.clj,*.qi,*.shen set sm
+"Markdown
+autocmd BufRead,BufNewFile *.md setlocal filetype=markdown
+autocmd BufRead,BufNewFile *.md setlocal tw=79
 
-" Google's Go language
+"Scheme, Lisp, Clojure, Qi, & Shen: paren-matching
+autocmd BufRead,BufNewFile *.scm,*.lsp,*.lisp,*.cl,*.clj,*.qi,*.shen setlocal sm
+
+"HTML, Ruby, YAML: set tab stop and shift width to 2
+autocmd BufRead,BufNewFile *.html,*.rb,*.yml setlocal ts=2
+autocmd BufRead,BufNewFile *.html,*.rb,*.yml setlocal sw=2
+
+"Google's Go language
 set rtp+=/usr/local/go/misc/vim
 au BufRead,BufNewFile *.go set filetype=go
 au BufRead,BufNewFile *.go set noexpandtab

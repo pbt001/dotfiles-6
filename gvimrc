@@ -2,10 +2,10 @@
 set background=dark
 
 "Set the colorscheme to something nicer
-:colorscheme torte
+colorscheme solarized
 
 "Make the window same dimensions as my terminal preferences
 set lines=24 columns=90
 
 "Transparency
-set transparency=17
+"set transparency=17
