@@ -14,9 +14,15 @@ LINKS = '
     .tmux.conf
     .vim
     .vimrc
-    .zsh.local
+    .zshrc
 '.split
 
 puts 'Tearing down...'
-LINKS.each {|f| File.unlink File.join(HOME, f) }
+LINKS.each do |f|
+  begin
+    File.unlink File.join(HOME, f)
+  rescue
+    # ignore errors
+  end
+end
 puts 'Done!'

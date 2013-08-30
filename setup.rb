@@ -15,7 +15,7 @@ LINKS = {
   'tmux_conf'    => '.tmux.conf',
   'vim'          => '.vim',
   'vimrc'        => '.vimrc',
-  'zsh_local'    => '.zsh.local'
+  'zshrc'        => '.zshrc'
 }
 
 puts 'Setting up...'
