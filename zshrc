@@ -5,7 +5,7 @@ ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="robbyrussell"
+ZSH_THEME="powerline"
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
@@ -40,19 +40,19 @@ ZSH_THEME="robbyrussell"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(colorize git osx python ruby tmux tmuxinator vi-mode virtualenv virtualenvwrapper)
+plugins=(colorize git history history-substring-searchosx python ruby tmux tmuxinator vi-mode virtualenv virtualenvwrapper)
 
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
+alias \:q='exit'
+alias \:e='/usr/local/bin/vim'
 alias gcc='/usr/local/bin/gcc-4.9 -std=c11 -pedantic -O3 -Wall -Wextra'
 alias g++='/usr/local/bin/g++-4.9 -std=c++11 -pedantic -O3 -Wall -Wextra -Weffc++'
 alias grm='git status -s | grep "^ D" | cut -d" " -f3 | xargs git rm'
 alias jc='/Applications/j64-701/bin/jconsole'
-alias mux=tmuxinator
 alias R='/usr/local/bin/r'
 alias sage='/Applications/sage/sage'
-alias screen=tmux
 alias vim='/usr/local/bin/vim'
 alias vless='vim -u /usr/share/vim/vim72/macros/less.vim'
 eval `opam config env`
@@ -60,4 +60,3 @@ export EDITOR='/usr/local/bin/vim'
 export PATH="$HOME/bin:$HOME/.local/bin:/usr/texbin:$HOME/.cabal/bin:$HOME/.rvm/bin:$HOME/perl5/perlbrew/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/usr/local/go/bin:/usr/X11/bin:/usr/local/sbin:$PATH"
 export PROJECT_HOME="$HOME/workbench"
 export VIRTUALENVWRAPPER_VIRTUALENV_ARGS='--no-site-packages'
-source ~/perl5/perlbrew/etc/bashrc
