@@ -18,7 +18,7 @@ bind ^O select-pane -t :.+
 ## http://jasonwryan.com/blog/2011/06/07/copy-and-paste-in-tmux/
 # have copy mode behave like vim
 setw -g mode-keys vi
-unbind [
+unbind ^[
 bind Escape copy-mode
 unbind p
 bind p paste-buffer

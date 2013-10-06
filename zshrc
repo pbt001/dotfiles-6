@@ -5,7 +5,7 @@ ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="powerline"
+ZSH_THEME="itchy"
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
@@ -40,7 +40,7 @@ ZSH_THEME="powerline"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(colorize git history history-substring-searchosx python ruby tmux tmuxinator vi-mode virtualenv virtualenvwrapper)
+plugins=(colorize git history history-substring-search osx python ruby tmux tmuxinator vi-mode virtualenv virtualenvwrapper)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -57,6 +57,7 @@ alias vim='/usr/local/bin/vim'
 alias vless='vim -u /usr/share/vim/vim72/macros/less.vim'
 eval `opam config env`
 export EDITOR='/usr/local/bin/vim'
-export PATH="$HOME/bin:$HOME/.local/bin:/usr/texbin:$HOME/.cabal/bin:$HOME/.rvm/bin:$HOME/perl5/perlbrew/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/usr/local/go/bin:/usr/X11/bin:/usr/local/sbin:$PATH"
+export KEYTIMEOUT=1
+export PATH="$HOME/bin:$HOME/.local/bin:/usr/texbin:$HOME/.cabal/bin:$HOME/.rvm/bin:$HOME/.rvm/gems/rbx-head/bin:$HOME/.rvm/gems/ruby-2.0.0-p247/bin:$HOME/perl5/perlbrew/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/usr/local/go/bin:/usr/X11/bin:/usr/local/sbin:$PATH"
 export PROJECT_HOME="$HOME/workbench"
 export VIRTUALENVWRAPPER_VIRTUALENV_ARGS='--no-site-packages'

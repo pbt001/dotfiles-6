@@ -137,7 +137,7 @@ nnoremap ; :
 inoremap jj <ESC>
 
 "Markdown
-autocmd BufRead,BufNewFile *.md setlocal filetype=markdown
+autocmd BufRead,BufNewFile *.md set filetype=markdown
 autocmd BufRead,BufNewFile *.md setlocal tw=79
 
 "Scheme, Lisp, Clojure, Qi, & Shen: paren-matching
@@ -151,3 +151,6 @@ autocmd BufRead,BufNewFile *.html,*.rb,*.yml setlocal sw=2
 set rtp+=/usr/local/go/misc/vim
 au BufRead,BufNewFile *.go set filetype=go
 au BufRead,BufNewFile *.go set noexpandtab
+
+"Agda
+au BufNewFile,BufRead *.agda set filetype=agda
