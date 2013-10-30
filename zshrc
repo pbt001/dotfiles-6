@@ -40,15 +40,15 @@ ZSH_THEME="itchy"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(colorize git history history-substring-search osx python ruby tmux tmuxinator vi-mode virtualenv virtualenvwrapper)
+plugins=(colorize git history osx python ruby tmux tmuxinator vi-mode virtualenv virtualenvwrapper)
 
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 alias \:q='exit'
 alias \:e='/usr/local/bin/vim'
-alias gcc='/usr/local/bin/gcc-4.9 -std=c11 -pedantic -O3 -Wall -Wextra'
-alias g++='/usr/local/bin/g++-4.9 -std=c++11 -pedantic -O3 -Wall -Wextra -Weffc++'
+alias gcc='/usr/local/bin/gcc-4.9 -std=c11 -pedantic -Wall -Wextra'
+alias g++='/usr/local/bin/g++-4.9 -std=c++11 -pedantic -Wall -Wextra -Weffc++'
 alias grm='git status -s | grep "^ D" | cut -d" " -f3 | xargs git rm'
 alias jc='/Applications/j64-701/bin/jconsole'
 alias R='/usr/local/bin/r'
