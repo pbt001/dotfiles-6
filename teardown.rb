@@ -2,6 +2,7 @@
 
 HOME = ENV['HOME']
 LINKS = '
+    .emacs
     .emacs.d
     .ghci
     .gitconfig
