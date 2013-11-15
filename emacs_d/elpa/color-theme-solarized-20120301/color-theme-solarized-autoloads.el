@@ -33,7 +33,7 @@ Ported to Emacs by Greg Pfeil, http://ethanschoonover.com/solarized.
 ;;;;;;  "../../../../../.emacs.d/elpa/color-theme-solarized-20120301/solarized-dark-theme.el"
 ;;;;;;  "../../../../../.emacs.d/elpa/color-theme-solarized-20120301/solarized-definitions.el"
 ;;;;;;  "../../../../../.emacs.d/elpa/color-theme-solarized-20120301/solarized-light-theme.el")
-;;;;;;  (21126 6530 659848 0))
+;;;;;;  (21126 7041 160038 0))
 
 ;;;***
 

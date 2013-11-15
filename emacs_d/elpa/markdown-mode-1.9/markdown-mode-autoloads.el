@@ -27,7 +27,7 @@ Major mode for editing GitHub Flavored Markdown files.
 
 ;;;### (autoloads nil nil ("../../../../../.emacs.d/elpa/markdown-mode-1.9/markdown-mode-pkg.el"
 ;;;;;;  "../../../../../.emacs.d/elpa/markdown-mode-1.9/markdown-mode.el")
-;;;;;;  (21126 6538 689743 0))
+;;;;;;  (21126 7047 715142 0))
 
 ;;;***
 

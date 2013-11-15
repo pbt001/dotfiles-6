@@ -22,7 +22,7 @@ Paredit behaves badly if parentheses are imbalanced, so exercise
 
 ;;;### (autoloads nil nil ("../../../../../.emacs.d/elpa/paredit-22/paredit-pkg.el"
 ;;;;;;  "../../../../../.emacs.d/elpa/paredit-22/paredit.el") (21126
-;;;;;;  6539 877924 0))
+;;;;;;  7049 900481 0))
 
 ;;;***
 

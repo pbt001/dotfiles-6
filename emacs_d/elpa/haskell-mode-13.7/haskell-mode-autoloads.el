@@ -731,7 +731,7 @@ we load it.
 ;;;;;;  "../../../../../.emacs.d/elpa/haskell-mode-13.7/haskell-unicode-input-method.el"
 ;;;;;;  "../../../../../.emacs.d/elpa/haskell-mode-13.7/haskell-yas.el"
 ;;;;;;  "../../../../../.emacs.d/elpa/haskell-mode-13.7/inf-haskell.el")
-;;;;;;  (21126 6532 671538 0))
+;;;;;;  (21126 7044 611848 0))
 
 ;;;***
 

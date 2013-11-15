@@ -35,7 +35,7 @@ if that value is non-nil.
 
 ;;;### (autoloads nil nil ("../../../../../.emacs.d/elpa/clojure-mode-2.1.0/clojure-mode-pkg.el"
 ;;;;;;  "../../../../../.emacs.d/elpa/clojure-mode-2.1.0/clojure-mode.el")
-;;;;;;  (21126 6522 888340 0))
+;;;;;;  (21126 7035 650308 0))
 
 ;;;***
 
