@@ -4,9 +4,9 @@
 
 
 ;;;### (autoloads (color-theme-solarized-light color-theme-solarized-dark
-;;;;;;  color-theme-solarized) "color-theme-solarized" "color-theme-solarized.el"
-;;;;;;  (21115 36471 0 0))
-;;; Generated autoloads from color-theme-solarized.el
+;;;;;;  color-theme-solarized) "color-theme-solarized" "../../../../../.emacs.d/elpa/color-theme-solarized-20120301/color-theme-solarized.el"
+;;;;;;  "93f3e2dd1cb8d74f1948d50bbcce8e7e")
+;;; Generated autoloads from ../../../../../.emacs.d/elpa/color-theme-solarized-20120301/color-theme-solarized.el
 
 (autoload 'color-theme-solarized "color-theme-solarized" "\
 Color theme by Ethan Schoonover, created 2011-03-24.
@@ -28,9 +28,12 @@ Ported to Emacs by Greg Pfeil, http://ethanschoonover.com/solarized.
 
 ;;;***
 
-;;;### (autoloads nil nil ("color-theme-solarized-pkg.el" "solarized-dark-theme.el"
-;;;;;;  "solarized-definitions.el" "solarized-light-theme.el") (21115
-;;;;;;  36471 179159 0))
+;;;### (autoloads nil nil ("../../../../../.emacs.d/elpa/color-theme-solarized-20120301/color-theme-solarized-pkg.el"
+;;;;;;  "../../../../../.emacs.d/elpa/color-theme-solarized-20120301/color-theme-solarized.el"
+;;;;;;  "../../../../../.emacs.d/elpa/color-theme-solarized-20120301/solarized-dark-theme.el"
+;;;;;;  "../../../../../.emacs.d/elpa/color-theme-solarized-20120301/solarized-definitions.el"
+;;;;;;  "../../../../../.emacs.d/elpa/color-theme-solarized-20120301/solarized-light-theme.el")
+;;;;;;  (21126 6530 659848 0))
 
 ;;;***
 

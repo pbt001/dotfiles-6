@@ -3,8 +3,9 @@
 ;;; Code:
 
 
-;;;### (autoloads nil nil ("color-theme-pkg.el" "color-theme.el")
-;;;;;;  (21115 36406 549343 0))
+;;;### (autoloads nil nil ("../../../../../.emacs.d/elpa/color-theme-6.5.5/color-theme-pkg.el"
+;;;;;;  "../../../../../.emacs.d/elpa/color-theme-6.5.5/color-theme.el")
+;;;;;;  (21126 6528 345010 0))
 
 ;;;***
 

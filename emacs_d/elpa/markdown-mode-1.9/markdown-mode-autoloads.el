@@ -4,8 +4,9 @@
 
 
 ;;;### (autoloads (gfm-mode markdown-mode markdown-cleanup-list-numbers)
-;;;;;;  "markdown-mode" "markdown-mode.el" (21115 36491 0 0))
-;;; Generated autoloads from markdown-mode.el
+;;;;;;  "markdown-mode" "../../../../../.emacs.d/elpa/markdown-mode-1.9/markdown-mode.el"
+;;;;;;  "ddc15b76289efc27c2225194d1e63e3f")
+;;; Generated autoloads from ../../../../../.emacs.d/elpa/markdown-mode-1.9/markdown-mode.el
 
 (autoload 'markdown-cleanup-list-numbers "markdown-mode" "\
 Update the numbering of ordered lists.
@@ -24,8 +25,9 @@ Major mode for editing GitHub Flavored Markdown files.
 
 ;;;***
 
-;;;### (autoloads nil nil ("markdown-mode-pkg.el") (21115 36491 121484
-;;;;;;  0))
+;;;### (autoloads nil nil ("../../../../../.emacs.d/elpa/markdown-mode-1.9/markdown-mode-pkg.el"
+;;;;;;  "../../../../../.emacs.d/elpa/markdown-mode-1.9/markdown-mode.el")
+;;;;;;  (21126 6538 689743 0))
 
 ;;;***
 
