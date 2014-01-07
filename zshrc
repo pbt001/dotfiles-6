@@ -40,28 +40,15 @@ ZSH_THEME="itchy"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(colorize git history osx python ruby tmux tmuxinator virtualenv virtualenvwrapper)
+plugins=(colorize git history osx python ruby tmux)
 
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 alias \:q='exit'
-alias \:e='/usr/local/bin/emacs'
-alias e='emacsclient -t'
-alias ec='emacsclient -c'
-alias emacs='/Applications/Emacs.app/Contents/MacOS/Emacs'
-alias gcc='/usr/local/bin/gcc-4.9 -std=c11 -pedantic -Wall -Wextra'
-alias g++='/usr/local/bin/g++-4.9 -std=c++11 -pedantic -Wall -Wextra -Weffc++'
+alias \:e='vim'
 alias grm='git status -s | grep "^ D" | cut -d" " -f3 | xargs git rm'
-alias jc='/Applications/j64-701/bin/jconsole'
-alias R='/usr/local/bin/r'
-alias sage='/Applications/sage/sage'
-alias vim='/usr/local/bin/vim'
-alias vless='vim -u /usr/share/vim/vim72/macros/less.vim'
-eval `opam config env`
-export EDITOR='/usr/local/bin/emacs'
+export EDITOR='vim'
 export KEYTIMEOUT=1
-export PATH="$HOME/bin:$HOME/.local/bin:/usr/texbin:$HOME/.cabal/bin:$HOME/.rvm/bin:$HOME/.rvm/gems/rbx-head/bin:$HOME/.rvm/gems/ruby-2.0.0-p247/bin:$HOME/perl5/perlbrew/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/usr/local/go/bin:/usr/X11/bin:/usr/local/sbin:$PATH"
-export PROJECT_HOME="$HOME/workbench"
+export PATH="$HOME/bin:$HOME/.local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/sbin:$PATH"
 export TERM=xterm-256color
-export VIRTUALENVWRAPPER_VIRTUALENV_ARGS='--no-site-packages'
