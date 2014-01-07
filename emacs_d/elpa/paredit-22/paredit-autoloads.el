@@ -4,7 +4,7 @@
 
 
 ;;;### (autoloads (paredit-mode) "paredit" "../../../../../.emacs.d/elpa/paredit-22/paredit.el"
-;;;;;;  "d52369b90e181b848d270ba876c53ffb")
+;;;;;;  (21195 24551))
 ;;; Generated autoloads from ../../../../../.emacs.d/elpa/paredit-22/paredit.el
 
 (autoload 'paredit-mode "paredit" "\
@@ -21,8 +21,8 @@ Paredit behaves badly if parentheses are imbalanced, so exercise
 ;;;***
 
 ;;;### (autoloads nil nil ("../../../../../.emacs.d/elpa/paredit-22/paredit-pkg.el"
-;;;;;;  "../../../../../.emacs.d/elpa/paredit-22/paredit.el") (21126
-;;;;;;  7049 900481 0))
+;;;;;;  "../../../../../.emacs.d/elpa/paredit-22/paredit.el") (21195
+;;;;;;  24551 347590))
 
 ;;;***
 

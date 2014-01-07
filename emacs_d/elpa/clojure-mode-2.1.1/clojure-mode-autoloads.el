@@ -3,9 +3,9 @@
 ;;; Code:
 
 
-;;;### (autoloads (clojure-mode) "clojure-mode" "../../../../../.emacs.d/elpa/clojure-mode-2.1.0/clojure-mode.el"
-;;;;;;  "a4eddf18007f95885dbc88f769a38ad3")
-;;; Generated autoloads from ../../../../../.emacs.d/elpa/clojure-mode-2.1.0/clojure-mode.el
+;;;### (autoloads (clojure-mode) "clojure-mode" "clojure-mode.el"
+;;;;;;  (21195 24534))
+;;; Generated autoloads from clojure-mode.el
 
 (autoload 'clojure-mode "clojure-mode" "\
 Major mode for editing Clojure code - similar to Lisp mode.
@@ -21,11 +21,11 @@ if that value is non-nil.
 
 \(fn)" t nil)
 
-(put 'clojure-test-ns-segment-position 'safe-local-variable 'integerp)
+(add-to-list 'auto-mode-alist '("\\.clj[sx]?\\'" . clojure-mode))
 
-(put 'clojure-mode-load-command 'safe-local-variable 'stringp)
+(add-to-list 'auto-mode-alist '("\\.dtm\\'" . clojure-mode))
 
-(add-to-list 'auto-mode-alist '("\\.clj\\'" . clojure-mode))
+(add-to-list 'auto-mode-alist '("\\.edn\\'" . clojure-mode))
 
 (add-to-list 'interpreter-mode-alist '("jark" . clojure-mode))
 
@@ -33,9 +33,7 @@ if that value is non-nil.
 
 ;;;***
 
-;;;### (autoloads nil nil ("../../../../../.emacs.d/elpa/clojure-mode-2.1.0/clojure-mode-pkg.el"
-;;;;;;  "../../../../../.emacs.d/elpa/clojure-mode-2.1.0/clojure-mode.el")
-;;;;;;  (21126 7035 650308 0))
+;;;### (autoloads nil nil ("clojure-mode-pkg.el") (21195 24534 839672))
 
 ;;;***
 

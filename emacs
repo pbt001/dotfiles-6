@@ -1,19 +1,5 @@
 ;;; .emacs
 
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(custom-safe-themes (quote ("fc5fcb6f1f1c1bc01305694c59a1a861b008c534cae8d0e48e4d5e81ad718bc6" default)))
- '(inhibit-startup-screen t))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
-
 ;;; Paths, etc.
 ;; addition lisp library files
 (defvar user-site-lisp-directory (concat user-emacs-directory "site-lisp"))
@@ -33,17 +19,15 @@
 (when (not package-archive-contents)
   (package-refresh-contents))
 (defvar my-packages '(auctex clojure-mode color-theme
-                             color-theme-solarized haskell-mode
-                             markdown-mode paredit recentf reftex))
+                             haskell-mode markdown-mode paredit))
 (dolist (p my-packages)
   (when (not (package-installed-p p))
     (package-install p)))
 
 ;;; Appearance
 (when window-system
-  (progn
-    (require 'color-theme-solarized)
-    (load-theme 'solarized-dark)))
+  (color-theme-solarized-dark))
+
 
 ;;; Behavior
 (prefer-coding-system 'utf-8-unix)

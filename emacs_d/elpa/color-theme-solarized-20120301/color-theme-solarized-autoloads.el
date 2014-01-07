@@ -5,7 +5,7 @@
 
 ;;;### (autoloads (color-theme-solarized-light color-theme-solarized-dark
 ;;;;;;  color-theme-solarized) "color-theme-solarized" "../../../../../.emacs.d/elpa/color-theme-solarized-20120301/color-theme-solarized.el"
-;;;;;;  "93f3e2dd1cb8d74f1948d50bbcce8e7e")
+;;;;;;  (21195 24541))
 ;;; Generated autoloads from ../../../../../.emacs.d/elpa/color-theme-solarized-20120301/color-theme-solarized.el
 
 (autoload 'color-theme-solarized "color-theme-solarized" "\
@@ -15,12 +15,12 @@ Ported to Emacs by Greg Pfeil, http://ethanschoonover.com/solarized.
 \(fn MODE)" t nil)
 
 (autoload 'color-theme-solarized-dark "color-theme-solarized" "\
-
+Not documented
 
 \(fn)" t nil)
 
 (autoload 'color-theme-solarized-light "color-theme-solarized" "\
-
+Not documented
 
 \(fn)" t nil)
 
@@ -33,7 +33,7 @@ Ported to Emacs by Greg Pfeil, http://ethanschoonover.com/solarized.
 ;;;;;;  "../../../../../.emacs.d/elpa/color-theme-solarized-20120301/solarized-dark-theme.el"
 ;;;;;;  "../../../../../.emacs.d/elpa/color-theme-solarized-20120301/solarized-definitions.el"
 ;;;;;;  "../../../../../.emacs.d/elpa/color-theme-solarized-20120301/solarized-light-theme.el")
-;;;;;;  (21126 7041 160038 0))
+;;;;;;  (21195 24541 219248))
 
 ;;;***
 
