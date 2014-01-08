@@ -19,10 +19,10 @@ Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-surround'
 Bundle 'vim-scripts/scratch.vim'
 Bundle 'altercation/vim-colors-solarized'
+Bundle 'kikijump/tslime.vim'
 
 filetype plugin indent on     " required!
 
-let g:Powerline_symbols='fancy'
 set laststatus=2  " always
 
 "Security exploits?
@@ -32,7 +32,7 @@ set modelines=0
 set cryptmethod=blowfish
 
 "Colors
-colorscheme solarized
+"colorscheme solarized
 set background=dark
 set t_Co=256
 
@@ -144,16 +144,8 @@ autocmd BufRead,BufNewFile *.md set filetype=markdown
 autocmd BufRead,BufNewFile *.md setlocal tw=79
 
 "Scheme, Lisp, Clojure, Qi, & Shen: paren-matching
-autocmd BufRead,BufNewFile *.scm,*.lsp,*.lisp,*.cl,*.clj,*.qi,*.shen setlocal sm
+autocmd BufRead,BufNewFile *.scm,*.lisp,*.cl,*.clj,*.qi,*.shen setlocal sm
 
 "HTML, Ruby, YAML: set tab stop and shift width to 2
 autocmd BufRead,BufNewFile *.html,*.rb,*.yml setlocal ts=2
 autocmd BufRead,BufNewFile *.html,*.rb,*.yml setlocal sw=2
-
-"Google's Go language
-set rtp+=/usr/local/go/misc/vim
-au BufRead,BufNewFile *.go set filetype=go
-au BufRead,BufNewFile *.go set noexpandtab
-
-"Agda
-au BufNewFile,BufRead *.agda set filetype=agda
