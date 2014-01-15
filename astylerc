@@ -1,0 +1,8 @@
+--style=java
+--indent=spaces=4
+--convert-tabs
+--pad-oper
+--pad-header
+--unpad-paren
+--add-brackets
+
