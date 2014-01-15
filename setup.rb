@@ -3,6 +3,7 @@
 HOME = ENV['HOME']
 DOTFILES = File.join(HOME, 'github', 'dotfiles')
 LINKS = {
+  'astylerc'     => '.astylerc',
   'emacs'        => '.emacs',
   'emacs_d'      => '.emacs.d',
   'ghci'         => '.ghci',

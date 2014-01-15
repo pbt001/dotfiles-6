@@ -2,6 +2,7 @@
 
 HOME = ENV['HOME']
 LINKS = '
+    .astylerc
     .emacs
     .emacs.d
     .ghci
