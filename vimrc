@@ -49,6 +49,9 @@ set autoindent
 "Guess indent level of any new line
 set smartindent
 
+"Don't indent access specifiers or labels in C, C++
+set cinoptions=L0,g0
+
 "Show matching parenthesis, etc.
 set showmatch
 

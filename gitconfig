@@ -9,7 +9,7 @@
 [color]
 	ui = auto
 [core]
-	editor = /usr/local/bin/vim
+	editor = vim
 	excludesfile = /Users/grahamenos/.gitignore
 [push]
     default = matching
