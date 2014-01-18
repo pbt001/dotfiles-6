@@ -7,4 +7,6 @@
 --align-reference=type
 --add-brackets
 --indent-col1-comments
---max-code-length=80
+--close-templates
+--max-code-length=79
+--lineend=linux
