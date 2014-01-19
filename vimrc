@@ -142,6 +142,11 @@ nnoremap ; :
 "Quicker escaping
 inoremap jj <ESC>
 
+"tslime.vim key mappings
+vmap <C-c><C-c> <Plug>SendSelectionToTmux
+nmap <C-c><C-c> <Plug>NormalModeSendToTmux
+nmap <C-c>r <Plug>SetTmuxVars
+
 "Markdown
 autocmd BufRead,BufNewFile *.md set filetype=markdown
 autocmd BufRead,BufNewFile *.md setlocal tw=79
