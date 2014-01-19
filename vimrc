@@ -19,7 +19,7 @@ Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-surround'
 Bundle 'vim-scripts/scratch.vim'
 Bundle 'altercation/vim-colors-solarized'
-Bundle 'kikijump/tslime.vim'
+Bundle 'jgdavey/tslime.vim'
 
 filetype plugin indent on     " required!
 
