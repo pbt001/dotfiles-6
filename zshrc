@@ -48,6 +48,7 @@ source $ZSH/oh-my-zsh.sh
 alias \:q='exit'
 alias \:e='vim'
 alias grm='git status -s | grep "^ D" | cut -d" " -f3 | xargs git rm'
+bindkey -v
 export EDITOR='vim'
 export KEYTIMEOUT=1
 export PATH="$HOME/bin:$HOME/.local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/sbin:$PATH"
