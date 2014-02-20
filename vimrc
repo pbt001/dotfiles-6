@@ -19,6 +19,7 @@ Bundle 'tpope/vim-surround'
 Bundle 'vim-scripts/scratch.vim'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'jgdavey/tslime.vim'
+Bundle 'vim-pandoc/vim-pandoc'
 
 filetype plugin indent on     " required!
 
@@ -146,10 +147,6 @@ inoremap jj <ESC>
 vmap <C-c><C-c> <Plug>SendSelectionToTmux
 nmap <C-c><C-c> <Plug>NormalModeSendToTmux
 nmap <C-c>r <Plug>SetTmuxVars
-
-"Markdown
-autocmd BufRead,BufNewFile *.md set filetype=markdown
-autocmd BufRead,BufNewFile *.md setlocal tw=79
 
 "Scheme, Lisp, Clojure, Qi, & Shen: paren-matching
 autocmd BufRead,BufNewFile *.scm,*.lisp,*.cl,*.clj,*.qi,*.shen setlocal sm

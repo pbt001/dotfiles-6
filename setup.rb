@@ -12,7 +12,6 @@ LINKS = {
   'haskeline'    => '.haskeline',
   'inputrc'      => '.inputrc',
   'irbrc'        => '.irbrc',
-  'ocamlinit'    => '.ocamlinit',
   'perlcriticrc' => '.perlcriticrc',
   'perltidyrc'   => '.perltidyrc',
   'tmux_conf'    => '.tmux.conf',

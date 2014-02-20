@@ -11,7 +11,6 @@ LINKS = '
     .haskeline
     .inputrc
     .irbrc
-    .ocamlinit
     .perlcriticrc
     .perltidyrc
     .tmux.conf
