@@ -5,7 +5,7 @@ ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME='edvardm'
+ZSH_THEME='cloud'
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
@@ -47,7 +47,7 @@ source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
 alias \:q='exit'
 alias \:e='vim'
-alias grm='git status -s | grep "^ D" | cut -d" " -f3 | xargs git rm'
+alias grm='git status -s | grep "^ D" | awk "{print $3}" | xargs git rm'
 bindkey -v
 export EDITOR='vim'
 export KEYTIMEOUT=1
