@@ -51,5 +51,5 @@ alias grm='git status -s | grep "^ D" | awk "{print $2}" | xargs git rm'
 bindkey -v
 export EDITOR='vim'
 export KEYTIMEOUT=1
-export PATH="$HOME/bin:$HOME/.local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/sbin:$PATH"
+export PATH="$HOME/bin:$HOME/.local/bin:/home/genos/.cabal/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/sbin:$PATH"
 export TERM=xterm-256color
