@@ -12,14 +12,13 @@ Bundle 'gmarik/vundle'
 " My Bundles here:
 "
 " original repos on github
-Bundle 'mileszs/ack.vim'
+Bundle 'altercation/vim-colors-solarized'
 Bundle 'tomtom/tcomment_vim'
 Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-surround'
-Bundle 'vim-scripts/scratch.vim'
-Bundle 'altercation/vim-colors-solarized'
 Bundle 'jgdavey/tslime.vim'
-Bundle 'vim-pandoc/vim-pandoc'
+Bundle 'JuliaLang/julia-vim'
+Bundle 'PProvost/vim-markdown-jekyll'
 
 filetype plugin indent on     " required!
 
@@ -32,9 +31,8 @@ set modelines=0
 set cryptmethod=blowfish
 
 "Colors
-"colorscheme solarized
-colorscheme slate
 set background=dark
+colorscheme solarized
 set t_Co=256
 
 "syntax coloring, other stuff

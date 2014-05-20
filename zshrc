@@ -47,9 +47,12 @@ source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
 alias \:q='exit'
 alias \:e='vim'
-alias grm='git status -s | grep "^ D" | awk "{print $2}" | xargs git rm'
+alias grm="git status -s | grep '^ D' | awk '{print $NF}' | xargs git rm"
+alias ijulia='ipython notebook --profile julia'
 bindkey -v
 export EDITOR='vim'
 export KEYTIMEOUT=1
-export PATH="$HOME/bin:$HOME/.local/bin:/home/genos/.cabal/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/sbin:$PATH"
 export TERM=xterm-256color
+typeset -aU path
+path=( $HOME/.rbenv/bin $HOME/bin $HOME/.local/bin /home/genos/.cabal/bin /usr/bin /bin /usr/sbin /sbin /usr/local/bin /usr/local/sbin $PATH)
+eval "$(rbenv init -)"
