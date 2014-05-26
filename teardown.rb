@@ -3,16 +3,13 @@
 HOME = ENV['HOME']
 LINKS = '
     .astylerc
-    .emacs
-    .emacs.d
     .ghci
     .gitconfig
     .gvimrc
     .haskeline
+    .hirc
     .inputrc
     .irbrc
-    .perlcriticrc
-    .perltidyrc
     .tmux.conf
     .vim
     .vimrc

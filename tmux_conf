@@ -21,7 +21,6 @@ bind p paste-buffer
 bind-key -t vi-copy 'v' begin-selection
 bind-key -t vi-copy 'y' copy-selection
 
-
 ## http://robots.thoughtbot.com/post/2166174647/love-hate-tmux 
 # colors of status bar
 set -g status-bg '#54ff9f'

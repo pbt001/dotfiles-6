@@ -32,7 +32,6 @@ set cryptmethod=blowfish
 
 "Colors
 set background=dark
-colorscheme solarized
 set t_Co=256
 
 "syntax coloring, other stuff

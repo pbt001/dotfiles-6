@@ -29,7 +29,8 @@ ZSH_THEME='cloud'
 # Uncomment following line if you want to disable command autocorrection
 # DISABLE_CORRECTION="true"
 
-# Uncomment following line if you want red dots to be displayed while waiting for completion
+# Uncomment following line if you want red dots to be displayed while waiting
+# for completion
 # COMPLETION_WAITING_DOTS="true"
 
 # Uncomment following line if you want to disable marking untracked files under
@@ -37,22 +38,30 @@ ZSH_THEME='cloud'
 # much faster.
 # DISABLE_UNTRACKED_FILES_DIRTY="true"
 
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
+# Which plugins would you like to load? (plugins can be found in
+# ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(colorize git history osx python ruby tmux)
+plugins=(cabal colorize git history python theme tmux vi-mode vim-interaction
+         virtualenv virtualenvwrapper vundle)
 
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 alias \:q='exit'
 alias \:e='vim'
-alias grm="git status -s | grep '^ D' | awk '{print $NF}' | xargs git rm"
+alias gem='noglob gem1.9.1'
+alias grm='git status -s | grep "^ D" | perl -lpe "s/ D //g" | xargs git rm'
 alias ijulia='ipython notebook --profile julia'
-bindkey -v
+alias rake='noglob rake1.9.1'
+alias ruby='noglob ruby1.9.1'
 export EDITOR='vim'
 export KEYTIMEOUT=1
 export TERM=xterm-256color
+# <<< virtualenvwrapper
+export WORKON_HOME=~/Envs
+export PROJECT_HOME=~/Devel
+# >>>
 typeset -aU path
-path=( $HOME/.rbenv/bin $HOME/bin $HOME/.local/bin /home/genos/.cabal/bin /usr/bin /bin /usr/sbin /sbin /usr/local/bin /usr/local/sbin $PATH)
-eval "$(rbenv init -)"
+path=($HOME/bin $HOME/.local/bin /home/genos/.cabal/bin /usr/bin /bin /usr/sbin
+      /sbin /usr/local/bin /usr/local/sbin $PATH)
