@@ -42,25 +42,36 @@ ZSH_THEME='cloud'
 # ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(cabal colorize git history python theme tmux vi-mode vim-interaction
-         virtualenv virtualenvwrapper vundle)
+plugins=(cabal coffee colorize git history python themes tmux vi-mode
+         vim-interaction virtualenvwrapper vundle)
 
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 alias \:q='exit'
 alias \:e='vim'
-alias gem='noglob gem1.9.1'
-alias grm='git status -s | grep "^ D" | perl -lpe "s/ D //g" | xargs git rm'
+alias gem='gem1.9.1'
+alias grm='git status -s | grep "^ D" | sed -e "s/^\s+D\s*//g" | xargs git rm'
 alias ijulia='ipython notebook --profile julia'
 alias rake='noglob rake1.9.1'
-alias ruby='noglob ruby1.9.1'
+alias ruby='ruby1.9.1'
 export EDITOR='vim'
 export KEYTIMEOUT=1
 export TERM=xterm-256color
+# <<< nocorrect: don't be so eager, zsh
+alias cp='nocorrect cp'
+alias ln='nocorrect ln'
+alias mkdir='nocorrect mkdir'
+alias mv='nocorrect mv'
+alias touch='nocorrect touch'
+# >>>
 # <<< virtualenvwrapper
 export WORKON_HOME=~/Envs
 export PROJECT_HOME=~/Devel
+# >>>
+# <<< zmv
+autoload -U zmv
+alias mmv='noglob zmv -W'
 # >>>
 typeset -aU path
 path=($HOME/bin $HOME/.local/bin /home/genos/.cabal/bin /usr/bin /bin /usr/sbin
