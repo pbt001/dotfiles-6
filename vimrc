@@ -149,5 +149,7 @@ nmap <C-c>r <Plug>SetTmuxVars
 autocmd BufRead,BufNewFile *.scm,*.lisp,*.cl,*.clj,*.qi,*.shen setlocal sm
 
 "HTML, Ruby, YAML: set tab stop and shift width to 2
-autocmd BufRead,BufNewFile *.html,*.rb,*.yml setlocal ts=2
-autocmd BufRead,BufNewFile *.html,*.rb,*.yml setlocal sw=2
+autocmd BufRead,BufNewFile *.html,*.rb,*.yml setlocal ts=2 sw=2
+
+" Markdown
+autocmd BufRead,BufNewFile *.md setlocal ft=markdown tw=79
