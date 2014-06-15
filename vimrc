@@ -12,14 +12,13 @@ Bundle 'gmarik/vundle'
 " My Bundles here:
 "
 " original repos on github
-"Bundle 'Lokaltog/vim-powerline'
-Bundle 'mileszs/ack.vim'
+Bundle 'altercation/vim-colors-solarized'
 Bundle 'tomtom/tcomment_vim'
 Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-surround'
-Bundle 'vim-scripts/scratch.vim'
-Bundle 'altercation/vim-colors-solarized'
 Bundle 'jgdavey/tslime.vim'
+Bundle 'JuliaLang/julia-vim'
+Bundle 'PProvost/vim-markdown-jekyll'
 
 filetype plugin indent on     " required!
 
@@ -32,7 +31,6 @@ set modelines=0
 set cryptmethod=blowfish
 
 "Colors
-"colorscheme solarized
 set background=dark
 set t_Co=256
 
@@ -144,13 +142,11 @@ vmap <C-c><C-c> <Plug>SendSelectionToTmux
 nmap <C-c><C-c> <Plug>NormalModeSendToTmux
 nmap <C-c>r <Plug>SetTmuxVars
 
-"Markdown
-autocmd BufRead,BufNewFile *.md set filetype=markdown
-autocmd BufRead,BufNewFile *.md setlocal tw=79
-
 "Scheme, Lisp, Clojure, Qi, & Shen: paren-matching
 autocmd BufRead,BufNewFile *.scm,*.lisp,*.cl,*.clj,*.qi,*.shen setlocal sm
 
 "HTML, Ruby, YAML: set tab stop and shift width to 2
-autocmd BufRead,BufNewFile *.html,*.rb,*.yml setlocal ts=2
-autocmd BufRead,BufNewFile *.html,*.rb,*.yml setlocal sw=2
+autocmd BufRead,BufNewFile *.html,*.rb,*.yml setlocal ts=2 sw=2
+
+" Markdown
+autocmd BufRead,BufNewFile *.md setlocal ft=markdown tw=79

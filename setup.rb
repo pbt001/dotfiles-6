@@ -1,25 +1,10 @@
 #!/usr/bin/env ruby
 
+require 'yaml'
+
 HOME = ENV['HOME']
 DOTFILES = File.join(HOME, 'github', 'dotfiles')
-LINKS = {
-  'astylerc'     => '.astylerc',
-  'emacs'        => '.emacs',
-  'emacs_d'      => '.emacs.d',
-  'ghci'         => '.ghci',
-  'gitconfig'    => '.gitconfig',
-  'gvimrc'       => '.gvimrc',
-  'haskeline'    => '.haskeline',
-  'inputrc'      => '.inputrc',
-  'irbrc'        => '.irbrc',
-  'ocamlinit'    => '.ocamlinit',
-  'perlcriticrc' => '.perlcriticrc',
-  'perltidyrc'   => '.perltidyrc',
-  'tmux_conf'    => '.tmux.conf',
-  'vim'          => '.vim',
-  'vimrc'        => '.vimrc',
-  'zshrc'        => '.zshrc'
-}
+LINKS = YAML::load_file 'config.yaml'
 
 puts 'Setting up...'
 LINKS.each do |file, link|

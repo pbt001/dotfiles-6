@@ -29,7 +29,8 @@ ZSH_THEME='cloud'
 # Uncomment following line if you want to disable command autocorrection
 # DISABLE_CORRECTION="true"
 
-# Uncomment following line if you want red dots to be displayed while waiting for completion
+# Uncomment following line if you want red dots to be displayed while waiting
+# for completion
 # COMPLETION_WAITING_DOTS="true"
 
 # Uncomment following line if you want to disable marking untracked files under
@@ -37,19 +38,42 @@ ZSH_THEME='cloud'
 # much faster.
 # DISABLE_UNTRACKED_FILES_DIRTY="true"
 
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
+# Which plugins would you like to load? (plugins can be found in
+# ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(colorize git history osx python ruby tmux)
+plugins=(cabal coffee colorize git history python themes tmux vi-mode
+         vim-interaction virtualenvwrapper vundle)
 
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 alias \:q='exit'
 alias \:e='vim'
-alias grm="git status -s | grep '^ D' | awk '{print $2}' | xargs git rm"
 bindkey -v
+alias gem='gem1.9.1'
+alias grm='git status -s | grep "^ D" | sed -e "s/^\s+D\s*//g" | xargs git rm'
+alias ijulia='ipython notebook --profile julia'
+alias rake='noglob rake1.9.1'
+alias ruby='ruby1.9.1'
 export EDITOR='vim'
 export KEYTIMEOUT=1
-export PATH="$HOME/bin:$HOME/.local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/sbin:$PATH"
 export TERM=xterm-256color
+# <<< nocorrect: don't be so eager, zsh
+alias cp='nocorrect cp'
+alias ln='nocorrect ln'
+alias mkdir='nocorrect mkdir'
+alias mv='nocorrect mv'
+alias touch='nocorrect touch'
+# >>>
+# <<< virtualenvwrapper
+export WORKON_HOME=~/Envs
+export PROJECT_HOME=~/Devel
+# >>>
+# <<< zmv
+autoload -U zmv
+alias mmv='noglob zmv -W'
+# >>>
+typeset -aU path
+path=($HOME/bin $HOME/.local/bin /home/genos/.cabal/bin /usr/bin /bin /usr/sbin
+      /sbin /usr/local/bin /usr/local/sbin $PATH)

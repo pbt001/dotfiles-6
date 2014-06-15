@@ -1,29 +1,14 @@
 #!/usr/bin/env ruby
 
+require 'yaml'
+
 HOME = ENV['HOME']
-LINKS = '
-    .astylerc
-    .emacs
-    .emacs.d
-    .ghci
-    .gitconfig
-    .gvimrc
-    .haskeline
-    .inputrc
-    .irbrc
-    .ocamlinit
-    .perlcriticrc
-    .perltidyrc
-    .tmux.conf
-    .vim
-    .vimrc
-    .zshrc
-'.split
+LINKS = YAML::load_file 'config.yaml'
 
 puts 'Tearing down...'
-LINKS.each do |f|
+LINKS.each do |_, link|
   begin
-    File.unlink File.join(HOME, f)
+    File.unlink File.join(HOME, link)
   rescue
     # ignore errors
   end
