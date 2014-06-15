@@ -47,7 +47,7 @@ source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
 alias \:q='exit'
 alias \:e='vim'
-alias grm='git status -s | grep "^ D" | awk "{print $3}" | xargs git rm'
+alias grm="git status -s | grep '^ D' | awk '{print $2}' | xargs git rm"
 bindkey -v
 export EDITOR='vim'
 export KEYTIMEOUT=1

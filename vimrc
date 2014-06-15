@@ -86,9 +86,6 @@ inoremap <S-Tab> <C-D>
 "Don't include an extra space when joining lines
 set nojoinspaces
 
-"use color column for width warnings
-set colorcolumn=80
-
 "Perl/Python regexes instead of Vim's
 nnoremap / /\v
 vnoremap / /\v
