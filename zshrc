@@ -50,6 +50,7 @@ source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
 alias \:q='exit'
 alias \:e='vim'
+bindkey -v
 alias gem='gem1.9.1'
 alias grm='git status -s | grep "^ D" | sed -e "s/^\s*D\s*//g" | xargs git rm'
 alias ijulia='ipython notebook --profile julia'
