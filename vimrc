@@ -18,7 +18,6 @@ Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-surround'
 Bundle 'jgdavey/tslime.vim'
 Bundle 'JuliaLang/julia-vim'
-"Bundle 'PProvost/vim-markdown-jekyll'
 Bundle 'wting/rust.vim'
 Bundle 'guns/vim-clojure-static'
 
@@ -145,7 +144,7 @@ nmap <C-c><C-c> <Plug>NormalModeSendToTmux
 nmap <C-c>r <Plug>SetTmuxVars
 
 "Scheme, Lisp, Clojure, Qi, & Shen: paren-matching
-autocmd BufRead,BufNewFile *.scm,*.lisp,*.cl,*.clj,*.qi,*.shen setlocal sm
+autocmd BufRead,BufNewFile *.scm,*.lisp,*.cl,*.clj,*.qi,*.shen setlocal lisp sm
 
 "HTML, Ruby, YAML: set tab stop and shift width to 2
 autocmd BufRead,BufNewFile *.html,*.rb,*.yml setlocal ts=2 sw=2
