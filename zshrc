@@ -42,7 +42,7 @@ ZSH_THEME='cloud'
 # ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(cabal coffee colorize git history python themes tmux vi-mode
+plugins=(cabal coffee colorize git history lein python themes tmux vi-mode
          vim-interaction virtualenvwrapper vundle)
 
 source $ZSH/oh-my-zsh.sh
@@ -51,8 +51,9 @@ source $ZSH/oh-my-zsh.sh
 alias \:q='exit'
 alias \:e='vim'
 alias gem='gem1.9.1'
-alias grm='git status -s | grep "^ D" | sed -e "s/^\s+D\s*//g" | xargs git rm'
+alias grm='git status -s | grep "^ D" | sed -e "s/^\s*D\s*//g" | xargs git rm'
 alias ijulia='ipython notebook --profile julia'
+alias lrt='ls -lrt'
 alias rake='noglob rake1.9.1'
 alias ruby='ruby1.9.1'
 export EDITOR='vim'

@@ -18,7 +18,9 @@ Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-surround'
 Bundle 'jgdavey/tslime.vim'
 Bundle 'JuliaLang/julia-vim'
-Bundle 'PProvost/vim-markdown-jekyll'
+"Bundle 'PProvost/vim-markdown-jekyll'
+Bundle 'wting/rust.vim'
+Bundle 'guns/vim-clojure-static'
 
 filetype plugin indent on     " required!
 
