@@ -143,11 +143,18 @@ vmap <C-c><C-c> <Plug>SendSelectionToTmux
 nmap <C-c><C-c> <Plug>NormalModeSendToTmux
 nmap <C-c>r <Plug>SetTmuxVars
 
-"Scheme, Lisp, Clojure, Qi, & Shen: paren-matching
-autocmd BufRead,BufNewFile *.scm,*.lisp,*.cl,*.clj,*.qi,*.shen setlocal lisp sm
+"Scheme, Lisp, ASD, Clojure, Qi, & Shen: paren-matching
+autocmd BufRead,BufNewFile *.asd setlocal ft=lisp lisp sm
+autocmd BufRead,BufNewFile *.scm,*.lisp,*.clj,*.qi,*.shen setlocal lisp sm
 
 "HTML, Ruby, YAML: set tab stop and shift width to 2
 autocmd BufRead,BufNewFile *.html,*.rb,*.yml setlocal ts=2 sw=2
 
 " Markdown
 autocmd BufRead,BufNewFile *.md setlocal ft=markdown tw=79
+
+" {La}TeX
+autocmd BufRead,BufNewFile *.tex setlocal tw=79
+
+" http://jasonseney.com/post/18646147210/open-edit-save-encrypted-files-with-vim-and-gpg
+command -nargs=1 WriteEncrypted w !gpg -c -o <q-args>

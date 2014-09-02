@@ -78,3 +78,7 @@ alias mmv='noglob zmv -W'
 typeset -aU path
 path=($HOME/bin $HOME/.local/bin /home/genos/.cabal/bin /usr/bin /bin /usr/sbin
       /sbin /usr/local/bin /usr/local/sbin $PATH)
+# <<< http://jasonseney.com/post/18646147210/open-edit-save-encrypted-files-with-vim-and-gpg
+vimdecrypt() { gpg -d "$1" | vim - -n -i "NONE" "+set filetype=$2"; }
+alias vd='vimdecrypt'
+# >>>
