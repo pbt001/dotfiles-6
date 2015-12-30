@@ -48,17 +48,22 @@ plugins=(cabal coffee colorize git history lein python themes tmux vi-mode
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
+bindkey -v
 alias \:q='exit'
 alias \:e='vim'
-bindkey -v
-alias gem='gem1.9.1'
-alias grm='git status -s | grep "^ D" | sed -e "s/^\s*D\s*//g" | xargs git rm'
-alias ijulia='ipython notebook --profile julia'
+alias glol='git log --graph --decorate --oneline'
+alias grm='git status --porcelain | grep "^\s*D" | sed -e "s/^\s*D\s*//g" | xargs git rm'
+alias ip=ipython
 alias lrt='ls -lrt'
-alias rake='noglob rake1.9.1'
-alias ruby='ruby1.9.1'
+alias t=todo.sh
+alias v=vim
+export C_INCLUDE_PATH="$HOME/include:$C_INCLUDE_PATH"
+export CPLUS_INCLUDE_PATH="$C_INCLUDE_PATH:$CPLUS_INCLUDE_PATH"
 export EDITOR='vim'
 export KEYTIMEOUT=1
+export LD_LIBRARY_PATH="$HOME/lib:$LD_LIBRARY_PATH"
+export LESS='CiMQRX'
+export SHELL=$(which zsh)
 export TERM=xterm-256color
 # <<< nocorrect: don't be so eager, zsh
 alias cp='nocorrect cp'
@@ -74,6 +79,7 @@ export PROJECT_HOME=~/Devel
 # <<< zmv
 autoload -U zmv
 alias mmv='noglob zmv -W'
+alias mcp='noglob zmv -WC'
 # >>>
 typeset -aU path
 path=($HOME/bin $HOME/.local/bin /home/genos/.cabal/bin /usr/bin /bin /usr/sbin
