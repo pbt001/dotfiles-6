@@ -10,3 +10,6 @@ set lines=24 columns=90
 
 "Transparency
 "set transparency=17
+
+"Font
+set guifont=InputMono\ Medium:h12

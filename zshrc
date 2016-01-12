@@ -42,8 +42,8 @@ ZSH_THEME='cloud'
 # ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(cabal coffee colorize git history lein python themes tmux vi-mode
-         vim-interaction virtualenvwrapper vundle)
+plugins=(autojump brew cabal coffee colorize git history lein python sbt themes
+vi-mode vim-interaction vundle)  # tmux virtualenvwrapper  
 
 source $ZSH/oh-my-zsh.sh
 
@@ -60,6 +60,7 @@ alias v=vim
 export C_INCLUDE_PATH="$HOME/include:$C_INCLUDE_PATH"
 export CPLUS_INCLUDE_PATH="$C_INCLUDE_PATH:$CPLUS_INCLUDE_PATH"
 export EDITOR='vim'
+export HOMEBREW_GITHUB_API_TOKEN="496c515bbebcfb5f85bab365ebab27619dd7935e"
 export KEYTIMEOUT=1
 export LD_LIBRARY_PATH="$HOME/lib:$LD_LIBRARY_PATH"
 export LESS='CiMQRX'
@@ -82,8 +83,9 @@ alias mmv='noglob zmv -W'
 alias mcp='noglob zmv -WC'
 # >>>
 typeset -aU path
-path=($HOME/bin $HOME/.local/bin /home/genos/.cabal/bin /usr/bin /bin /usr/sbin
-      /sbin /usr/local/bin /usr/local/sbin $PATH)
+path=($HOME/bin /Library/TeX/Distributions/Programs/texbin/
+$HOME/Library/Haskell/bin /usr/bin /bin /usr/sbin /sbin /usr/local/bin
+/usr/local/sbin $PATH)
 # <<< http://jasonseney.com/post/18646147210/open-edit-save-encrypted-files-with-vim-and-gpg
 vimdecrypt() { gpg -d "$1" | vim - -n -i "NONE" "+set filetype=$2"; }
 alias vd='vimdecrypt'
