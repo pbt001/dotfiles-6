@@ -83,9 +83,8 @@ alias mmv='noglob zmv -W'
 alias mcp='noglob zmv -WC'
 # >>>
 typeset -aU path
-path=($HOME/bin /Library/TeX/Distributions/Programs/texbin/
-$HOME/Library/Haskell/bin /usr/bin /bin /usr/sbin /sbin /usr/local/bin
-/usr/local/sbin $PATH)
+path=($HOME/bin /Library/TeX/Distributions/Programs/texbin/ /usr/bin /bin
+/usr/sbin /sbin /usr/local/bin /usr/local/sbin $PATH)
 # <<< http://jasonseney.com/post/18646147210/open-edit-save-encrypted-files-with-vim-and-gpg
 vimdecrypt() { gpg -d "$1" | vim - -n -i "NONE" "+set filetype=$2"; }
 alias vd='vimdecrypt'
