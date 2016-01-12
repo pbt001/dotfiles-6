@@ -43,7 +43,7 @@ ZSH_THEME='cloud'
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(autojump brew cabal coffee colorize git history lein python sbt themes
-vi-mode vim-interaction vundle)  # tmux virtualenvwrapper  
+vi-mode vim-interaction vundle)  # tmux virtualenvwrapper
 
 source $ZSH/oh-my-zsh.sh
 

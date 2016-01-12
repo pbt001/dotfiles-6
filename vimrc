@@ -7,19 +7,22 @@ call vundle#rc()
 
 " let Vundle manage Vundle
 " required! 
-Bundle 'gmarik/vundle'
+Plugin 'VundleVim/Vundle.vim'
 
 " My Bundles here:
 "
 " original repos on github
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'tomtom/tcomment_vim'
-Bundle 'tpope/vim-repeat'
-Bundle 'tpope/vim-surround'
-Bundle 'jgdavey/tslime.vim'
-Bundle 'JuliaLang/julia-vim'
-Bundle 'wting/rust.vim'
-Bundle 'guns/vim-clojure-static'
+Plugin 'tomtom/tcomment_vim'
+Plugin 'tpope/vim-repeat'
+Plugin 'tpope/vim-surround'
+Plugin 'jgdavey/tslime.vim'
+Plugin 'JuliaLang/julia-vim'
+Plugin 'wting/rust.vim'
+Plugin 'ervandew/supertab'
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'godlygeek/tabular'
+Plugin 'rking/ag.vim'
 
 filetype plugin indent on     " required!
 
@@ -129,8 +132,8 @@ set wildmode=longest,full
 "Backspace all the things
 set backspace=indent,eol,start
 
-"Using Ack
-nnoremap <leader>a :Ack
+"Using The_Silver_Searcher
+nnoremap <leader>a :Ag 
 
 "Less typing to enter a command
 nnoremap ; :
