@@ -43,7 +43,7 @@ ZSH_THEME='cloud'
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(autojump brew cabal coffee colorize git history lein python sbt themes
-vi-mode vim-interaction vundle)  # tmux virtualenvwrapper
+vi-mode vim-interaction vundle) # tmux virtualenvwrapper
 
 source $ZSH/oh-my-zsh.sh
 
@@ -52,7 +52,7 @@ bindkey -v
 alias \:q='exit'
 alias \:e='vim'
 alias glol='git log --graph --decorate --oneline'
-alias grm='git status --porcelain | grep "^\s*D" | sed -e "s/^\s*D\s*//g" | xargs git rm'
+alias grm='git status --porcelain | grep "^\s*D" | cut -d " " -f 3 | xargs git rm'
 alias ip=ipython
 alias lrt='ls -lrt'
 alias t=todo.sh
@@ -74,8 +74,9 @@ alias mv='nocorrect mv'
 alias touch='nocorrect touch'
 # >>>
 # <<< virtualenvwrapper
-export WORKON_HOME=~/Envs
+export VIRTUALENVWRAPPER_PYTHON="/usr/local/bin/python3"
 export PROJECT_HOME=~/Devel
+export WORKON_HOME=~/Envs
 # >>>
 # <<< zmv
 autoload -U zmv
@@ -83,8 +84,9 @@ alias mmv='noglob zmv -W'
 alias mcp='noglob zmv -WC'
 # >>>
 typeset -aU path
-path=($HOME/bin /Library/TeX/Distributions/Programs/texbin/ /usr/bin /bin
-/usr/sbin /sbin /usr/local/bin /usr/local/sbin $PATH)
+path=($HOME/bin /Library/TeX/Distributions/Programs/texbin
+$HOME/Library/Haskell/bin /usr/local/bin /usr/bin /bin /usr/sbin /sbin
+/usr/local/sbin $PATH)
 # <<< http://jasonseney.com/post/18646147210/open-edit-save-encrypted-files-with-vim-and-gpg
 vimdecrypt() { gpg -d "$1" | vim - -n -i "NONE" "+set filetype=$2"; }
 alias vd='vimdecrypt'
