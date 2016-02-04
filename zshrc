@@ -42,8 +42,8 @@ ZSH_THEME='cloud'
 # ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(autojump brew cabal coffee colorize git history lein python sbt themes
-vi-mode vim-interaction vundle) # tmux virtualenvwrapper
+plugins=(autojump brew cabal colored-man-pages colorize git history lein pip
+python sbt themes tmux vi-mode vundle) # tmux virtualenvwrapper
 
 source $ZSH/oh-my-zsh.sh
 
@@ -54,6 +54,7 @@ alias \:e='vim'
 alias glol='git log --graph --decorate --oneline'
 alias grm='git status --porcelain | grep "^\s*D" | cut -d " " -f 3 | xargs git rm'
 alias ip=ipython
+alias ipn='ipython notebook'
 alias lrt='ls -lrt'
 alias t=todo.sh
 alias v=vim
@@ -75,6 +76,7 @@ alias touch='nocorrect touch'
 # >>>
 # <<< virtualenvwrapper
 export VIRTUALENVWRAPPER_PYTHON="/usr/local/bin/python3"
+source /usr/local/bin/virtualenvwrapper.sh
 export PROJECT_HOME=~/Devel
 export WORKON_HOME=~/Envs
 # >>>
@@ -85,9 +87,16 @@ alias mcp='noglob zmv -WC'
 # >>>
 typeset -aU path
 path=($HOME/bin /Library/TeX/Distributions/Programs/texbin
-$HOME/Library/Haskell/bin /usr/local/bin /usr/bin /bin /usr/sbin /sbin
-/usr/local/sbin $PATH)
+$HOME/Library/Haskell/bin $HOME/.scalaenv/shims /usr/local/bin /usr/bin /bin
+/usr/sbin /sbin /usr/local/sbin $PATH)
 # <<< http://jasonseney.com/post/18646147210/open-edit-save-encrypted-files-with-vim-and-gpg
 vimdecrypt() { gpg -d "$1" | vim - -n -i "NONE" "+set filetype=$2"; }
 alias vd='vimdecrypt'
 # >>>
+# >>> autojump
+source $(brew --prefix)/etc/autojump.sh
+#source $HOME/.autojump/etc/profile.d/autojump.zsh
+# <<<
+# >>> scalaenv
+eval "$(scalaenv init -)"
+# <<<
