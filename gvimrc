@@ -2,7 +2,7 @@
 set background=dark
 
 "Set the colorscheme to something nicer
-colorscheme macvim
+colorscheme molokai
 
 "Make the window same dimensions as my terminal preferences
 set lines=24 columns=90
