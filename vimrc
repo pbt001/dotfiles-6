@@ -23,6 +23,10 @@ Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'godlygeek/tabular'
 Plugin 'rking/ag.vim'
+Plugin 'derekwyatt/vim-scala'
+Plugin 'dpwright/vim-tup'
+Plugin 'ntpeters/vim-better-whitespace'
+Plugin 'tomasr/molokai'
 
 filetype plugin indent on     " required!
 
@@ -47,9 +51,6 @@ set enc=utf-8
 
 "Each line follows the indentation of the line above
 set autoindent
-
-"Guess indent level of any new line
-set smartindent
 
 "Don't indent access specifiers or labels in C, C++
 set cinoptions=L0,g0
