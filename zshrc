@@ -43,7 +43,7 @@ ZSH_THEME='cloud'
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(autojump brew cabal colored-man-pages colorize git history lein pip
-python sbt themes vi-mode vundle) # tmux virtualenvwrapper
+python themes vi-mode vundle) # tmux virtualenvwrapper
 
 source $ZSH/oh-my-zsh.sh
 
@@ -99,4 +99,7 @@ source $(brew --prefix)/etc/autojump.sh
 # <<<
 # >>> scalaenv
 eval "$(scalaenv init -)"
+# <<<
+# >>> opam
+. /Users/graham/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
 # <<<
