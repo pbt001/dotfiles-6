@@ -43,14 +43,19 @@ ZSH_THEME='cloud'
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(autojump brew cabal colored-man-pages colorize git history lein pip
-python themes vi-mode vundle) # tmux virtualenvwrapper
+python themes vi-mode vundle) # tmux virtualenvwrapper don't work
 
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
+typeset -aU path
+path=($HOME/bin /Library/TeX/Distributions/Programs/texbin
+$HOME/Library/Haskell/bin $HOME/.scalaenv/shims /usr/local/bin /usr/bin /bin
+/usr/sbin /sbin /usr/local/sbin $PATH)
 bindkey -v
 alias \:q='exit'
 alias \:e='vim'
+alias cadt='cat'  # fat finger
 alias glol='git log --graph --decorate --oneline'
 alias grm='git status --porcelain | grep "^\s*D" | cut -d " " -f 3 | xargs git rm'
 alias ip=ipython
@@ -85,10 +90,6 @@ autoload -U zmv
 alias mmv='noglob zmv -W'
 alias mcp='noglob zmv -WC'
 # >>>
-typeset -aU path
-path=($HOME/bin /Library/TeX/Distributions/Programs/texbin
-$HOME/Library/Haskell/bin $HOME/.scalaenv/shims /usr/local/bin /usr/bin /bin
-/usr/sbin /sbin /usr/local/sbin $PATH)
 # <<< http://jasonseney.com/post/18646147210/open-edit-save-encrypted-files-with-vim-and-gpg
 vimdecrypt() { gpg -d "$1" | vim - -n -i "NONE" "+set filetype=$2"; }
 alias vd='vimdecrypt'
