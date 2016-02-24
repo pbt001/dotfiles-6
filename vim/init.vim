@@ -1,0 +1,1 @@
+/Users/graham/github/dotfiles/nvimrc
