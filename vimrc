@@ -6,7 +6,7 @@ set rtp+=~/.vim/bundle/Vundle.vim/
 call vundle#rc()
 
 " let Vundle manage Vundle
-" required! 
+" required!
 Plugin 'VundleVim/Vundle.vim'
 
 " My Bundles here:
@@ -36,7 +36,9 @@ set laststatus=2  " always
 set modelines=0
 
 "encrypt with Blowfish
-set cryptmethod=blowfish
+if !has('nvim')
+    set cryptmethod=blowfish
+endif
 
 "Colors
 set background=dark
@@ -134,7 +136,7 @@ set wildmode=longest,full
 set backspace=indent,eol,start
 
 "Using The_Silver_Searcher
-nnoremap <leader>a :Ag 
+nnoremap <leader>a :Ag
 
 "Less typing to enter a command
 nnoremap ; :

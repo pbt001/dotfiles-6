@@ -1,4 +1,4 @@
---- 
+---
 astylerc: .astylerc
 ghci: .ghci
 gitconfig: .gitconfig
@@ -8,6 +8,7 @@ hirc: .hirc
 inputrc: .inputrc
 irbrc: .irbrc
 nvim: .config/nvim
+nvimrc: .config/nvim/init.vim
 stack_config: .stack/config.yaml
 todo_cfg: .todo.cfg
 tmux_conf: .tmux.conf
