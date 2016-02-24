@@ -8,4 +8,4 @@ colorscheme molokai
 set lines=24 columns=90
 
 "Font
-set guifont=InputMono\ Medium:h12
+set guifont=InputMonoCondensed\ ExLight:h12
