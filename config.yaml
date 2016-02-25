@@ -8,6 +8,7 @@ hirc: .hirc
 inputrc: .inputrc
 irbrc: .irbrc
 nvim: .config/nvim
+ocamlinit: .ocamlinit
 sbclrc: .sbclrc
 stack_config: .stack/config.yaml
 todo_cfg: .todo.cfg
