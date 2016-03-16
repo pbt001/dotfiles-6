@@ -9,6 +9,7 @@ inputrc: .inputrc
 irbrc: .irbrc
 nvim: .config/nvim
 ocamlinit: .ocamlinit
+lein_profile: .lein/profiles.clj
 sbclrc: .sbclrc
 stack_config: .stack/config.yaml
 todo_cfg: .todo.cfg

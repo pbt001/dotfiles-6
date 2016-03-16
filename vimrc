@@ -27,6 +27,13 @@ Plugin 'derekwyatt/vim-scala'
 Plugin 'dpwright/vim-tup'
 Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'tomasr/molokai'
+Plugin 'omlet.vim'
+Plugin 'the-lambda-church/merlin'
+Plugin 'guns/vim-sexp'
+Plugin 'tpope/vim-dispatch'
+Plugin 'tpope/vim-sexp-mappings-for-regular-people'
+Plugin 'tpope/vim-fireplace'
+Plugin 'tpope/vim-salve'
 
 filetype plugin indent on     " required!
 

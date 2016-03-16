@@ -42,16 +42,16 @@ ZSH_THEME='cloud'
 # ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(autojump brew cabal colored-man-pages colorize git history lein pip
-python themes vi-mode vundle) # tmux virtualenvwrapper don't work
+plugins=(autojump brew cabal colored-man-pages colorize git history lein
+mercurial pip python themes vi-mode vundle) # tmux virtualenvwrapper don't work
 
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-typeset -aU path
-path=($HOME/bin /Library/TeX/Distributions/Programs/texbin
-$HOME/Library/Haskell/bin $HOME/.scalaenv/shims /usr/local/bin /usr/bin /bin
-/usr/sbin /sbin /usr/local/sbin $PATH)
+path=($HOME/bin /usr/local/bin /usr/local/sbin /usr/bin /usr/sbin /bin /sbin
+/Library/TeX/Distributions/Programs/texbin $HOME/Library/Haskell/bin
+$HOME/.scalaenv/shims $path)
+typeset -U path
 bindkey -v
 alias \:q='exit'
 alias \:e='vim'
