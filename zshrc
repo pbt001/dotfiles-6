@@ -61,6 +61,7 @@ alias grm='git status --porcelain | grep "^\s*D" | cut -d " " -f 3 | xargs git r
 alias ip=ipython
 alias ipn='ipython notebook'
 alias lrt='ls -lrt'
+alias py='python3'
 alias t=todo.sh
 alias v=vim
 export C_INCLUDE_PATH="$HOME/include:$C_INCLUDE_PATH"

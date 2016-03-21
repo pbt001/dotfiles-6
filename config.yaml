@@ -7,13 +7,14 @@ haskeline: .haskeline
 hirc: .hirc
 inputrc: .inputrc
 irbrc: .irbrc
+lein_profile: .lein/profiles.clj
 nvim: .config/nvim
 ocamlinit: .ocamlinit
-lein_profile: .lein/profiles.clj
+pylintrc: .pylintrc
 sbclrc: .sbclrc
 stack_config: .stack/config.yaml
-todo_cfg: .todo.cfg
 tmux_conf: .tmux.conf
+todo_cfg: .todo.cfg
 vim: .vim
 vimrc: .vimrc
 xinitrc: .xinitrc
