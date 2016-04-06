@@ -25,3 +25,6 @@ bind-key -t vi-copy 'y' copy-selection
 # colors of status bar
 set -g status-bg '#455354'
 set -g status-fg '#C7C7C7'
+
+## https://www.reddit.com/r/haskell/comments/2ky0d8/vim_keybindings_in_ghci/
+set -sg escape-time 0
