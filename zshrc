@@ -62,6 +62,7 @@ alias ip=ipython
 alias ipn='jupyter notebook'
 alias lrt='ls -lrt'
 alias py='python3'
+alias q='rlwrap -c -r q/m32/q'
 alias t=todo.sh
 alias v=vim
 export C_INCLUDE_PATH="$HOME/include:$C_INCLUDE_PATH"
