@@ -13,6 +13,7 @@ ocamlinit: .ocamlinit
 pylintrc: .pylintrc
 sbclrc: .sbclrc
 stack_config: .stack/config.yaml
+stylish_haskell: .stylish-haskell.yaml
 tmux_conf: .tmux.conf
 todo_cfg: .todo.cfg
 vim: .vim
