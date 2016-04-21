@@ -1,5 +1,6 @@
 ---
 astylerc: .astylerc
+dups: bin/dups
 ghci: .ghci
 gitconfig: .gitconfig
 gvimrc: .gvimrc
@@ -10,12 +11,14 @@ irbrc: .irbrc
 lein_profile: .lein/profiles.clj
 nvim: .config/nvim
 ocamlinit: .ocamlinit
+passive: bin/passive
 pylintrc: .pylintrc
 sbclrc: .sbclrc
 stack_config: .stack/config.yaml
 stylish_haskell: .stylish-haskell.yaml
 tmux_conf: .tmux.conf
 todo_cfg: .todo.cfg
+weasel: bin/weasel
 vim: .vim
 vimrc: .vimrc
 xinitrc: .xinitrc
