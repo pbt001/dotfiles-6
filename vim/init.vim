@@ -34,6 +34,7 @@ Plugin 'tpope/vim-dispatch'
 Plugin 'tpope/vim-sexp-mappings-for-regular-people'
 Plugin 'tpope/vim-fireplace'
 Plugin 'tpope/vim-salve'
+Plugin 'maverickg/stan.vim'
 
 filetype plugin indent on     " required!
 
