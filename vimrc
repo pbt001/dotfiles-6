@@ -64,6 +64,9 @@ set autoindent
 "Don't indent access specifiers or labels in C, C++
 set cinoptions=L0,g0
 
+"Highlight 80th column
+set colorcolumn=80
+
 "Show matching parenthesis, etc.
 set showmatch
 
