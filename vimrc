@@ -156,5 +156,11 @@ vmap <C-c><C-c> <Plug>SendSelectionToTmux
 nmap <C-c><C-c> <Plug>NormalModeSendToTmux
 nmap <C-c>r <Plug>SetTmuxVars
 
-" http://jasonseney.com/post/18646147210/open-edit-save-encrypted-files-with-vim-and-gpg
+"http://jasonseney.com/post/18646147210/open-edit-save-encrypted-files-with-vim-and-gpg
 command -nargs=1 WriteEncrypted w !gpg -c -o <q-args>
+
+"Scala import sorting
+let g:scala_sort_across_groups=1
+
+"Move up the directory hierarchy until you find a tags file
+set tags=tags;/

@@ -1,5 +1,6 @@
 ---
 astylerc: .astylerc
+ctags: .ctags
 dups: bin/dups
 ghci: .ghci
 gitconfig: .gitconfig
