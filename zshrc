@@ -71,6 +71,7 @@ export EDITOR='vim'
 export HOMEBREW_GITHUB_API_TOKEN="496c515bbebcfb5f85bab365ebab27619dd7935e"
 export KEYTIMEOUT=1
 export LD_LIBRARY_PATH="$HOME/lib:$LD_LIBRARY_PATH"
+export LEIN_JAVA_CMD=${LEIN_JAVA_CMD-drip}
 export LESS='CiMQRX'
 export SHELL=$(which zsh)
 export TERM=xterm-256color
