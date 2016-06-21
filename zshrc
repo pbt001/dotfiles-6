@@ -42,7 +42,7 @@ ZSH_THEME='cloud'
 # ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(autojump brew cabal colored-man-pages colorize git history lein
+plugins=(brew fasd cabal colored-man-pages colorize git history lein
 mercurial pip python themes vi-mode vundle) # tmux virtualenvwrapper don't work
 
 source $ZSH/oh-my-zsh.sh
@@ -64,11 +64,11 @@ alias lrt='ls -lrt'
 alias py='python3'
 alias q="rlwrap -c -r $HOME/q/m32/q"
 alias t=todo.sh
-alias v=vim
 export C_INCLUDE_PATH="$HOME/include:$C_INCLUDE_PATH"
 export CPLUS_INCLUDE_PATH="$C_INCLUDE_PATH:$CPLUS_INCLUDE_PATH"
 export EDITOR='vim'
 export HOMEBREW_GITHUB_API_TOKEN="496c515bbebcfb5f85bab365ebab27619dd7935e"
+export JAVACMD='drip'
 export KEYTIMEOUT=1
 export LD_LIBRARY_PATH="$HOME/lib:$LD_LIBRARY_PATH"
 export LEIN_JAVA_CMD=${LEIN_JAVA_CMD-drip}
@@ -88,22 +88,19 @@ source /usr/local/bin/virtualenvwrapper.sh
 export PROJECT_HOME=~/Devel
 export WORKON_HOME=~/Envs
 # >>>
-# <<< zmv
-autoload -U zmv
-alias mmv='noglob zmv -W'
-alias mcp='noglob zmv -WC'
+# <<< fasd
+source $ZSH/plugins/fasd/fasd.plugin.zsh
 # >>>
 # <<< http://jasonseney.com/post/18646147210/open-edit-save-encrypted-files-with-vim-and-gpg
 vimdecrypt() { gpg -d "$1" | vim - -n -i "NONE" "+set filetype=$2"; }
 alias vd='vimdecrypt'
 # >>>
-# >>> autojump
-source $(brew --prefix)/etc/autojump.sh
-#source $HOME/.autojump/etc/profile.d/autojump.zsh
-# <<<
 # >>> scalaenv
 eval "$(scalaenv init -)"
 # <<<
 # >>> opam
-. /Users/graham/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
+. $HOME/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
+# <<<
+# >>> nix
+source $HOME/.nix-profile/etc/profile.d/nix.sh
 # <<<
