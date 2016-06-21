@@ -90,6 +90,7 @@ export WORKON_HOME=~/Envs
 # >>>
 # <<< fasd
 source $ZSH/plugins/fasd/fasd.plugin.zsh
+alias o='a -e open'
 # >>>
 # <<< http://jasonseney.com/post/18646147210/open-edit-save-encrypted-files-with-vim-and-gpg
 vimdecrypt() { gpg -d "$1" | vim - -n -i "NONE" "+set filetype=$2"; }
