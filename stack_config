@@ -9,4 +9,3 @@ templates:
     category: 'Machine Learning'
     copyright: 'Copyright: (c) 2016 Quantifind'
     github-username: genos
-    resolver: nightly-2016-06-21
