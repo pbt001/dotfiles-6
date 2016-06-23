@@ -43,13 +43,14 @@ ZSH_THEME='cloud'
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(brew fasd cabal colored-man-pages colorize git history lein
-mercurial pip python themes vi-mode vundle) # tmux virtualenvwrapper don't work
+mercurial pip python stack themes vi-mode vundle)
+# tmux virtualenvwrapper don't work
 
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 path=($HOME/bin /usr/local/bin /usr/local/sbin /usr/bin /usr/sbin /bin /sbin
-/Library/TeX/Distributions/Programs/texbin $HOME/Library/Haskell/bin
+/Library/TeX/Distributions/Programs/texbin $HOME/.cabal/bin
 $HOME/.cargo/bin $HOME/.scalaenv/shims $path)
 typeset -U path
 bindkey -v
@@ -60,6 +61,7 @@ alias glol='git log --graph --decorate --oneline'
 alias grm='git status --porcelain | grep "^\s*D" | cut -d " " -f 3 | xargs git rm'
 alias ip=ipython
 alias ipn='jupyter notebook'
+alias j='$HOME/Applications/j64-804/bin/jconsole'
 alias lrt='ls -lrt'
 alias py='python3'
 alias q="rlwrap -c -r $HOME/q/m32/q"
@@ -68,10 +70,8 @@ export C_INCLUDE_PATH="$HOME/include:$C_INCLUDE_PATH"
 export CPLUS_INCLUDE_PATH="$C_INCLUDE_PATH:$CPLUS_INCLUDE_PATH"
 export EDITOR='vim'
 export HOMEBREW_GITHUB_API_TOKEN="496c515bbebcfb5f85bab365ebab27619dd7935e"
-export JAVACMD='drip'
 export KEYTIMEOUT=1
 export LD_LIBRARY_PATH="$HOME/lib:$LD_LIBRARY_PATH"
-export LEIN_JAVA_CMD=${LEIN_JAVA_CMD-drip}
 export LESS='CiMQRX'
 export SHELL=$(which zsh)
 export TERM=xterm-256color
