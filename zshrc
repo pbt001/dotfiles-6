@@ -49,9 +49,9 @@ mercurial pip python stack themes vi-mode vundle)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-path=($HOME/bin /usr/local/bin /usr/local/sbin /usr/bin /usr/sbin /bin /sbin
-/Library/TeX/Distributions/Programs/texbin $HOME/.cabal/bin
-$HOME/.cargo/bin $HOME/.scalaenv/shims $path)
+path=($HOME/bin $HOME/.local/bin /usr/local/bin /usr/local/sbin /usr/bin
+/usr/sbin /bin /sbin /Library/TeX/Distributions/Programs/texbin
+$HOME/.cabal/bin $HOME/.cargo/bin $HOME/.scalaenv/shims $path)
 typeset -U path
 bindkey -v
 alias \:q='exit'
