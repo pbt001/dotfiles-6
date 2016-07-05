@@ -6,10 +6,20 @@
 	di = diff --color-words
 	st = status
 	co = checkout
+	rom = rebase origin/master
+	romi = rebase -i --autosquash origin/master
 [color]
 	ui = auto
 [core]
 	editor = vim
-	excludesfile = /Users/grahamenos/.gitignore
+	excludesfile = /Users/graham/.gitignore_global
 [push]
     default = matching
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[commit]
+	template = /Users/graham/.stCommitMsg
