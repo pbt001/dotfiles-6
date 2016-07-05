@@ -18,13 +18,14 @@ Plugin 'dpwright/vim-tup'
 Plugin 'elixir-lang/vim-elixir'
 Plugin 'ervandew/supertab'
 Plugin 'godlygeek/tabular'
-Plugin 'guns/vim-sexp'
 Plugin 'jgdavey/tslime.vim'
+Plugin 'JuliaLang/julia-vim'
 Plugin 'lfe-support/vim-lfe'
 Plugin 'LnL7/vim-nix'
 Plugin 'maverickg/stan.vim'
 Plugin 'ntpeters/vim-better-whitespace'
-Plugin 'omlet.vim'
+Plugin 'octol/vim-hindent'
+Plugin 'raichoo/purescript-vim'
 Plugin 'rking/ag.vim'
 Plugin 'rust-lang/rust.vim'
 Plugin 'scrooloose/nerdtree'
@@ -35,7 +36,6 @@ Plugin 'tpope/vim-dispatch'
 Plugin 'tpope/vim-fireplace'
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-salve'
-Plugin 'tpope/vim-sexp-mappings-for-regular-people'
 Plugin 'tpope/vim-surround'
 Plugin 'vim-airline/vim-airline'
 Plugin 'venantius/vim-cljfmt'
@@ -173,3 +173,6 @@ let g:scala_sort_across_groups=1
 
 "Move up the directory hierarchy until you find a tags file
 set tags=tags;/
+
+"vim-hindent style
+let g:hindent_style = "cramer"
