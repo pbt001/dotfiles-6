@@ -57,6 +57,7 @@ bindkey -v
 alias \:q='exit'
 alias \:e='vim'
 alias cadt='cat'  # fat finger
+alias e='vim'
 alias glol='git log --graph --decorate --oneline'
 alias grm='git status --porcelain | grep "^\s*D" | cut -d " " -f 3 | xargs git rm'
 alias ip=ipython
@@ -101,7 +102,4 @@ eval "$(scalaenv init -)"
 # <<<
 # >>> opam
 . $HOME/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
-# <<<
-# >>> nix
-source $HOME/.nix-profile/etc/profile.d/nix.sh
 # <<<
