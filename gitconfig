@@ -23,3 +23,7 @@
 	trustExitCode = true
 [commit]
 	template = /Users/graham/.stCommitMsg
+[filter "lfs"]
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+	required = true

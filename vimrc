@@ -116,7 +116,7 @@ set smartcase
 "Don't go off bottom of screen
 set scrolloff=3
 
-"Decently fast, since we're at home
+"Decently fast, since we've got a modern computer
 set ttyfast
 
 "Follow the leader
@@ -174,3 +174,6 @@ set tags=tags;/
 
 "vim-hindent style
 let g:hindent_style = "cramer"
+
+"Specify indentation for yaml files
+au FileType yaml setlocal tabstop=2 shiftwidth=2
