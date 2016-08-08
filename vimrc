@@ -15,7 +15,6 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'derekwyatt/vim-scala'
 Plugin 'ervandew/supertab'
-Plugin 'flazz/vim-colorschemes'
 Plugin 'godlygeek/tabular'
 Plugin 'jgdavey/tslime.vim'
 Plugin 'JuliaLang/julia-vim'
@@ -49,9 +48,8 @@ if !has('nvim')
 endif
 
 "Colors
-set background=dark
 set t_Co=256
-colorscheme molokai
+set background=dark
 
 "syntax coloring, other stuff
 syntax on
