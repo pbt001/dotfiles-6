@@ -14,15 +14,13 @@ Plugin 'VundleVim/Vundle.vim'
 " original repos on github
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'derekwyatt/vim-scala'
-Plugin 'dpwright/vim-tup'
-Plugin 'elixir-lang/vim-elixir'
 Plugin 'ervandew/supertab'
+Plugin 'flazz/vim-colorschemes'
 Plugin 'godlygeek/tabular'
-Plugin 'idris-hackers/idris-vim'
+Plugin 'jceb/vim-orgmode'
 Plugin 'jgdavey/tslime.vim'
 Plugin 'JuliaLang/julia-vim'
 Plugin 'junegunn/goyo.vim'
-Plugin 'lfe-support/vim-lfe'
 Plugin 'LnL7/vim-nix'
 Plugin 'maverickg/stan.vim'
 Plugin 'ntpeters/vim-better-whitespace'
@@ -31,7 +29,6 @@ Plugin 'raichoo/purescript-vim'
 Plugin 'rking/ag.vim'
 Plugin 'rust-lang/rust.vim'
 Plugin 'scrooloose/nerdtree'
-Plugin 'tomasr/molokai'
 Plugin 'tomtom/tcomment_vim'
 Plugin 'tpope/vim-dispatch'
 Plugin 'tpope/vim-fireplace'
@@ -55,6 +52,7 @@ endif
 "Colors
 set background=dark
 set t_Co=256
+colorscheme molokai
 
 "syntax coloring, other stuff
 syntax on
