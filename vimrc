@@ -27,6 +27,7 @@ Plugin 'raichoo/purescript-vim'
 Plugin 'rking/ag.vim'
 Plugin 'rust-lang/rust.vim'
 Plugin 'scrooloose/nerdtree'
+Plugin 'tomasr/molokai'
 Plugin 'tomtom/tcomment_vim'
 Plugin 'tpope/vim-dispatch'
 Plugin 'tpope/vim-fireplace'
@@ -50,6 +51,7 @@ endif
 "Colors
 set t_Co=256
 set background=dark
+colorscheme molokai
 
 "syntax coloring, other stuff
 syntax on
