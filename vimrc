@@ -12,6 +12,7 @@ Plugin 'VundleVim/Vundle.vim'
 " My Bundles here:
 "
 " original repos on github
+Plugin 'vim-scripts/confluencewiki.vim'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'derekwyatt/vim-scala'
 Plugin 'ervandew/supertab'
