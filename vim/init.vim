@@ -1,42 +1,34 @@
-"Packages with vundle
 set nocompatible               " be iMproved
-filetype off                   " required!
 
-set rtp+=~/.vim/bundle/Vundle.vim/
-call vundle#rc()
+" Plugin time: https://github.com/junegunn/vim-plug
+call plug#begin('~/.vim/plugged')
+Plug 'coddingtonbear/confluencewiki.vim', { 'for': 'confluencewiki' }
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'derekwyatt/vim-scala', { 'for': 'scala' }
+Plug 'ervandew/supertab'
+Plug 'godlygeek/tabular', { 'for': 'markdown' }
+Plug 'jgdavey/tslime.vim'
+Plug 'junegunn/goyo.vim', { 'for': 'markdown' }
+Plug 'kovisoft/paredit', { 'for': ['clojure', 'lisp', 'scheme'] }
+Plug 'LnL7/vim-nix', { 'for': 'nix' }
+Plug 'maverickg/stan.vim', { 'for': 'stan' }
+Plug 'ntpeters/vim-better-whitespace'
+Plug 'raichoo/purescript-vim',  { 'for': 'purescript' }
+Plug 'rking/ag.vim'
+Plug 'rust-lang/rust.vim', { 'for': 'rust' }
+Plug 'scrooloose/nerdtree'
+Plug 'tomasr/molokai'
+Plug 'tomtom/tcomment_vim'
+Plug 'tpope/vim-dispatch'
+Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-salve', { 'for': 'clojure' }
+Plug 'tpope/vim-surround'
+Plug 'vim-airline/vim-airline'
+call plug#end()
 
-" let Vundle manage Vundle
-" required!
-Plugin 'VundleVim/Vundle.vim'
-
-" My Bundles here:
-"
-" original repos on github
-Plugin 'tomtom/tcomment_vim'
-Plugin 'tpope/vim-repeat'
-Plugin 'tpope/vim-surround'
-Plugin 'jgdavey/tslime.vim'
-Plugin 'JuliaLang/julia-vim'
-Plugin 'wting/rust.vim'
-Plugin 'ervandew/supertab'
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'scrooloose/nerdtree'
-Plugin 'godlygeek/tabular'
-Plugin 'rking/ag.vim'
-Plugin 'derekwyatt/vim-scala'
-Plugin 'dpwright/vim-tup'
-Plugin 'ntpeters/vim-better-whitespace'
-Plugin 'tomasr/molokai'
-Plugin 'omlet.vim'
-Plugin 'the-lambda-church/merlin'
-Plugin 'guns/vim-sexp'
-Plugin 'tpope/vim-dispatch'
-Plugin 'tpope/vim-sexp-mappings-for-regular-people'
-Plugin 'tpope/vim-fireplace'
-Plugin 'tpope/vim-salve'
-Plugin 'maverickg/stan.vim'
-
-filetype plugin indent on     " required!
+"Turn on stuff
+filetype plugin indent on
 
 set laststatus=2  " always
 
@@ -49,8 +41,9 @@ if !has('nvim')
 endif
 
 "Colors
-set background=dark
 set t_Co=256
+set background=dark
+colorscheme molokai
 
 "syntax coloring, other stuff
 syntax on
@@ -64,6 +57,9 @@ set autoindent
 
 "Don't indent access specifiers or labels in C, C++
 set cinoptions=L0,g0
+
+"Highlight 80th column
+set colorcolumn=80
 
 "Show matching parenthesis, etc.
 set showmatch
@@ -82,7 +78,6 @@ set smarttab
 
 "Line numbers
 set number
-"set relativenumber
 
 "Line and column position
 set ruler
@@ -110,7 +105,7 @@ set smartcase
 "Don't go off bottom of screen
 set scrolloff=3
 
-"Decently fast, since we're at home
+"Decently fast, since we've got a modern computer
 set ttyfast
 
 "Follow the leader
@@ -157,5 +152,14 @@ vmap <C-c><C-c> <Plug>SendSelectionToTmux
 nmap <C-c><C-c> <Plug>NormalModeSendToTmux
 nmap <C-c>r <Plug>SetTmuxVars
 
-" http://jasonseney.com/post/18646147210/open-edit-save-encrypted-files-with-vim-and-gpg
+"http://jasonseney.com/post/18646147210/open-edit-save-encrypted-files-with-vim-and-gpg
 command -nargs=1 WriteEncrypted w !gpg -c -o <q-args>
+
+"Scala import sorting
+let g:scala_sort_across_groups=1
+
+"Move up the directory hierarchy until you find a tags file
+set tags=tags;/
+
+"Specify indentation for yaml files
+au FileType yaml setlocal tabstop=2 shiftwidth=2
