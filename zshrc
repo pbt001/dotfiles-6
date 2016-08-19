@@ -42,8 +42,8 @@ ZSH_THEME='awesomepanda'
 # ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(brew fasd cabal colored-man-pages colorize git history lein
-mercurial pip python stack themes vi-mode vundle)
+plugins=(brew fasd cabal colored-man-pages colorize git history lein pip python
+stack vi-mode)
 # tmux virtualenvwrapper don't work
 
 source $ZSH/oh-my-zsh.sh

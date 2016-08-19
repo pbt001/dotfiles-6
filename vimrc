@@ -16,7 +16,7 @@ Plug 'octol/vim-hindent', { 'for': 'haskell' }
 Plug 'raichoo/purescript-vim',  { 'for': 'purescript' }
 Plug 'rking/ag.vim'
 Plug 'rust-lang/rust.vim', { 'for': 'rust' }
-Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+Plug 'scrooloose/nerdtree'
 Plug 'tomasr/molokai'
 Plug 'tomtom/tcomment_vim'
 Plug 'tpope/vim-dispatch'
