@@ -1,5 +1,6 @@
 set nocompatible               " be iMproved
 
+" Plugin time: https://github.com/junegunn/vim-plug
 call plug#begin('~/.vim/plugged')
 Plug 'coddingtonbear/confluencewiki.vim', { 'for': 'confluencewiki' }
 Plug 'ctrlpvim/ctrlp.vim'
@@ -12,7 +13,6 @@ Plug 'kovisoft/paredit', { 'for': ['clojure', 'lisp', 'scheme'] }
 Plug 'LnL7/vim-nix', { 'for': 'nix' }
 Plug 'maverickg/stan.vim', { 'for': 'stan' }
 Plug 'ntpeters/vim-better-whitespace'
-Plug 'octol/vim-hindent', { 'for': 'haskell' }
 Plug 'raichoo/purescript-vim',  { 'for': 'purescript' }
 Plug 'rking/ag.vim'
 Plug 'rust-lang/rust.vim', { 'for': 'rust' }
@@ -27,6 +27,7 @@ Plug 'tpope/vim-surround'
 Plug 'vim-airline/vim-airline'
 call plug#end()
 
+"Turn on stuff
 filetype plugin indent on
 
 set laststatus=2  " always
@@ -77,7 +78,6 @@ set smarttab
 
 "Line numbers
 set number
-"set relativenumber
 
 "Line and column position
 set ruler
@@ -160,9 +160,6 @@ let g:scala_sort_across_groups=1
 
 "Move up the directory hierarchy until you find a tags file
 set tags=tags;/
-
-"vim-hindent style
-let g:hindent_style = "johan-tibell"
 
 "Specify indentation for yaml files
 au FileType yaml setlocal tabstop=2 shiftwidth=2
