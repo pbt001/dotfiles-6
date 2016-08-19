@@ -12,7 +12,7 @@ Plugin 'VundleVim/Vundle.vim'
 " My Bundles here:
 "
 " original repos on github
-Plugin 'vim-scripts/confluencewiki.vim'
+Plugin 'coddingtonbear/confluencewiki.vim'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'derekwyatt/vim-scala'
 Plugin 'ervandew/supertab'
@@ -172,7 +172,7 @@ let g:scala_sort_across_groups=1
 set tags=tags;/
 
 "vim-hindent style
-let g:hindent_style = "cramer"
+let g:hindent_style = "johan-tibell"
 
 "Specify indentation for yaml files
 au FileType yaml setlocal tabstop=2 shiftwidth=2
