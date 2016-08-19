@@ -1,43 +1,33 @@
-"Packages with vundle
 set nocompatible               " be iMproved
-filetype off                   " required!
 
-set rtp+=~/.vim/bundle/Vundle.vim/
-call vundle#rc()
+call plug#begin('~/.vim/plugged')
+Plug 'coddingtonbear/confluencewiki.vim', { 'for': 'confluencewiki' }
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'derekwyatt/vim-scala', { 'for': 'scala' }
+Plug 'ervandew/supertab'
+Plug 'godlygeek/tabular', { 'for': 'markdown' }
+Plug 'jgdavey/tslime.vim'
+Plug 'junegunn/goyo.vim', { 'for': 'markdown' }
+Plug 'kovisoft/paredit', { 'for': ['clojure', 'lisp', 'scheme'] }
+Plug 'LnL7/vim-nix', { 'for': 'nix' }
+Plug 'maverickg/stan.vim', { 'for': 'stan' }
+Plug 'ntpeters/vim-better-whitespace'
+Plug 'octol/vim-hindent', { 'for': 'haskell' }
+Plug 'raichoo/purescript-vim',  { 'for': 'purescript' }
+Plug 'rking/ag.vim'
+Plug 'rust-lang/rust.vim', { 'for': 'rust' }
+Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+Plug 'tomasr/molokai'
+Plug 'tomtom/tcomment_vim'
+Plug 'tpope/vim-dispatch'
+Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-salve', { 'for': 'clojure' }
+Plug 'tpope/vim-surround'
+Plug 'vim-airline/vim-airline'
+call plug#end()
 
-" let Vundle manage Vundle
-" required!
-Plugin 'VundleVim/Vundle.vim'
-
-" My Bundles here:
-"
-" original repos on github
-Plugin 'coddingtonbear/confluencewiki.vim'
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'derekwyatt/vim-scala'
-Plugin 'ervandew/supertab'
-Plugin 'godlygeek/tabular'
-Plugin 'jgdavey/tslime.vim'
-Plugin 'JuliaLang/julia-vim'
-Plugin 'junegunn/goyo.vim'
-Plugin 'LnL7/vim-nix'
-Plugin 'maverickg/stan.vim'
-Plugin 'ntpeters/vim-better-whitespace'
-Plugin 'octol/vim-hindent'
-Plugin 'raichoo/purescript-vim'
-Plugin 'rking/ag.vim'
-Plugin 'rust-lang/rust.vim'
-Plugin 'scrooloose/nerdtree'
-Plugin 'tomasr/molokai'
-Plugin 'tomtom/tcomment_vim'
-Plugin 'tpope/vim-dispatch'
-Plugin 'tpope/vim-fireplace'
-Plugin 'tpope/vim-repeat'
-Plugin 'tpope/vim-salve'
-Plugin 'tpope/vim-surround'
-Plugin 'vim-airline/vim-airline'
-
-filetype plugin indent on     " required!
+filetype plugin indent on
 
 set laststatus=2  " always
 
