@@ -103,3 +103,8 @@ eval "$(scalaenv init -)"
 # >>> opam
 . $HOME/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
 # <<<
+# >>> nix
+if [ -e /Users/graham/.nix-profile/etc/profile.d/nix.sh ]; then
+    . /Users/graham/.nix-profile/etc/profile.d/nix.sh
+fi
+# <<<
