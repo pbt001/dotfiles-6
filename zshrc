@@ -51,7 +51,8 @@ source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
 path=($HOME/bin $HOME/.local/bin /usr/local/bin /usr/local/sbin /usr/bin
 /usr/sbin /bin /sbin /Library/TeX/Distributions/Programs/texbin
-$HOME/.cabal/bin $HOME/.cargo/bin $HOME/.scalaenv/shims $path)
+$HOME/.cabal/bin $HOME/.cargo/bin $HOME/.scalaenv/shims
+/usr/local/opt/llvm/bin/ $path)
 typeset -U path
 bindkey -v
 alias \:q='exit'
