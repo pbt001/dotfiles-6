@@ -2,8 +2,8 @@ set nocompatible               " be iMproved
 
 " Plugin time: https://github.com/junegunn/vim-plug
 call plug#begin('~/.vim/plugged')
+Plug 'https://github.com/alx741/vim-hindent', { 'for': 'haskell' }
 Plug 'coddingtonbear/confluencewiki.vim', { 'for': 'confluencewiki' }
-Plug 'ctrlpvim/ctrlp.vim'
 Plug 'derekwyatt/vim-scala', { 'for': 'scala' }
 Plug 'ervandew/supertab'
 Plug 'godlygeek/tabular', { 'for': 'markdown' }
@@ -163,3 +163,6 @@ set tags=tags;/
 
 "Specify indentation for yaml files
 au FileType yaml setlocal tabstop=2 shiftwidth=2
+
+"Specify indentation & formatting for haskell files
+au FileType haskell setlocal tabstop=2 shiftwidth=2 formatprg=hindent
