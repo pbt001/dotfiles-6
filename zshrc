@@ -42,18 +42,13 @@ ZSH_THEME='awesomepanda'
 # ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(brew fasd cabal colored-man-pages colorize git history lein pip python
-stack vi-mode)
+plugins=(brew fasd cabal colored-man-pages colorize git go history lein pip
+python stack vi-mode)
 # tmux virtualenvwrapper don't work
 
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-path=($HOME/bin $HOME/.local/bin /usr/local/bin /usr/local/sbin /usr/bin
-/usr/sbin /bin /sbin /Library/TeX/Distributions/Programs/texbin
-$HOME/.cabal/bin $HOME/.cargo/bin $HOME/.scalaenv/shims
-/usr/local/opt/llvm/bin/ $path)
-typeset -U path
 bindkey -v
 alias \:q='exit'
 alias \:e='vim'
@@ -61,8 +56,8 @@ alias cadt='cat'  # fat finger
 alias e='vim'
 alias glol='git log --graph --decorate --oneline'
 alias grm='git status --porcelain | grep "^\s*D" | cut -d " " -f 3 | xargs git rm'
-alias ip=ipython
-alias ipn='jupyter notebook'
+alias ip=jupyter-console
+alias ipn=jupyter-notebook
 alias j='$HOME/Applications/j64-804/bin/jconsole'
 alias lrt='ls -lrt'
 alias py='python3'
@@ -71,12 +66,20 @@ alias t=todo.sh
 export C_INCLUDE_PATH="$HOME/include:$C_INCLUDE_PATH"
 export CPLUS_INCLUDE_PATH="$C_INCLUDE_PATH:$CPLUS_INCLUDE_PATH"
 export EDITOR='vim'
+export GOPATH="$HOME/go"
 export HOMEBREW_GITHUB_API_TOKEN="496c515bbebcfb5f85bab365ebab27619dd7935e"
 export KEYTIMEOUT=1
 export LD_LIBRARY_PATH="$HOME/lib:$LD_LIBRARY_PATH"
 export LESS='CiMQRX'
 export SHELL=$(which zsh)
 export TERM=xterm-256color
+# <<< PATH at of major exports
+path=($HOME/bin $HOME/.local/bin /usr/local/bin /usr/local/sbin /usr/bin
+/usr/sbin /bin /sbin /Library/TeX/Distributions/Programs/texbin
+$HOME/.cabal/bin $HOME/.cargo/bin $HOME/.scalaenv/shims
+/usr/local/opt/llvm/bin/ $GOPATH/bin $path)
+typeset -U path
+# >>>
 # <<< nocorrect: don't be so eager, zsh
 alias cp='nocorrect cp'
 alias ln='nocorrect ln'
@@ -98,9 +101,9 @@ alias o='a -e open'
 vimdecrypt() { gpg -d "$1" | vim - -n -i "NONE" "+set filetype=$2"; }
 alias vd='vimdecrypt'
 # >>>
-# >>> scalaenv
+# <<< scalaenv
 eval "$(scalaenv init -)"
-# <<<
-# >>> opam
+# >>>
+# <<< opam
 . $HOME/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
-# <<<
+# >>>

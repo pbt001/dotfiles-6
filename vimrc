@@ -3,6 +3,7 @@ set nocompatible               " be iMproved
 " Plugin time: https://github.com/junegunn/vim-plug
 call plug#begin('~/.vim/plugged')
 Plug 'https://github.com/alx741/vim-hindent', { 'for': 'haskell' }
+Plug 'cespare/vim-toml', { 'for': 'toml' }
 Plug 'coddingtonbear/confluencewiki.vim', { 'for': 'confluencewiki' }
 Plug 'derekwyatt/vim-scala', { 'for': 'scala' }
 Plug 'ervandew/supertab'
@@ -25,6 +26,7 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-salve', { 'for': 'clojure' }
 Plug 'tpope/vim-surround'
 Plug 'vim-airline/vim-airline'
+Plug 'fatih/vim-go', { 'for': 'go' }
 call plug#end()
 
 "Turn on stuff
