@@ -1,4 +1,6 @@
-set nocompatible               " be iMproved
+if !has('nvim')
+    set nocompatible               " be iMproved
+endif
 
 " Plugin time: https://github.com/junegunn/vim-plug
 call plug#begin('~/.vim/plugged')

@@ -15,9 +15,9 @@ source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
 bindkey -v
 alias \:q='exit'
-alias \:e='vim'
+alias \:e='nvim'
 alias cadt='cat'  # fat finger
-alias e='vim'
+alias e='nvim'
 alias glol='git log --graph --decorate --oneline'
 alias grm='git status --porcelain | grep "^\s*D" | cut -d " " -f 3 | xargs git rm'
 alias ip=jupyter-console
@@ -26,7 +26,7 @@ alias lrt='ls -lrt'
 alias py='python3'
 export C_INCLUDE_PATH="$HOME/include:$C_INCLUDE_PATH"
 export CPLUS_INCLUDE_PATH="$C_INCLUDE_PATH:$CPLUS_INCLUDE_PATH"
-export EDITOR='vim'
+export EDITOR='nvim'
 export GOPATH="$HOME/go"
 export HOMEBREW_GITHUB_API_TOKEN="496c515bbebcfb5f85bab365ebab27619dd7935e"
 export KEYTIMEOUT=1

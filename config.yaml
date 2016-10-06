@@ -6,13 +6,11 @@ ghci: .ghci
 gitconfig: .gitconfig
 gvimrc: .gvimrc
 haskeline: .haskeline
-hirc: .hirc
+imgcat: bin/imgcat
+imls: bin/imls
 inputrc: .inputrc
 irbrc: .irbrc
-lein_profile: .lein/profiles.clj
-leinrc: .lein/leinrc
 nvim: .config/nvim
-ocamlinit: .ocamlinit
 passive: bin/passive
 pylintrc: .pylintrc
 sbclrc: .sbclrc
