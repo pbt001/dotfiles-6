@@ -6,43 +6,7 @@ ZSH=$HOME/.oh-my-zsh
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 ZSH_THEME='awesomepanda'
-
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-
-# Set to this to use case-sensitive completion
-# CASE_SENSITIVE="true"
-
-# Comment this out to disable bi-weekly auto-update checks
-# DISABLE_AUTO_UPDATE="true"
-
-# Uncomment to change how often before auto-updates occur? (in days)
-# export UPDATE_ZSH_DAYS=13
-
-# Uncomment following line if you want to disable colors in ls
-# DISABLE_LS_COLORS="true"
-
-# Uncomment following line if you want to disable autosetting terminal title.
-# DISABLE_AUTO_TITLE="true"
-
-# Uncomment following line if you want to disable command autocorrection
-# DISABLE_CORRECTION="true"
-
-# Uncomment following line if you want red dots to be displayed while waiting
-# for completion
-# COMPLETION_WAITING_DOTS="true"
-
-# Uncomment following line if you want to disable marking untracked files under
-# VCS as dirty. This makes repository status check for large repositories much,
-# much faster.
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
-
-# Which plugins would you like to load? (plugins can be found in
-# ~/.oh-my-zsh/plugins/*)
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(brew fasd cabal colored-man-pages colorize git go history lein pip
+plugins=(brew fasd cabal colored-man-pages colorize git go history pip
 python stack vi-mode)
 # tmux virtualenvwrapper don't work
 
@@ -58,11 +22,8 @@ alias glol='git log --graph --decorate --oneline'
 alias grm='git status --porcelain | grep "^\s*D" | cut -d " " -f 3 | xargs git rm'
 alias ip=jupyter-console
 alias ipn=jupyter-notebook
-alias j='$HOME/Applications/j64-804/bin/jconsole'
 alias lrt='ls -lrt'
 alias py='python3'
-alias q="rlwrap -c -r $HOME/q/m32/q"
-alias t=todo.sh
 export C_INCLUDE_PATH="$HOME/include:$C_INCLUDE_PATH"
 export CPLUS_INCLUDE_PATH="$C_INCLUDE_PATH:$CPLUS_INCLUDE_PATH"
 export EDITOR='vim'
@@ -88,7 +49,7 @@ alias mv='nocorrect mv'
 alias touch='nocorrect touch'
 # >>>
 # <<< virtualenvwrapper
-export VIRTUALENVWRAPPER_PYTHON="/usr/local/bin/python3"
+export VIRTUALENVWRAPPER_PYTHON='/usr/local/bin/python3'
 source /usr/local/bin/virtualenvwrapper.sh
 export PROJECT_HOME=~/Devel
 export WORKON_HOME=~/Envs
@@ -103,7 +64,4 @@ alias vd='vimdecrypt'
 # >>>
 # <<< scalaenv
 eval "$(scalaenv init -)"
-# >>>
-# <<< opam
-. $HOME/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
 # >>>
