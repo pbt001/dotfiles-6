@@ -37,8 +37,7 @@ export TERM=xterm-256color
 # <<< PATH at of major exports
 path=($HOME/bin $HOME/.local/bin /usr/local/bin /usr/local/sbin /usr/bin
 /usr/sbin /bin /sbin /Library/TeX/Distributions/Programs/texbin
-$HOME/.cabal/bin $HOME/.cargo/bin $HOME/.scalaenv/shims
-/usr/local/opt/llvm/bin/ $GOPATH/bin $path)
+$HOME/.cabal/bin $HOME/.cargo/bin $HOME/.scalaenv/shims $GOPATH/bin $path)
 typeset -U path
 # >>>
 # <<< nocorrect: don't be so eager, zsh
