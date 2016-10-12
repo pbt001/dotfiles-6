@@ -11,19 +11,6 @@
 [color]
 	ui = auto
 [core]
-	editor = vim
-	excludesfile = /Users/graham/.gitignore_global
+	editor = nvim
 [push]
     default = matching
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
-[mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
-[commit]
-	template = /Users/graham/.stCommitMsg
-[filter "lfs"]
-	smudge = git-lfs smudge -- %f
-	required = true
-	clean = git-lfs clean -- %f
