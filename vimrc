@@ -168,3 +168,9 @@ au FileType yaml setlocal tabstop=2 shiftwidth=2
 
 "Specify indentation & formatting for haskell files
 au FileType haskell setlocal tabstop=2 shiftwidth=2 formatprg=hindent
+
+"Specify indentation for css & html
+au FileType css,html setlocal tabstop=2 shiftwidth=2
+
+"Allow vim access to system clipboard
+set clipboard=unnamed
