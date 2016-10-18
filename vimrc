@@ -9,10 +9,11 @@ Plug 'cespare/vim-toml', { 'for': 'toml' }
 Plug 'coddingtonbear/confluencewiki.vim', { 'for': 'confluencewiki' }
 Plug 'derekwyatt/vim-scala', { 'for': 'scala' }
 Plug 'ervandew/supertab'
+Plug 'fatih/vim-go', { 'for': 'go' }
 Plug 'godlygeek/tabular', { 'for': 'markdown' }
 Plug 'jgdavey/tslime.vim'
 Plug 'junegunn/goyo.vim', { 'for': 'markdown' }
-Plug 'kovisoft/paredit', { 'for': ['clojure', 'lisp', 'scheme'] }
+Plug 'kovisoft/paredit', { 'for': ['clojure', 'lisp', 'racket', 'scheme'] }
 Plug 'LnL7/vim-nix', { 'for': 'nix' }
 Plug 'maverickg/stan.vim', { 'for': 'stan' }
 Plug 'ntpeters/vim-better-whitespace'
@@ -26,7 +27,7 @@ Plug 'tpope/vim-dispatch'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'vim-airline/vim-airline'
-Plug 'fatih/vim-go', { 'for': 'go' }
+Plug 'wlangstroth/vim-racket', { 'for': 'racket' }
 call plug#end()
 
 "Turn on stuff
