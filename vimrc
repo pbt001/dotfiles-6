@@ -6,15 +6,15 @@ endif
 call plug#begin('~/.vim/plugged')
 Plug 'cespare/vim-toml'
 Plug 'coddingtonbear/confluencewiki.vim'
-Plug 'ctrlp/ctrlp.vim'
-Plug 'derekwyatt/vim-scala', { 'for': 'scala' }
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'derekwyatt/vim-scala'
 Plug 'ervandew/supertab'
-Plug 'fatih/vim-go', { 'for': 'go' }
+Plug 'fatih/vim-go'
 Plug 'godlygeek/tabular'
 Plug 'guns/vim-sexp'
 Plug 'jgdavey/tslime.vim'
-Plug 'junegunn/goyo.vim', { 'for': 'markdown' }
-Plug 'LnL7/vim-nix', { 'for': 'nix' }
+Plug 'joom/latex-unicoder.vim'
+Plug 'junegunn/goyo.vim'
 Plug 'maverickg/stan.vim'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'raichoo/purescript-vim'
