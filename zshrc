@@ -36,6 +36,7 @@ alias ip=jupyter-console
 alias ipn=jupyter-notebook
 alias lrt='ls -lrt'
 alias py='python3'
+alias runTL="sbt/sbt 'project ai' 'run-main com.qf.automated.timeline.TimeLineApp --env dev --signumServiceClient.host prod-signumservice-lb.mtv.quantifind.com'"
 export C_INCLUDE_PATH="$HOME/include:$C_INCLUDE_PATH"
 export CPLUS_INCLUDE_PATH="$C_INCLUDE_PATH:$CPLUS_INCLUDE_PATH"
 export EDITOR='nvim'
