@@ -4,30 +4,32 @@ endif
 
 " Plugin time: https://github.com/junegunn/vim-plug
 call plug#begin('~/.vim/plugged')
-Plug 'https://github.com/alx741/vim-hindent', { 'for': 'haskell' }
-Plug 'cespare/vim-toml', { 'for': 'toml' }
-Plug 'coddingtonbear/confluencewiki.vim', { 'for': 'confluencewiki' }
+Plug 'cespare/vim-toml'
+Plug 'coddingtonbear/confluencewiki.vim'
+Plug 'ctrlp/ctrlp.vim'
 Plug 'derekwyatt/vim-scala', { 'for': 'scala' }
 Plug 'ervandew/supertab'
 Plug 'fatih/vim-go', { 'for': 'go' }
-Plug 'godlygeek/tabular', { 'for': 'markdown' }
+Plug 'godlygeek/tabular'
+Plug 'guns/vim-sexp'
 Plug 'jgdavey/tslime.vim'
 Plug 'junegunn/goyo.vim', { 'for': 'markdown' }
-Plug 'kovisoft/paredit', { 'for': ['clojure', 'lisp', 'racket', 'scheme'] }
 Plug 'LnL7/vim-nix', { 'for': 'nix' }
-Plug 'maverickg/stan.vim', { 'for': 'stan' }
+Plug 'maverickg/stan.vim'
 Plug 'ntpeters/vim-better-whitespace'
-Plug 'raichoo/purescript-vim',  { 'for': 'purescript' }
+Plug 'raichoo/purescript-vim'
 Plug 'rking/ag.vim'
-Plug 'rust-lang/rust.vim', { 'for': 'rust' }
-Plug 'scrooloose/nerdtree'
+Plug 'rust-lang/rust.vim'
 Plug 'tomasr/molokai'
 Plug 'tomtom/tcomment_vim'
 Plug 'tpope/vim-dispatch'
+Plug 'tpope/vim-fireplace'
 Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-salve'
 Plug 'tpope/vim-surround'
+Plug 'tpope/vim-sexp-mappings-for-regular-people'
 Plug 'vim-airline/vim-airline'
-Plug 'wlangstroth/vim-racket', { 'for': 'racket' }
+Plug 'wlangstroth/vim-racket'
 call plug#end()
 
 "Turn on stuff

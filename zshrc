@@ -5,9 +5,21 @@ ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME='awesomepanda'
-plugins=(brew fasd cabal colored-man-pages colorize git go history pip
-python stack vi-mode)
+ZSH_THEME='robbyrussell'
+plugins=(
+    brew
+    fasd
+    cabal
+    colored-man-pages
+    colorize
+    git
+    go
+    history
+    pip
+    python
+    stack
+    vi-mode
+)
 # tmux virtualenvwrapper don't work
 
 source $ZSH/oh-my-zsh.sh
@@ -35,10 +47,23 @@ export LESS='CiMQRX'
 export SHELL=$(which zsh)
 export TERM=xterm-256color
 # <<< PATH at of major exports
-path=($HOME/bin $HOME/.local/bin /usr/local/bin /usr/local/sbin /usr/bin
-/usr/sbin /bin /sbin /Library/TeX/Distributions/Programs/texbin
-$HOME/.cabal/bin $HOME/.cargo/bin $HOME/.scalaenv/shims $GOPATH/bin
-/Applications/Racket\ v6.6/bin $path)
+path=(
+    $HOME/bin
+    $HOME/.local/bin
+    /Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home/bin
+    /usr/local/bin
+    /usr/local/sbin
+    /usr/bin
+    /usr/sbin
+    /bin
+    /sbin
+    /Library/TeX/Distributions/Programs/texbin
+    $HOME/.cabal/bin
+    $HOME/.cargo/bin
+    $HOME/.scalaenv/shims
+    $GOPATH/bin
+    /Applications/Racket\ v6.6/bin $path
+)
 typeset -U path
 # >>>
 # <<< nocorrect: don't be so eager, zsh
