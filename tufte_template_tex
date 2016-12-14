@@ -1,0 +1,56 @@
+\documentclass[nofonts]{tufte-handout}
+
+% typography
+\usepackage[T1]{fontenc}
+\usepackage{libertine}
+\usepackage[libertine]{newtxmath}
+\usepackage[varqu]{inconsolata}
+\usepackage{microtype}
+
+% other packages
+\usepackage{booktabs}
+\usepackage{cleveref}
+\usepackage{fancyvrb}
+    \fvset{fontsize=\normalsize}
+\usepackage{graphicx}
+    \setkeys{Gin}{width=\linewidth,
+                  totalheight=\textheight,
+                  keepaspectratio}
+\usepackage{listings}
+    \lstset{basicstyle=\footnotesize\ttfamily,
+            upquote=true,
+            showstringspaces=false}
+\usepackage{mathtools}
+\usepackage{units}
+\usepackage{xspace}
+
+% citations
+\newcommand{\ct}[1]{\footnote{\citet{#1}}}
+
+% custom
+
+$if(title)$
+\title{$title$}
+$endif$
+$if(author)$
+\author{$for(author)$$author$$sep$ \and $endfor$}
+$endif$
+$if(date)$
+\date{$date$}
+$endif$
+
+\begin{document}
+$if(title)$
+\maketitle
+$endif$
+
+$if(abstract)$
+\begin{fullwidth}
+    \vskip10pt
+    \hfill\textsf{$abstract$}
+\end{fullwidth}
+$endif$
+
+$body$
+
+\end{document}

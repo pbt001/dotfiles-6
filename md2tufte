@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+if [ -z "$1" ]; then
+    name=$(basename $0)
+    echo "Usage: $name <input.md>"
+    exit 1
+else
+    md=$1
+    pdf="$(basename $1 .md).pdf"
+    pandoc --data-dir=$HOME/.pandoc \
+           --template=tufte_template.tex \
+           --listings $md -o $pdf
+fi
