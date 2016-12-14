@@ -34,6 +34,7 @@ alias glol='git log --graph --decorate --oneline'
 alias grm='git status --porcelain | grep "^\s*D" | cut -d " " -f 3 | xargs git rm'
 alias ip=jupyter-console
 alias ipn=jupyter-notebook
+alias jc=$HOME/j64-805/bin/jconsole
 alias lrt='ls -lrt'
 alias py='python3'
 alias runTL="sbt/sbt 'project ai' 'run-main com.qf.automated.timeline.TimeLineApp --env dev --signumServiceClient.host prod-signumservice-lb.mtv.quantifind.com'"
