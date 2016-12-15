@@ -2,3 +2,4 @@
 emacs_d/elpa/*/*.elc
 emacs_d/eshell
 vim/bundle/*
+md2tufte
