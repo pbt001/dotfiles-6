@@ -1,13 +1,21 @@
-#!/usr/bin/env bash
+#!/usr/bin/env stack
+-- stack --install-ghc runghc --package turtle
+{-# LANGUAGE OverloadedStrings #-}
 
-if [ -z "$1" ]; then
-    name=$(basename $0)
-    echo "Usage: $name <input.md>"
-    exit 1
-else
-    md=$1
-    pdf="$(basename $1 .md).pdf"
-    pandoc --data-dir=$HOME/.pandoc \
-           --template=tufte_template.tex \
-           --listings $md -o $pdf
-fi
+import Turtle
+import Prelude hiding (FilePath)
+
+md2pdf :: FilePath -> FilePath
+md2pdf = (<.> "pdf") . dropExtension
+
+parser :: Parser FilePath
+parser = argPath "input.md" "Markdown file to convert & typeset"
+
+typeset :: FilePath -> FilePath -> Text
+typeset = format $
+  "pandoc --data-dir=$HOME/.pandoc --template=tufte_template.tex --listings "
+    %fp% " -o " %fp% ""
+
+main = do
+  input <- options "Convert markdown file to laTeX & typeset" parser
+  shell (typeset input $ md2pdf input) empty
