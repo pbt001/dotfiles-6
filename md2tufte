@@ -17,5 +17,5 @@ typeset = format $
     %fp% " -o " %fp% ""
 
 main = do
-  input <- options "Convert markdown file to laTeX & typeset" parser
+  input <- options "Convert markdown file to LaTeX & typeset" parser
   shell (typeset input $ md2pdf input) empty
