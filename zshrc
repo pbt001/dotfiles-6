@@ -92,3 +92,6 @@ alias vd='vimdecrypt'
 # <<< scalaenv
 eval "$(scalaenv init -)"
 # >>>
+
+# OPAM configuration
+. /Users/graham/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
