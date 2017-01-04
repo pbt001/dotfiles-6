@@ -18,6 +18,7 @@ typeset = format $
   "pandoc --data-dir=$HOME/.pandoc --template=tufte_template.tex --listings "
     % fp % " -o " % fp
 
+main :: IO ExitCode
 main = do
   input <- options "Convert markdown file to LaTeX & typeset" parser
-  shell (typeset input $ md2pdf input) empty
+  proc (typeset input $ md2pdf input) empty empty
