@@ -7,7 +7,6 @@ ZSH=$HOME/.oh-my-zsh
 # time that oh-my-zsh is loaded.
 ZSH_THEME='robbyrussell'
 plugins=(
-    brew
     fasd
     cabal
     colored-man-pages

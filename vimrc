@@ -167,6 +167,23 @@ au FileType haskell,css,html,markdown,yaml,ruby,scala setlocal tabstop=2 shiftwi
 
 "Allow vim access to system clipboard
 set clipboard=unnamed
+
+"Ctrl-P search mode
+let g:ctrlp_working_path_mode = 'ar'
+"Speed up Ctrl-P with git & silversurver
+"http://snow-dev.com/the-power-of-vim-plugins-ctrlp/
+let g:ctrlp_use_caching = 0
+if executable('ag')
+set grepprg=ag\ --nogroup\ --nocolor
+
+let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+else
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
+let g:ctrlp_prompt_mappings = {
+\ 'AcceptSelection("e")': ['<space>', '<cr>', '<2-LeftMouse>'],
+\ }
+endif
+
 " ## added by OPAM user-setup for vim / base ## 93ee63e278bdfc07d1139a748ed3fff2 ## you can edit, but keep this line
 let s:opam_share_dir = system("opam config var share")
 let s:opam_share_dir = substitute(s:opam_share_dir, '[\r\n]*$', '', '')

@@ -21,4 +21,4 @@ typeset = format $
 main :: IO ExitCode
 main = do
   input <- options "Convert markdown file to LaTeX & typeset" parser
-  proc (typeset input $ md2pdf input) empty empty
+  shell (typeset input $ md2pdf input) empty
