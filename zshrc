@@ -17,6 +17,7 @@ plugins=(
     pip
     python
     stack
+    thefuck
     vi-mode
 )
 # tmux virtualenvwrapper don't work
