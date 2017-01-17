@@ -7,7 +7,7 @@ gitconfig: .gitconfig
 gvimrc: .gvimrc
 haskeline: .haskeline
 imgcat: bin/imgcat
-imls: bin/imls
+imgls: bin/imgls
 inputrc: .inputrc
 irbrc: .irbrc
 md2tufte: bin/md2tufte
