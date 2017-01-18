@@ -1,4 +1,11 @@
 :set editor /usr/local/bin/vim
-:set prompt "λ> "
+:set -XOverloadedStrings
+:set -Wall
+:set prompt "λ⤇ "
+:set +m
 :set +t
-:def pf \str -> return $ ":! pointfree \"" ++ str ++ "\""
+:def hlint const . return $ ":! hlint \"src\""
+:def hoogle \s -> return $ ":! hoogle --count=17 \"" ++ s ++ "\""
+:def pf \s -> return $ ":! pointfree \"" ++ s ++ "\""
+:def pretty const . return $ "import Text.Show.Pretty (pPrint)\n:set -interactive-print pPrint"
+:def no-pretty const . return $ ":set -interactive-print System.IO.print"
