@@ -1,5 +1,6 @@
 ---
 astylerc: .astylerc
+beamer_template_tex: .pandoc/templates/beamer_template.tex
 ctags: .ctags
 dups: bin/dups
 ghci: .ghci
@@ -10,6 +11,7 @@ imgcat: bin/imgcat
 imgls: bin/imgls
 inputrc: .inputrc
 irbrc: .irbrc
+md2beamer: bin/md2beamer
 md2tufte: bin/md2tufte
 nvim: .config/nvim
 passive: bin/passive

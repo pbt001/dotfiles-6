@@ -1,0 +1,88 @@
+\documentclass{beamer}
+
+% typography
+\usepackage[T1]{fontenc}
+\usepackage{libertine}
+\usepackage[libertine]{newtxmath}
+\usepackage[varqu]{inconsolata}
+\usepackage{microtype}
+
+% colors
+\usepackage{color}
+\definecolor{BG}{RGB}{237, 237, 237}
+\definecolor{FG}{RGB}{50, 50, 50}
+\setbeamercolor{title}{fg=FG, bg=BG}
+\setbeamercolor{titlelike}{fg=FG, bg=BG}
+\setbeamercolor{normal text}{fg=FG, bg=BG}
+\setbeamercolor{block title}{fg=FG, bg=BG}
+\setbeamercolor{block body}{fg=FG, bg=BG}
+\setbeamercolor{item}{fg=FG, bg=BG}
+\setbeamercolor{title}{fg=FG, bg=BG}
+
+% other packages
+\usepackage{booktabs}
+\usepackage{cleveref}
+\usepackage{fancyvrb}
+    \fvset{fontsize=\normalsize}
+\usepackage{graphicx}
+    \setkeys{Gin}{width=\linewidth,
+                  totalheight=\textheight,
+                  keepaspectratio}
+\definecolor{CommentGreen}{RGB}{39, 118, 76}
+\definecolor{KeywordBlue}{RGB}{16, 120, 168}
+\usepackage{listings}
+    \lstset{basicstyle=\footnotesize\ttfamily,
+            upquote=true,
+            showstringspaces=false,
+            commentstyle=\color{CommentGreen},
+            keywordstyle=\color{KeywordBlue}}
+\usepackage{mathtools}
+\usepackage{units}
+\usepackage{xspace}
+
+$if(header-includes)$
+% other includes
+$header-includes$
+$endif$
+
+% suppress navigation bar
+\beamertemplatenavigationsymbolsempty
+% suppress caption label (e.g. "Figure", "Table", etc.)
+\setbeamertemplate{caption}{\insertcaption}
+
+% pandoc workaround
+\def\tightlist{}
+
+% set itemize symbol
+\mode<presentation> {
+    \setbeamercovered{transparent}
+    \setbeamertemplate{items}[circle]
+}
+
+$if(title)$
+\title{$title$}
+$endif$
+$if(author)$
+\author{$for(author)$$author$$sep$ \and $endfor$}
+$endif$
+$if(date)$
+\date{$date$}
+$endif$
+
+\begin{document}
+
+$if(title)$
+\begin{frame}
+\titlepage
+\end{frame}
+$endif$
+
+$if(abstract)$
+\begin{frame}
+$abstract$
+\end{frame}
+$endif$
+
+$body$
+
+\end{document}
