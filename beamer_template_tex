@@ -20,13 +20,30 @@
 \setbeamercolor{title}{fg=FG, bg=BG}
 
 % other packages
+\usepackage{longtable}
 \usepackage{booktabs}
 \usepackage{cleveref}
 \usepackage{fancyvrb}
     \fvset{fontsize=\normalsize}
 \usepackage{graphicx}
-    \setkeys{Gin}{width=\linewidth,
-                  totalheight=\textheight,
+\makeatletter
+\def\ScaleWidthIfNeeded{%
+ \ifdim\Gin@nat@width>\linewidth
+    \linewidth
+  \else
+    \Gin@nat@width
+  \fi
+}
+\def\ScaleHeightIfNeeded{%
+  \ifdim\Gin@nat@height>0.5\textheight
+    0.5\textheight
+  \else
+    \Gin@nat@width
+  \fi
+}
+\makeatother
+    \setkeys{Gin}{width=\ScaleWidthIfNeeded,%\linewidth,
+                  totalheight=\ScaleHeightIfNeeded,%\textheight,
                   keepaspectratio}
 \definecolor{CommentGreen}{RGB}{39, 118, 76}
 \definecolor{KeywordBlue}{RGB}{16, 120, 168}
