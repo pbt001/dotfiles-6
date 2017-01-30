@@ -65,6 +65,7 @@ path=(
     $HOME/.scalaenv/shims
     $GOPATH/bin
     /Applications/Racket\ v6.6/bin $path
+    /usr/local/opt/llvm/bin
 )
 typeset -U path
 # >>>
