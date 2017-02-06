@@ -55,8 +55,9 @@ path=(
     $HOME/.cargo/bin
     $HOME/.scalaenv/shims
     $GOPATH/bin
-    /Applications/Racket\ v6.6/bin $path
+    /Applications/Racket\ v6.6/bin
     /usr/local/opt/llvm/bin
+    $path
 )
 typeset -U path
 # <<< nocorrect: don't be so eager, zsh

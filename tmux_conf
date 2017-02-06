@@ -1,5 +1,6 @@
-##  https://robots.thoughtbot.com/how-to-copy-and-paste-with-tmux-on-mac-os-x
-set-option -g default-command "reattach-to-user-namespace -l zsh"
+## https://robots.thoughtbot.com/how-to-copy-and-paste-with-tmux-on-mac-os-x
+## https://github.com/sorin-ionescu/prezto/tree/master/modules/tmux
+set-option -g default-command "reattach-to-user-namespace -l $SHELL -l"
 
 ## http://robots.thoughtbot.com/post/2641409235/a-tmux-crash-course
 # prefix change
