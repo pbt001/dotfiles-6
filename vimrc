@@ -39,11 +39,6 @@ set laststatus=2  " always
 "Security exploits?
 set modelines=0
 
-"encrypt with Blowfish
-if !has('nvim')
-    set cryptmethod=blowfish
-endif
-
 "Colors
 set t_Co=256
 set background=dark
@@ -156,9 +151,6 @@ vmap <C-c><C-c> <Plug>SendSelectionToTmux
 nmap <C-c><C-c> <Plug>NormalModeSendToTmux
 nmap <C-c>r <Plug>SetTmuxVars
 
-"http://jasonseney.com/post/18646147210/open-edit-save-encrypted-files-with-vim-and-gpg
-command -nargs=1 WriteEncrypted w !gpg -c -o <q-args>
-
 "Move up the directory hierarchy until you find a tags file
 set tags=tags;/
 
@@ -175,7 +167,6 @@ let g:ctrlp_working_path_mode = 'ar'
 let g:ctrlp_use_caching = 0
 if executable('ag')
 set grepprg=ag\ --nogroup\ --nocolor
-
 let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 else
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
