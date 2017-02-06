@@ -29,13 +29,13 @@ function git_branch_info() {
 
 function git_status() {
   local INDEX STATUS
-  local ADDED="%{$fg[green]%}✓"
+  local ADDED="%{$fg[blue]%}✓"
   local DELETED="%{$fg[red]%}⊗"
   local MODIFIED="%{$fg[yellow]%}△"
-  local PRISTINE="%{$fg[green]%}∞"
+  local PRISTINE="%{$fg[hite]%}∞"
   local RENAMED="%{$fg[blue]%}⋙"
   local UNMERGED="%{$fg[cyan]%}§"
-  local UNTRACKED="%{$fg[white]%}◒ "
+  local UNTRACKED="%{$fg[gray]%}◒ "
   INDEX=$(command git status --porcelain --ignore-submodules=dirty 2> /dev/null | tail -n1)
   STATUS=""
   case ${INDEX[1,2]} in
