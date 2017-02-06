@@ -32,6 +32,7 @@ alias gco='git checkout'
 alias gd='git diff'
 alias gl='git pull'
 alias glol='git log --graph --decorate --oneline'
+alias gm='git merge'
 alias gp='git push'
 alias grep='grep  --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn}'
 alias gst='git status'
@@ -125,3 +126,4 @@ setopt share_history # share command history data
 setopt prompt_subst
 
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
