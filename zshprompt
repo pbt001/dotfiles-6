@@ -42,10 +42,10 @@ function git_branch_info() {
 function git_status() {
 	local INDEX STATUS
 	local UNTRACKED="%{$fg[white]%}◒ "
-	local ADDED="%{$fg[cyan]%}✓ "
+	local ADDED="%{$fg[green]%}✓ "
 	local MODIFIED="%{$fg[yellow]%}△ "
-	local DELETED="%{$fg[red]%}✖ "
-	local RENAMED="%{$fg[blue]%}➜ "
+	local DELETED="%{$fg[red]%}⊗ "
+	local RENAMED="%{$fg[blue]%}⋙ "
 	local UNMERGED="%{$fg[cyan]%}§ "
 	local AHEAD="%{$fg[blue]%}▲ "
 	INDEX=$(command git status --porcelain -b 2> /dev/null)
