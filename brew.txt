@@ -28,7 +28,6 @@ emacs
 erlang
 exercism
 fasd
-fish
 fontconfig
 freetype
 gcc
