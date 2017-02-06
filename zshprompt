@@ -1,15 +1,25 @@
+# modified from https://github.com/tylerreckart/hyperzsh & oh-my-zsh awesomepanda
+#
 . $HOME/github/dotfiles/spectrum.zsh
 
-# modified from https://github.com/tylerreckart/hyperzsh & oh-my-zsh awesomepanda
-PROMPT='%{$fg[cyan]%}%~ $(git_branch_info)%{$fg[magenta]%}$(git_status)$(return_status)  '
+PROMPT='$(dir) $(glyph) '
+RPROMPT='$(return_status)$(git_branch_info)$(git_status)'
+
+function glyph() {
+  echo "%{$fg[green]%}𝔼%{$reset_color%}"
+}
+
+function dir() {
+  echo "%{$fg[cyan]%}%~ %{$reset_color%}"
+}
 
 function return_status() {
   echo "%{$fg[red]%}%(?..⍉ )%{$reset_color%}"
 }
 
 function git_branch_info() {
-  local prefix="git:(%{$fg[red]%}"
-  local suffix="%{$reset_color%}"
+  local prefix="%{$fg[cyan]%}git:(%{$fg[red]%}"
+  local suffix="%{$fg[cyan]%})%{$reset_color%}"
   local ref
   ref=$(command git symbolic-ref HEAD 2> /dev/null) || \
     ref=$(command git rev-parse --short HEAD 2> /dev/null) || return 0
@@ -37,6 +47,9 @@ function git_status() {
       STATUS="$ADDED$STATUS"
       ;;
     ' M')
+      STATUS="$MODIFIED$STATUS"
+      ;;
+    'MM')
       STATUS="$MODIFIED$STATUS"
       ;;
     'AM')
