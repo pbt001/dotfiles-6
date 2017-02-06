@@ -27,6 +27,7 @@ alias g='git'
 alias ga='git add'
 alias gb='git branch'
 alias gc='git commit'
+alias gcm='git checkout master'
 alias gco='git checkout'
 alias gd='git diff'
 alias gl='git pull'
@@ -57,6 +58,8 @@ alias v="f -e $EDITOR"
 alias whihc='which'
 alias z='fasd_cd -d'
 alias zz='fasd_cd -d -i'
+
+bindkey "^X^I" expand-or-complete-prefix
 
 export CPLUS_INCLUDE_PATH="$C_INCLUDE_PATH:$CPLUS_INCLUDE_PATH"
 export C_INCLUDE_PATH="$HOME/include:$C_INCLUDE_PATH"

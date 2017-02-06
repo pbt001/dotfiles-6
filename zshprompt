@@ -1,9 +1,10 @@
-# modified from https://github.com/tylerreckart/hyperzsh & oh-my-zsh awesomepanda
+# I started from https://github.com/tylerreckart/hyperzsh &
+# oh-my-zsh awesomepanda, but have largely diverged
 #
 . $HOME/github/dotfiles/spectrum.zsh
 
-PROMPT='$(dir) $(glyph) '
-RPROMPT='$(return_status)$(git_branch_info)$(git_status)'
+PROMPT='$(dir) $(git_status) $(glyph) '
+RPROMPT='$(return_status)$(git_branch_info)'
 
 function glyph() {
   echo "%{$fg[green]%}𝔼%{$reset_color%}"
