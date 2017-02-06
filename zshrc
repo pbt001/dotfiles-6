@@ -1,11 +1,8 @@
 ZSH=$HOME/.oh-my-zsh
-DISABLE_AUTO_UPDATE="true"
-ZSH_THEME='robbyrussell'
+DISABLE_AUTO_UPDATE='true'
+ZSH_THEME='awesomepanda'
 source $ZSH/oh-my-zsh.sh
 source ~/SOURCE_ME
-source ~/.zshalias
-source ~/.zshexport
-source ~/.zshfunc
 bindkey -v
 path=(
   $HOME/bin
