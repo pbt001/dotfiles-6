@@ -66,11 +66,11 @@ set showmatch
 "Insert spaces instead of tabs
 set expandtab
 
-"Tab length is 4 spaces
-set tabstop=4
+"Tab length is 2 spaces
+set tabstop=2
 
-"Use 4 spaces for << and >> commands
-set shiftwidth=4
+"Use 2 spaces for << and >> commands
+set shiftwidth=2
 
 "Use shiftwidth instead of tabstop setting
 set smarttab
@@ -154,9 +154,6 @@ nmap <C-c>r <Plug>SetTmuxVars
 "Move up the directory hierarchy until you find a tags file
 set tags=tags;/
 
-"Specify indentation for haskell, css, html, markdown, yaml, ruby, & scala
-au FileType haskell,css,html,markdown,yaml,ruby,scala setlocal tabstop=2 shiftwidth=2
-
 "Allow vim access to system clipboard
 set clipboard=unnamed
 
@@ -174,41 +171,3 @@ let g:ctrlp_prompt_mappings = {
 \ 'AcceptSelection("e")': ['<space>', '<cr>', '<2-LeftMouse>'],
 \ }
 endif
-
-" ## added by OPAM user-setup for vim / base ## 93ee63e278bdfc07d1139a748ed3fff2 ## you can edit, but keep this line
-let s:opam_share_dir = system("opam config var share")
-let s:opam_share_dir = substitute(s:opam_share_dir, '[\r\n]*$', '', '')
-
-let s:opam_configuration = {}
-
-function! OpamConfOcpIndent()
-  execute "set rtp^=" . s:opam_share_dir . "/ocp-indent/vim"
-endfunction
-let s:opam_configuration['ocp-indent'] = function('OpamConfOcpIndent')
-
-function! OpamConfOcpIndex()
-  execute "set rtp+=" . s:opam_share_dir . "/ocp-index/vim"
-endfunction
-let s:opam_configuration['ocp-index'] = function('OpamConfOcpIndex')
-
-function! OpamConfMerlin()
-  let l:dir = s:opam_share_dir . "/merlin/vim"
-  execute "set rtp+=" . l:dir
-endfunction
-let s:opam_configuration['merlin'] = function('OpamConfMerlin')
-
-let s:opam_packages = ["ocp-indent", "ocp-index", "merlin"]
-let s:opam_check_cmdline = ["opam list --installed --short --safe --color=never"] + s:opam_packages
-let s:opam_available_tools = split(system(join(s:opam_check_cmdline)))
-for tool in s:opam_packages
-  " Respect package order (merlin should be after ocp-index)
-  if count(s:opam_available_tools, tool) > 0
-    call s:opam_configuration[tool]()
-  endif
-endfor
-" ## end of OPAM user-setup addition for vim / base ## keep this line
-" ## added by OPAM user-setup for vim / ocp-indent ## 2843145aae8c087fcf9e2e7b17c5372f ## you can edit, but keep this line
-if count(s:opam_available_tools,"ocp-indent") == 0
-  source "/Users/graham/.opam/system/share/vim/syntax/ocp-indent.vim"
-endif
-" ## end of OPAM user-setup addition for vim / ocp-indent ## keep this line

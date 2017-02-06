@@ -25,3 +25,6 @@ vim: .vim
 vimrc: .vimrc
 weasel: bin/weasel
 zshrc: .zshrc
+zshalias: .zshalias
+zshexport: .zshexport
+zshfunc: .zshfunc

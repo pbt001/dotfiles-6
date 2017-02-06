@@ -1,0 +1,9 @@
+export C_INCLUDE_PATH="$HOME/include:$C_INCLUDE_PATH"
+export CPLUS_INCLUDE_PATH="$C_INCLUDE_PATH:$CPLUS_INCLUDE_PATH"
+export EDITOR='nvim'
+export GOPATH="$HOME/go"
+export KEYTIMEOUT=1
+export LD_LIBRARY_PATH="$HOME/lib:$LD_LIBRARY_PATH"
+export LESS='CiMQRX'
+export SHELL=$(which zsh)
+export TERM=xterm-256color
