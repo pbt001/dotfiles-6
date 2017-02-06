@@ -102,6 +102,7 @@ fi
 HISTSIZE=10000
 SAVEHIST=10000
 
+setopt auto_cd
 setopt auto_pushd
 setopt pushd_ignore_dups
 setopt pushdminus
