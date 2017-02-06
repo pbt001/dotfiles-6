@@ -1,4 +1,6 @@
 ---
+_cargo: site-functions/_cargo
+_stack: site-functions/_stack
 astylerc: .astylerc
 beamer_template_tex: .pandoc/templates/beamer_template.tex
 ctags: .ctags
@@ -24,5 +26,6 @@ tufte_template_tex: .pandoc/templates/tufte_template.tex
 vim: .vim
 vimrc: .vimrc
 weasel: bin/weasel
-zshrc: .zshrc
 zshenv: .zshenv
+zshprompt: .zshprompt
+zshrc: .zshrc

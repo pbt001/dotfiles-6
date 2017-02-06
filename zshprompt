@@ -1,0 +1,94 @@
+. $HOME/github/dotfiles/spectrum.zsh
+
+# modified from https://github.com/tylerreckart/hyperzsh & oh-my-zsh awesomepanda
+PROMPT='%{$fg[cyan]%}%~ $(git_branch_info)%{$fg[magenta]%}$(git_status)$(return_status)➜  '
+
+function return_status() {
+ echo "%{$fg[red]%}%(?..⍉ )%{$reset_color%}"
+}
+
+function git_current_branch() {
+	local ref
+	ref=$(command git symbolic-ref --quiet HEAD 2> /dev/null)
+	local ret=$?
+	if [[ $ret != 0 ]]; then
+		[[ $ret == 128 ]] && return  # no git repo.
+		ref=$(command git rev-parse --short HEAD 2> /dev/null) || return
+	fi
+	echo ${ref#refs/heads/}
+}
+
+function git_parse_dirty() {
+	local CLEAN="%{$fg[blue]%}) "
+	local DIRTY="%{$fg[blue]%})%{$fg[yellow]%} ✗ %{$reset_color%}"
+	local FLAGS='--porcelain --ignore-submodules=dirty'
+	local STATUS=$(command git status ${FLAGS} 2> /dev/null | tail -n1)
+	if [[ -n $STATUS ]]; then
+		echo $DIRTY
+	else
+		echo $CLEAN
+	fi
+}
+
+function git_branch_info() {
+	local prefix="git:(%{$fg[red]%}"
+	local suffix="%{$reset_color%}"
+	local ref
+	ref=$(command git symbolic-ref HEAD 2> /dev/null) || \
+		ref=$(command git rev-parse --short HEAD 2> /dev/null) || return 0
+	echo "$prefix${ref#refs/heads/}$(git_parse_dirty)$suffix"
+}
+
+function git_status() {
+	local INDEX STATUS
+	local UNTRACKED="%{$fg[white]%}◒ "
+	local ADDED="%{$fg[cyan]%}✓ "
+	local MODIFIED="%{$fg[yellow]%}△ "
+	local DELETED="%{$fg[red]%}✖ "
+	local RENAMED="%{$fg[blue]%}➜ "
+	local UNMERGED="%{$fg[cyan]%}§ "
+	local AHEAD="%{$fg[blue]%}▲ "
+	INDEX=$(command git status --porcelain -b 2> /dev/null)
+	STATUS=""
+	if $(echo "$INDEX" | command grep -E '^\?\? ' &> /dev/null); then
+		STATUS="$UNTRACKED$STATUS"
+	fi
+	if $(echo "$INDEX" | grep '^A  ' &> /dev/null); then
+		STATUS="$ADDED$STATUS"
+	elif $(echo "$INDEX" | grep '^M  ' &> /dev/null); then
+		STATUS="$ADDED$STATUS"
+	fi
+	if $(echo "$INDEX" | grep '^ M ' &> /dev/null); then
+		STATUS="$MODIFIED$STATUS"
+	elif $(echo "$INDEX" | grep '^AM ' &> /dev/null); then
+		STATUS="$MODIFIED$STATUS"
+	elif $(echo "$INDEX" | grep '^ T ' &> /dev/null); then
+		STATUS="$MODIFIED$STATUS"
+	fi
+	if $(echo "$INDEX" | grep '^R  ' &> /dev/null); then
+		STATUS="$RENAMED$STATUS"
+	fi
+	if $(echo "$INDEX" | grep '^ D ' &> /dev/null); then
+		STATUS="$DELETED$STATUS"
+	elif $(echo "$INDEX" | grep '^D  ' &> /dev/null); then
+		STATUS="$DELETED$STATUS"
+	elif $(echo "$INDEX" | grep '^AD ' &> /dev/null); then
+		STATUS="$DELETED$STATUS"
+	fi
+	if $(command git rev-parse --verify refs/stash >/dev/null 2>&1); then
+		STATUS="$STASHED$STATUS"
+	fi
+	if $(echo "$INDEX" | grep '^UU ' &> /dev/null); then
+		STATUS="$UNMERGED$STATUS"
+	fi
+	if $(echo "$INDEX" | grep '^## [^ ]\+ .*ahead' &> /dev/null); then
+		STATUS="$AHEAD$STATUS"
+	fi
+	if $(echo "$INDEX" | grep '^## [^ ]\+ .*behind' &> /dev/null); then
+		STATUS="$BEHIND$STATUS"
+	fi
+	if $(echo "$INDEX" | grep '^## [^ ]\+ .*diverged' &> /dev/null); then
+		STATUS="$DIVERGED$STATUS"
+	fi
+	echo $STATUS
+}

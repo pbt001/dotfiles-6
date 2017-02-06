@@ -1,9 +1,17 @@
-ZSH=$HOME/.oh-my-zsh
-DISABLE_AUTO_UPDATE='true'
-ZSH_THEME='awesomepanda'
-source $ZSH/oh-my-zsh.sh
+autoload -U colors && colors
+autoload -Uz compinit
+if [ $(date +'%j') != $(stat -f '%Sm' -t '%j' ~/.zcompdump) ]; then
+  compinit
+else
+  compinit -C
+fi
 source ~/SOURCE_ME
 bindkey -v
+fpath=(
+  $HOME/site-functions
+  $fpath
+)
+typeset -U fpath
 path=(
   $HOME/bin
   $HOME/.local/bin
@@ -15,22 +23,19 @@ path=(
   /bin
   /sbin
   /Library/TeX/Distributions/Programs/texbin
-  $HOME/.cabal/bin
   $HOME/.cargo/bin
-  $HOME/.scalaenv/shims
   $GOPATH/bin
   /Applications/Racket\ v6.6/bin
   /usr/local/opt/llvm/bin
   $path
 )
 typeset -U path
-# <<< fasd
+#
 if [ $commands[fasd] ]; then # check if fasd is installed
-  fasd_cache="${ZSH_CACHE_DIR}/fasd-init-cache"
+  fasd_cache="$HOME/.fasd-init-cache"
   if [ "$(command -v fasd)" -nt "$fasd_cache" -o ! -s "$fasd_cache" ]; then
     fasd --init auto >| "$fasd_cache"
   fi
   source "$fasd_cache"
   unset fasd_cache
 fi
-# >>>
