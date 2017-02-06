@@ -10,7 +10,6 @@ haskeline: .haskeline
 imgcat: bin/imgcat
 imgls: bin/imgls
 inputrc: .inputrc
-irbrc: .irbrc
 md2beamer: bin/md2beamer
 md2tufte: bin/md2tufte
 nvim: .config/nvim
@@ -21,11 +20,8 @@ stack_config: .stack/config.yaml
 stack_global: .stack/global-project/stack.yaml
 stylish_haskell: .stylish-haskell.yaml
 tmux_conf: .tmux.conf
-todo_cfg: .todo.cfg
 tufte_template_tex: .pandoc/templates/tufte_template.tex
 vim: .vim
 vimrc: .vimrc
 weasel: bin/weasel
-xinitrc: .xinitrc
-xmodmap: .Xmodmap
 zshrc: .zshrc
