@@ -11,11 +11,11 @@ function glyph() {
 }
 
 function dir() {
-  echo "%{$fg[cyan]%}%~ %{$reset_color%}"
+  echo "%{$fg[cyan]%}%~%{$reset_color%}"
 }
 
 function return_status() {
-  echo "%{$fg[red]%}%(?..⍉ )%{$reset_color%}"
+  echo "%(?..☠  )"
 }
 
 function git_branch_info() {
@@ -29,19 +29,15 @@ function git_branch_info() {
 
 function git_status() {
   local INDEX STATUS
-  local ADDED="%{$fg[blue]%}✓"
+  local ADDED="%{$fg[green]%}✓"
   local DELETED="%{$fg[red]%}⊗"
   local MODIFIED="%{$fg[yellow]%}△"
-  local PRISTINE="%{$fg[hite]%}∞"
   local RENAMED="%{$fg[blue]%}⋙"
   local UNMERGED="%{$fg[cyan]%}§"
-  local UNTRACKED="%{$fg[gray]%}◒ "
+  local UNTRACKED="%{$fg[white]%}◒ "
   INDEX=$(command git status --porcelain --ignore-submodules=dirty 2> /dev/null | tail -n1)
   STATUS=""
   case ${INDEX[1,2]} in
-    '')
-      STATUS="$PRISTINE$STATUS"
-      ;;
     '??')
       STATUS="$UNTRACKED$STATUS"
       ;;
@@ -79,5 +75,5 @@ function git_status() {
       STATUS="$UNMERGED$STATUS"
       ;;
   esac
-  echo "$STATUS %{$reset_color%}"
+  echo "$STATUS%{$reset_color%}"
 }
