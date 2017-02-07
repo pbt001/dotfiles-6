@@ -1,4 +1,3 @@
----
 _cargo: site-functions/_cargo
 _stack: site-functions/_stack
 astylerc: .astylerc
