@@ -38,6 +38,7 @@ alias gp='git push'
 alias grep='grep  --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn}'
 alias gst='git status'
 alias gwch='git whatchanged -p --abbrev-commit --pretty=medium'
+alias history='fc -il 1'
 alias ip=jupyter-console
 alias ipn=jupyter-notebook
 alias jc=$HOME/j64-805/bin/jconsole

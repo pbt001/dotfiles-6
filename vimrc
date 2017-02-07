@@ -15,6 +15,7 @@ Plug 'jgdavey/tslime.vim'
 Plug 'joom/latex-unicoder.vim'
 Plug 'junegunn/goyo.vim'
 Plug 'maverickg/stan.vim'
+Plug 'majutsushi/tagbar'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'raichoo/purescript-vim'
 Plug 'rking/ag.vim'
@@ -171,3 +172,10 @@ let g:ctrlp_prompt_mappings = {
 \ 'AcceptSelection("e")': ['<space>', '<cr>', '<2-LeftMouse>'],
 \ }
 endif
+"Use CtrlP + CTags
+"https://andrew.stwrt.ca/posts/vim-ctags/
+nnoremap <leader>. :CtrlPTag<cr>
+
+"Ctags + Tagbar
+"https://andrew.stwrt.ca/posts/vim-ctags/
+nnoremap <silent> <Leader>b :TagbarToggle<CR>
