@@ -1,79 +1,78 @@
-# I started from https://github.com/tylerreckart/hyperzsh &
-# oh-my-zsh awesomepanda, but have largely diverged
+# I started from https://github.com/tylerreckart/hyperzsh,
+# http://stevelosh.com/blog/2010/02/my-extravagant-zsh-prompt, &
+# oh-my-zsh's awesomepanda, but have largely diverged
 #
 . $HOME/github/dotfiles/spectrum.zsh
 
-PROMPT='$(dir) $(git_status) $(glyph) '
-RPROMPT='$(return_status)$(git_branch_info)'
+PROMPT='$(dir) $(glyph) '
+RPROMPT='$(git_status) $(git_branch_info)'
 
 function glyph() {
-  echo "%{$fg[green]%}𝔼%{$reset_color%}"
+  echo "%{$fg[green]%}∃%{$reset_color%}"
 }
 
 function dir() {
-  echo "%{$fg[cyan]%}%~%{$reset_color%}"
-}
-
-function return_status() {
-  echo "%{$fg[red]%}%(?..⊗ )%{$reset_color%}"
+  echo "%{$fg[cyan]%}${PWD/#$HOME/~}%{$reset_color%}"
 }
 
 function git_branch_info() {
-  local prefix="%{$fg[cyan]%}branch: %{$fg[red]%}"
-  local suffix="%{$fg[cyan]%}%{$reset_color%}"
   local ref
   ref=$(command git symbolic-ref HEAD 2> /dev/null) || \
     ref=$(command git rev-parse --short HEAD 2> /dev/null) || return 0
-  echo "$prefix${ref#refs/heads/}$suffix"
+  echo "%{$fg[cyan]%}${ref#refs/heads/}%{$reset_color%}"
 }
 
 function git_status() {
-  local INDEX STATUS
-  local ADDED="%{$fg[green]%}✓"
-  local DELETED="%{$fg[red]%}⊗"
-  local MODIFIED="%{$fg[yellow]%}△"
-  local RENAMED="%{$fg[blue]%}⋙"
-  local UNMERGED="%{$fg[cyan]%}§"
-  local UNTRACKED="%{$fg[white]%}◒ "
-  INDEX=$(command git status --porcelain --ignore-submodules=dirty 2> /dev/null | tail -n1)
+  local index STATUS
+  local added="%{$fg[green]%}○%{$reset_color%}"
+  local deleted="%{$fg[red]%}○%{$reset_color%}"
+  local modified="%{$fg[yellow]%}○%{$reset_color%}"
+  local renamed="%{$fg[blue]%}○%{$reset_color%}"
+  local unmerged="%{$fg[cyan]%}○%{$reset_color%}"
+  local untracked="%{$fg[white]%}○%{$reset_color%}"
+  local lines=(
+  "${(@f)$(git status --porcelain --ignore-submodules=dirty 2> /dev/null)}"
+  )
   STATUS=""
-  case ${INDEX[1,2]} in
-    '??')
-      STATUS="$UNTRACKED$STATUS"
-      ;;
-    'A ')
-      STATUS="$ADDED$STATUS"
-      ;;
-    'M ')
-      STATUS="$MODIFIED$STATUS"
-      ;;
-    ' M')
-      STATUS="$MODIFIED$STATUS"
-      ;;
-    'MM')
-      STATUS="$MODIFIED$STATUS"
-      ;;
-    'AM')
-      STATUS="$MODIFIED$STATUS"
-      ;;
-    ' T')
-      STATUS="$MODIFIED$STATUS"
-      ;;
-    'R ')
-      STATUS="$RENAMED$STATUS"
-      ;;
-    ' D')
-      STATUS="$DELETED$STATUS"
-      ;;
-    'D ')
-      STATUS="$DELETED$STATUS"
-      ;;
-    'AD')
-      STATUS="$DELETED$STATUS"
-      ;;
-    'UU')
-      STATUS="$UNMERGED$STATUS"
-      ;;
-  esac
-  echo "$STATUS%{$reset_color%}"
+  for line in $lines; do
+    case ${line[1,2]} in
+      '??')
+        STATUS="$untracked$STATUS"
+        ;;
+      'A ')
+        STATUS="$added$STATUS"
+        ;;
+      'M ')
+        STATUS="$modified$STATUS"
+        ;;
+      ' M')
+        STATUS="$modified$STATUS"
+        ;;
+      'MM')
+        STATUS="$modified$STATUS"
+        ;;
+      'AM')
+        STATUS="$modified$STATUS"
+        ;;
+      ' T')
+        STATUS="$modified$STATUS"
+        ;;
+      'R ')
+        STATUS="$renamed$STATUS"
+        ;;
+      ' D')
+        STATUS="$deleted$STATUS"
+        ;;
+      'D ')
+        STATUS="$deleted$STATUS"
+        ;;
+      'AD')
+        STATUS="$deleted$STATUS"
+        ;;
+      'UU')
+        STATUS="$unmerged$STATUS"
+        ;;
+    esac
+  done
+  echo "$STATUS"
 }
