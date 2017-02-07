@@ -18,6 +18,7 @@ nvim: .config/nvim
 passive: bin/passive
 pylintrc: .pylintrc
 sbclrc: .sbclrc
+scalariform_properties: .scalariform.properties
 stack_config: .stack/config.yaml
 stack_global: .stack/global-project/stack.yaml
 stylish_haskell: .stylish-haskell.yaml

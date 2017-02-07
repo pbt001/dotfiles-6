@@ -45,7 +45,7 @@ function git_status() {
       STATUS="$ADDED$STATUS"
       ;;
     'M ')
-      STATUS="$ADDED$STATUS"
+      STATUS="$MODIFIED$STATUS"
       ;;
     ' M')
       STATUS="$MODIFIED$STATUS"

@@ -36,12 +36,14 @@ alias gm='git merge'
 alias gp='git push'
 alias grep='grep  --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn}'
 alias gst='git status'
+alias gwch='git whatchanged -p --abbrev-commit --pretty=medium'
 alias ip=jupyter-console
 alias ipn=jupyter-notebook
 alias jc=$HOME/j64-805/bin/jconsole
 alias jqt=$HOME/j64-805/bin/jqt.command
-alias ln='nocorrect ln'
+alias l='ls -al'
 alias la='ls -a'
+alias ln='nocorrect ln'
 alias lrt='ls -lrt'
 alias ls='ls -G'
 alias md='mkdir -p'
@@ -52,6 +54,7 @@ alias py='python3'
 alias rd=rmdir
 alias runTL="sbt/sbt 'project timeline' 'run-main com.qf.timeline.TimeLineApp --env dev --signumServiceClient.host prod-signumservice-lb.mtv.quantifind.com'"
 alias s='fasd -si'
+alias scalariform='scalariform -p=$HOME/.scalariform.properties'
 alias sd='fasd -sid'
 alias sf='fasd -sif'
 alias touch='nocorrect touch'

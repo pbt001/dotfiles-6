@@ -18,6 +18,7 @@ chezscheme
 clasp
 cmake
 coursier
+cowsay
 cscope
 ctags
 docbook
@@ -75,11 +76,13 @@ libuv
 libvterm
 libyaml
 little-cms
+littler
 llvm
 lua
 luajit
 mad
 make
+mercurial
 mobile-shell
 mongodb
 mpfr
@@ -90,7 +93,6 @@ nettle
 ocaml
 ocamlbuild
 oniguruma
-opam
 openblas
 openssl
 p11-kit
@@ -116,7 +118,6 @@ redis
 ruby
 sbcl
 sbt
-scalaenv
 scalariform
 scalastyle
 scons
@@ -128,7 +129,6 @@ svgcleaner
 texinfo
 texmath
 the_silver_searcher
-thefuck
 tmux
 tree
 ucl
