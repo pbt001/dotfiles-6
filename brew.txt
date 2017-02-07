@@ -1,5 +1,4 @@
 ansible19
-ant
 aspcud
 astyle
 atk
@@ -84,7 +83,6 @@ mad
 make
 mercurial
 mobile-shell
-mongodb
 mpfr
 msgpack
 musl-cross
