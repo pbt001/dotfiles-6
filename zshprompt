@@ -15,7 +15,7 @@ function dir() {
 }
 
 function return_status() {
-  echo "%(?..☠  )"
+  echo "%{$fg[red]%}%(?..⊗ )%{$reset_color%}"
 }
 
 function git_branch_info() {
