@@ -4,3 +4,7 @@ md2tufte
 md2beamer
 setup
 teardown
+*.dyn_hi
+*.dyn_o
+*.hi
+*.o
