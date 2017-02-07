@@ -1,25 +1,21 @@
-# I started from https://github.com/tylerreckart/hyperzsh,
+# This started with help from https://github.com/tylerreckart/hyperzsh,
 # http://stevelosh.com/blog/2010/02/my-extravagant-zsh-prompt, &
 # oh-my-zsh's awesomepanda, but have largely diverged
 #
 . $HOME/github/dotfiles/spectrum.zsh
 
 PROMPT='$(dir) $(glyph) '
-RPROMPT='$(git_status) $(git_branch_info)'
+RPROMPT='$(git_status) $(git_branch)'
 
-function glyph() {
-  echo "%{$fg[green]%}∃%{$reset_color%}"
-}
+function glyph() { echo "%{$fg[green]%}∃%{$reset_color%}" }
 
-function dir() {
-  echo "%{$fg[cyan]%}${PWD/#$HOME/~}%{$reset_color%}"
-}
+function dir() { echo "%{$fg[cyan]%}${PWD/#$HOME/~}%{$reset_color%}" }
 
-function git_branch_info() {
+function git_branch() {
   local ref
   ref=$(command git symbolic-ref HEAD 2> /dev/null) || \
     ref=$(command git rev-parse --short HEAD 2> /dev/null) || return 0
-  echo "%{$fg[cyan]%}${ref#refs/heads/}%{$reset_color%}"
+  echo "%{$fg[red]%}${ref#refs/heads/}%{$reset_color%}"
 }
 
 function git_status() {
@@ -34,7 +30,7 @@ function git_status() {
   "${(@f)$(git status --porcelain --ignore-submodules=dirty 2> /dev/null)}"
   )
   STATUS=""
-  for line in $lines; do
+  for line in ${lines[1,3]}; do
     case ${line[1,2]} in
       '??')
         STATUS="$untracked$STATUS"
@@ -42,31 +38,13 @@ function git_status() {
       'A ')
         STATUS="$added$STATUS"
         ;;
-      'M ')
-        STATUS="$modified$STATUS"
-        ;;
-      ' M')
-        STATUS="$modified$STATUS"
-        ;;
-      'MM')
-        STATUS="$modified$STATUS"
-        ;;
-      'AM')
-        STATUS="$modified$STATUS"
-        ;;
-      ' T')
+      'M ' | ' M' | 'MM' | 'AM' | ' T')
         STATUS="$modified$STATUS"
         ;;
       'R ')
         STATUS="$renamed$STATUS"
         ;;
-      ' D')
-        STATUS="$deleted$STATUS"
-        ;;
-      'D ')
-        STATUS="$deleted$STATUS"
-        ;;
-      'AD')
+      ' D' | 'D ' | 'AD')
         STATUS="$deleted$STATUS"
         ;;
       'UU')
@@ -74,5 +52,5 @@ function git_status() {
         ;;
     esac
   done
-  echo "$STATUS"
+  echo $STATUS
 }
