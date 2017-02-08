@@ -34,6 +34,7 @@ gcc
 gdbm
 gdk-pixbuf
 gettext
+gflags
 ghc
 git
 glib
@@ -79,6 +80,7 @@ littler
 llvm
 lua
 luajit
+lz4
 mad
 make
 mercurial
@@ -113,6 +115,7 @@ r
 readline
 reattach-to-user-namespace
 redis
+rocksdb
 ruby
 sbcl
 sbt
@@ -120,6 +123,7 @@ scalariform
 scalastyle
 scons
 shared-mime-info
+snappy
 sox
 sphinx-doc
 sqlite
