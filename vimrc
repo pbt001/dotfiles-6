@@ -175,3 +175,9 @@ nnoremap <leader>. :CtrlPTag<cr>
 "Ctags + Tagbar
 "https://andrew.stwrt.ca/posts/vim-ctags/
 nnoremap <silent> <Leader>b :TagbarToggle<CR>
+
+"move backup to ~/.vim-tmp
+set backup
+set swapfile
+set backupdir=~/.vim-tmp
+set directory=~/.vim-tmp

@@ -75,9 +75,11 @@ libunistring
 libuv
 libvterm
 libyaml
+libzip
 little-cms
 littler
 llvm
+lmdb
 lua
 luajit
 lz4
@@ -107,8 +109,10 @@ pcre
 pcre2
 pixman
 pkg-config
+planck
 popt
 protobuf
+pypy
 python
 python3
 r
@@ -119,6 +123,7 @@ rocksdb
 ruby
 sbcl
 sbt
+scalafmt
 scalariform
 scalastyle
 scons
