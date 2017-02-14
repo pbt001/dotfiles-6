@@ -120,8 +120,8 @@ readline
 reattach-to-user-namespace
 redis
 rocksdb
+roswell
 ruby
-sbcl
 sbt
 scalafmt
 scalariform
