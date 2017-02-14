@@ -181,3 +181,6 @@ set backup
 set swapfile
 set backupdir=~/.vim-tmp
 set directory=~/.vim-tmp
+
+" *.ros = Common Lisp
+au BufNewFile,BufRead *.ros set filetype=lisp
