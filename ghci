@@ -1,7 +1,7 @@
 :set editor /usr/local/bin/vim
 :set -XOverloadedStrings
 :set -Wall
-:set prompt "λ⤇ "
+:set prompt "λ⋙ "
 :set +m
 :set +t
 :def hlint const . return $ ":! hlint \"src\""
