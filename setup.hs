@@ -4,16 +4,18 @@
 
 module Main where
 
-import Control.Arrow
+import Control.Arrow  ((***), second)
 import Turtle
 import Prelude hiding (FilePath)
-import Data.FileEmbed (embedStringFile)
 import qualified Data.Text as T
 
 type FileLink = (FilePath, FilePath)
 
-config :: FilePath
-config = "config.yaml"
+dotfiles :: IO FilePath
+dotfiles = (\h -> h </> "github" </> "dotfiles") <$> home
+
+config :: IO FilePath
+config = (</> "config.yaml") <$> dotfiles
 
 toFL :: Text -> FileLink
 toFL = (fromText *** fromText) .
@@ -23,19 +25,17 @@ toFL = (fromText *** fromText) .
 fileLinks :: Text -> [FileLink]
 fileLinks = fmap toFL . T.lines
 
-dotfiles :: IO FilePath
-dotfiles = (\h -> h </> "github" </> "dotfiles") <$> home
-
 symlink :: FileLink -> IO ()
-symlink (file, link) = let f = either (error . T.unpack) id . toText in
-  do
-    h <- home
-    d <- dotfiles
-    procs "ln" ["-s", f (d </> file), f (h </> link)] empty
+symlink (file, link) = do
+  h <- home
+  d <- dotfiles
+  procs "ln" ["-s", f (d </> file), f (h </> link)] empty
+  where f = either (error . T.unpack) id . toText
 
 main :: IO ()
 main = do
   echo "Setting up…"
-  configText <- readTextFile config
+  configFile <- config
+  configText <- readTextFile configFile
   mapM_ symlink $ fileLinks configText
   echo "Done!"

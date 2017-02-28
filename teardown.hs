@@ -8,17 +8,11 @@ import Turtle
 import Prelude hiding (FilePath)
 import qualified Data.Text as T
 
-config :: FilePath
-config = "config.yaml"
-
-toLink :: Text -> FilePath
-toLink = fromText . T.tail . T.dropWhile (/= ' ')
+config :: IO FilePath
+config = (\h -> h </> "github" </> "dotfiles" </> "config.yaml") <$> home
 
 links :: Text -> [FilePath]
-links = fmap toLink . T.lines
-
-dotfiles :: IO FilePath
-dotfiles = (\h -> h </> "github" </> "dotfiles") <$> home
+links = fmap (fromText . T.tail . T.dropWhile (/= ' ')) . T.lines
 
 unlink :: FilePath -> IO ()
 unlink f = home >>= \h -> rm (h </> f)
@@ -26,6 +20,7 @@ unlink f = home >>= \h -> rm (h </> f)
 main :: IO ()
 main = do
   echo "Tearing down…"
-  configText <- readTextFile config
+  configFile <- config
+  configText <- readTextFile configFile
   mapM_ unlink $ links configText
   echo "Done!"
