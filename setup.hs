@@ -1,7 +1,6 @@
 #!/usr/bin/env stack
--- stack --install-ghc runghc --package file-embed --package turtle
+-- stack --install-ghc runghc --package turtle
 {-# LANGUAGE OverloadedStrings #-}
-{-# LANGUAGE TemplateHaskell #-}
 
 module Main where
 
@@ -13,16 +12,16 @@ import qualified Data.Text as T
 
 type FileLink = (FilePath, FilePath)
 
-config :: Text
-config = $(embedStringFile "config.yaml")
+config :: FilePath
+config = "config.yaml"
 
 toFL :: Text -> FileLink
 toFL = (fromText *** fromText) .
   second (T.dropWhile ((||) <$> (== ':') <*> (== ' '))) .
   T.break (== ':')
 
-fileLinks :: [FileLink]
-fileLinks = fmap toFL . T.lines $ config
+fileLinks :: Text -> [FileLink]
+fileLinks = fmap toFL . T.lines
 
 dotfiles :: IO FilePath
 dotfiles = (\h -> h </> "github" </> "dotfiles") <$> home
@@ -37,5 +36,6 @@ symlink (file, link) = let f = either (error . T.unpack) id . toText in
 main :: IO ()
 main = do
   echo "Setting up…"
-  mapM_ symlink fileLinks
+  configText <- readTextFile config
+  mapM_ symlink $ fileLinks configText
   echo "Done!"

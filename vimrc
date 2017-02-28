@@ -184,3 +184,6 @@ set directory=~/.vim-tmp
 
 " *.ros = Common Lisp
 au BufNewFile,BufRead *.ros set filetype=lisp
+
+" build.boot = Clojure
+au BufNewFile,BufRead build.boot set filetype=clojure
