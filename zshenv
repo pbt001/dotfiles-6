@@ -60,6 +60,7 @@ alias sc='scalafmt && scalariform -p=$HOME/.scalariform.properties **/*.scala'
 alias scalariform='scalariform -p=$HOME/.scalariform.properties'
 alias sd='fasd -sid'
 alias sf='fasd -sif'
+alias ssh-init='pkill ssh-agent; eval $(ssh-agent); ssh-add'
 alias touch='nocorrect touch'
 alias v="f -e $EDITOR"
 alias whihc='which'

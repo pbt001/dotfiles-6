@@ -13,7 +13,8 @@ let colorPrint = System.IO.putStrLn . hscolour TTY defaultColourPrefs False Fals
 :set +t
 :def hlint const . return $ ":! hlint \"src\""
 :def hoogle \s -> return $ ":! hoogle --count=17 \"" ++ s ++ "\""
-:def pf \s -> return $ ":! pointfree \"" ++ s ++ "\""
+:def pfree \s -> return $ ":! pointfree \"" ++ s ++ "\""
+:def pfull \s -> return $ ":! pointful \"" ++ s ++ "\""
 :def pretty const . return $ ":set -interactive-print pPrint"
 :def pretty-colors const . return $ ":set -interactive-print colorPrint"
 :def no-pretty const . return $ ":set -interactive-print System.IO.print"

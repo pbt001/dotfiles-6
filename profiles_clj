@@ -1,1 +1,2 @@
-{:user {:plugins [[venantius/ultra "0.5.1"]]}}
+{:user {:plugins [[venantius/ultra "0.5.1"]
+                  [lein-marginalia "0.9.0"]]}}
