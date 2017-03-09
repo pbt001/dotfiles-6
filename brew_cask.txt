@@ -1,3 +1,4 @@
 java
 mactex
+sage
 virtualbox
