@@ -119,6 +119,7 @@ planck
 ponysay
 poppler
 popt
+primesieve
 protobuf
 pypy
 python
