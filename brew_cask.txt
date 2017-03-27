@@ -1,6 +1,7 @@
 fontforge
 java
 mactex
+racket
 sage
 transmission
 virtualbox
