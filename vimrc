@@ -4,6 +4,7 @@ endif
 
 " Plugin time: https://github.com/junegunn/vim-plug
 call plug#begin('~/.vim/plugged')
+Plug 'cespare/vim-toml'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'derekwyatt/vim-scala'
 Plug 'ervandew/supertab'
