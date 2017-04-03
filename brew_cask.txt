@@ -3,5 +3,6 @@ java
 mactex
 racket
 sage
+sourcetree
 transmission
 virtualbox

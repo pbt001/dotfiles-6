@@ -120,6 +120,7 @@ planck
 ponysay
 poppler
 popt
+postgresql
 primesieve
 protobuf
 pypy
@@ -129,6 +130,7 @@ r
 readline
 reattach-to-user-namespace
 redis
+rlwrap
 rocksdb
 roswell
 ruby
