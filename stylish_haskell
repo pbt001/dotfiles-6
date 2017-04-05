@@ -155,10 +155,10 @@ steps:
       remove_redundant: true
 
   # Replace tabs by spaces. This is disabled by default.
-  # - tabs:
+  - tabs:
   #     # Number of spaces to use for each tab. Default: 8, as specified by the
   #     # Haskell report.
-  #     spaces: 8
+      spaces: 4
 
   # Remove trailing whitespace
   - trailing_whitespace: {}
@@ -177,7 +177,7 @@ columns: 80
 # - crlf: Convert to CRLF ("\r\n").
 #
 # Default: native.
-newline: native
+newline: lf
 
 # Sometimes, language extensions are specified in a cabal file or from the
 # command line instead of using language pragmas in the file. stylish-haskell
