@@ -1,13 +1,4 @@
-import Text.Show.Pretty (pPrint, ppShow)
-import Language.Haskell.HsColour
-import Language.Haskell.HsColour.Colourise
-
-let colorPrint = System.IO.putStrLn . hscolour TTY defaultColourPrefs False False "" False . ppShow
-
-
 :set editor /usr/local/bin/vim
-:set -XOverloadedStrings
-:set -Wall
 :set prompt "\ESC[36mλ⋙ \ESC[m"
 :set +m
 :set +t
@@ -15,6 +6,3 @@ let colorPrint = System.IO.putStrLn . hscolour TTY defaultColourPrefs False Fals
 :def hoogle \s -> return $ ":! hoogle --count=17 \"" ++ s ++ "\""
 :def pfree \s -> return $ ":! pointfree \"" ++ s ++ "\""
 :def pfull \s -> return $ ":! pointful \"" ++ s ++ "\""
-:def pretty const . return $ ":set -interactive-print pPrint"
-:def pretty-colors const . return $ ":set -interactive-print colorPrint"
-:def no-pretty const . return $ ":set -interactive-print System.IO.print"
