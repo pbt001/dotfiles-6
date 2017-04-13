@@ -12,7 +12,7 @@ import qualified Data.Text as T
 type FileLink = (FilePath, FilePath)
 
 dotfiles :: IO FilePath
-dotfiles = (\h -> h </> "github" </> "dotfiles") <$> home
+dotfiles = (</> "github/dotfiles") <$> home
 
 config :: IO FilePath
 config = (</> "config.yaml") <$> dotfiles

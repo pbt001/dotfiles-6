@@ -9,7 +9,7 @@ import Prelude hiding (FilePath)
 import qualified Data.Text as T
 
 config :: IO FilePath
-config = (\h -> h </> "github" </> "dotfiles" </> "config.yaml") <$> home
+config = (</> "github/dotfiles/config.yaml") <$> home
 
 links :: Text -> [FilePath]
 links = fmap (fromText . T.tail . T.dropWhile (/= ' ')) . T.lines
