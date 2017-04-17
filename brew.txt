@@ -6,6 +6,7 @@ atk
 atkmm
 autoconf
 automake
+awk
 bazel
 bdw-gc
 bibclean
@@ -18,11 +19,13 @@ cairomm
 chezscheme
 clasp
 cmake
+coffeescript
 coreutils
 coursier
 cowsay
 cscope
 ctags
+dieharder
 djvulibre
 docbook
 docker
@@ -36,6 +39,7 @@ fontconfig
 fortune
 freetype
 gcc
+gd
 gdbm
 gdk-pixbuf
 gettext
@@ -50,6 +54,7 @@ gnu-sed
 gnutls
 go
 gobject-introspection
+graphviz
 gringo
 gsl
 gtk+
@@ -111,6 +116,7 @@ pandoc-crossref
 pango
 pangomm
 parallel
+pari
 pcre
 pcre2
 pdfgrep
@@ -130,6 +136,7 @@ r
 readline
 reattach-to-user-namespace
 redis
+ripgrep-bin
 rlwrap
 rocksdb
 roswell
@@ -156,6 +163,7 @@ unibilium
 upx
 utf8proc
 vim
+webp
 weechat
 wget
 write-good
