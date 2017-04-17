@@ -14,9 +14,9 @@ Plug 'jgdavey/tslime.vim'
 Plug 'joom/latex-unicoder.vim'
 Plug 'junegunn/goyo.vim'
 Plug 'kchmck/vim-coffee-script'
+Plug 'mileszs/ack.vim'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'raichoo/purescript-vim'
-Plug 'rking/ag.vim'
 Plug 'rust-lang/rust.vim'
 Plug 'tomasr/molokai'
 Plug 'tomtom/tcomment_vim'
@@ -136,8 +136,15 @@ set wildmode=longest,full
 "Backspace all the things
 set backspace=indent,eol,start
 
-"Using The_Silver_Searcher
-nnoremap <leader>a :Ag
+"Using Ack (well, ripgrep, formerly The_Silver_Searcher)
+nnoremap <leader>a :Ack
+
+"Use ripgrep instead of Ack
+let g:ackprg = 'rg --vimgrep --smart-case'
+cnoreabbrev rg Ack
+cnoreabbrev rG Ack
+cnoreabbrev Rg Ack
+cnoreabbrev RG Ack
 
 "Less typing to enter a command
 nnoremap ; :
