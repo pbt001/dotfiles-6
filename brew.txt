@@ -7,7 +7,6 @@ atkmm
 autoconf
 automake
 awk
-bazel
 bdw-gc
 bibclean
 boost
