@@ -93,6 +93,7 @@ lmdb
 lua
 luajit
 lz4
+macvim
 mad
 make
 mercurial

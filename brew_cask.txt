@@ -1,6 +1,7 @@
 fontforge
 java
 mactex
+processing
 racket
 sage
 sourcetree
