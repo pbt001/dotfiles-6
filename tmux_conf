@@ -24,5 +24,6 @@ set -sg escape-time 0
 setw -g mode-keys vi
 
 ## https://github.com/tmux/tmux/issues/592
+## specifically https://github.com/tmux/tmux/issues/592#issuecomment-255763680
 bind-key -Tcopy-mode-vi 'v' send -X begin-selection
 bind-key -Tcopy-mode-vi 'y' send -X copy-selection
