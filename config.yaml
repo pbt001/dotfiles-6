@@ -8,8 +8,6 @@ ghci: .ghci
 gitconfig: .gitconfig
 gvimrc: .gvimrc
 haskeline: .haskeline
-imgcat: bin/imgcat
-imgls: bin/imgls
 inputrc: .inputrc
 md2beamer: bin/md2beamer
 md2tufte: bin/md2tufte
