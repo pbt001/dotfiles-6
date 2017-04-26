@@ -39,3 +39,5 @@ if [ $commands[fasd] ]; then # check if fasd is installed
   source "$fasd_cache"
   unset fasd_cache
 fi
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
