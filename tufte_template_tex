@@ -24,8 +24,9 @@
 \usepackage{units}
 \usepackage{xspace}
 
-% pandoc workaround
+% pandoc workarounds
 \def\tightlist{}
+\usepackage{longtable}
 
 % citations
 \newcommand{\ct}[1]{\footnote{\citet{#1}}}
