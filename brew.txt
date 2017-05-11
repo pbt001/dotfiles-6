@@ -1,5 +1,6 @@
 alexjs
 ansible19
+arrayfire
 aspcud
 astyle
 atk
@@ -17,6 +18,8 @@ cairo
 cairomm
 chezscheme
 clasp
+clblas
+clfft
 cmake
 coffeescript
 coreutils
@@ -34,8 +37,10 @@ emacs
 erlang
 exercism
 fasd
+fftw
 fontconfig
 fortune
+freeimage
 freetype
 gcc
 gd
@@ -45,6 +50,7 @@ gettext
 gflags
 ghc
 git
+glfw
 glib
 glibmm
 gmp
@@ -66,6 +72,7 @@ icu4c
 imagemagick
 intltool
 isl
+jemalloc
 jpeg
 jq
 leiningen
@@ -105,6 +112,7 @@ neovim
 nettle
 node
 oniguruma
+open-mpi
 openblas
 openjpeg
 openssl
@@ -159,6 +167,7 @@ the_silver_searcher
 tmux
 tree
 ucl
+udunits
 unibilium
 upx
 utf8proc

@@ -1,4 +1,5 @@
 fontforge
+inkscape
 java
 mactex
 processing
