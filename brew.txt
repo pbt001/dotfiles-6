@@ -13,6 +13,7 @@ bibclean
 boost
 boost-build
 boot-clj
+browser
 cabal-install
 cairo
 cairomm
@@ -25,6 +26,7 @@ coffeescript
 coreutils
 coursier
 cowsay
+cppcheck
 cscope
 ctags
 dieharder
@@ -80,6 +82,7 @@ libevent
 libffi
 libgcrypt
 libgpg-error
+libmagic
 libmpc
 libpng
 libsigc++
