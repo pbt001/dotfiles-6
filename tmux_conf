@@ -27,3 +27,7 @@ setw -g mode-keys vi
 ## specifically https://github.com/tmux/tmux/issues/592#issuecomment-255763680
 bind-key -Tcopy-mode-vi 'v' send -X begin-selection
 bind-key -Tcopy-mode-vi 'y' send -X copy-selection
+
+## https://superuser.com/a/1211928
+## Scrolling in tmux
+set-option -g mouse on

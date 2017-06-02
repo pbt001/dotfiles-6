@@ -153,6 +153,9 @@ nnoremap ; :
 "Quicker escaping
 inoremap jj <ESC>
 
+"Use the mouse!?
+set mouse=a
+
 "tslime.vim key mappings
 vmap <C-c><C-c> <Plug>SendSelectionToTmux
 nmap <C-c><C-c> <Plug>NormalModeSendToTmux
