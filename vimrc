@@ -14,22 +14,12 @@ Plug 'jgdavey/tslime.vim'
 Plug 'joom/latex-unicoder.vim'
 Plug 'junegunn/goyo.vim'
 Plug 'kchmck/vim-coffee-script'
-Plug 'LnL7/vim-nix'
 Plug 'mileszs/ack.vim'
 Plug 'ntpeters/vim-better-whitespace'
-Plug 'raichoo/purescript-vim'
-Plug 'rhysd/vim-crystal'
 Plug 'rust-lang/rust.vim'
 Plug 'tomasr/molokai'
-Plug 'tomtom/tcomment_vim'
-Plug 'tpope/vim-dispatch'
-Plug 'tpope/vim-fireplace'
-Plug 'tpope/vim-repeat'
-Plug 'tpope/vim-salve'
-Plug 'tpope/vim-surround'
-Plug 'tpope/vim-sexp-mappings-for-regular-people'
+Plug 'tpope/vim-commentary.git'
 Plug 'vim-airline/vim-airline'
-Plug 'wlangstroth/vim-racket'
 call plug#end()
 
 "Turn on stuff
@@ -139,7 +129,7 @@ set wildmode=longest,full
 set backspace=indent,eol,start
 
 "Using Ack (well, ripgrep, formerly The_Silver_Searcher)
-nnoremap <leader>a :Ack
+nnoremap <leader>a :Ack<space>
 
 "Use ripgrep instead of Ack
 let g:ackprg = 'rg --vimgrep --smart-case'
@@ -150,9 +140,6 @@ cnoreabbrev RG Ack
 
 "Less typing to enter a command
 nnoremap ; :
-
-"Quicker escaping
-inoremap jj <ESC>
 
 "Use the mouse!?
 set mouse=a
@@ -170,12 +157,12 @@ set clipboard=unnamed
 
 "Ctrl-P search mode
 let g:ctrlp_working_path_mode = 'ar'
-"Speed up Ctrl-P with git & silversurver
+"Speed up Ctrl-P with git & ripgrep
 "http://snow-dev.com/the-power-of-vim-plugins-ctrlp/
 let g:ctrlp_use_caching = 0
-if executable('ag')
+if executable('rg')
 set grepprg=ag\ --nogroup\ --nocolor
-let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+let g:ctrlp_user_command = 'rg %s -l --color never -g ""'
 else
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
 let g:ctrlp_prompt_mappings = {
@@ -195,9 +182,3 @@ set backup
 set swapfile
 set backupdir=~/.vim-tmp
 set directory=~/.vim-tmp
-
-" *.ros = Common Lisp
-au BufNewFile,BufRead *.ros set filetype=lisp
-
-" build.boot = Clojure
-au BufNewFile,BufRead build.boot set filetype=clojure
