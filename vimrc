@@ -18,7 +18,7 @@ Plug 'mileszs/ack.vim'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'rust-lang/rust.vim'
 Plug 'tomasr/molokai'
-Plug 'tpope/vim-commentary.git'
+Plug 'tpope/vim-commentary'
 Plug 'vim-airline/vim-airline'
 call plug#end()
 
