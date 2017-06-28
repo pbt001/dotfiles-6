@@ -1,5 +1,6 @@
 fontforge
 inkscape
+insomnia
 java
 mactex
 processing

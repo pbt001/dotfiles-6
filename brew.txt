@@ -1,4 +1,5 @@
 alexjs
+ammonite-repl
 ansible19
 arrayfire
 aspcud
@@ -27,8 +28,9 @@ coreutils
 coursier
 cowsay
 cppcheck
+crystal-icr
+crystal-lang
 cscope
-ctags
 dieharder
 djvulibre
 docbook
@@ -61,6 +63,7 @@ gnu-sed
 gnutls
 go
 gobject-introspection
+graphite2
 graphviz
 gringo
 gsl
@@ -70,6 +73,7 @@ harfbuzz
 haskell-stack
 hicolor-icon-theme
 hiredis
+htop
 icu4c
 imagemagick
 intltool
@@ -119,6 +123,7 @@ open-mpi
 openblas
 openjpeg
 openssl
+openssl@1.1
 p11-kit
 p7zip
 pandoc
@@ -172,6 +177,7 @@ tree
 ucl
 udunits
 unibilium
+universal-ctags
 upx
 utf8proc
 vim
