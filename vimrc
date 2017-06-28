@@ -6,6 +6,7 @@ endif
 call plug#begin('~/.vim/plugged')
 Plug 'cespare/vim-toml'
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'dag/vim2hs'
 Plug 'derekwyatt/vim-scala'
 Plug 'ervandew/supertab'
 Plug 'godlygeek/tabular'

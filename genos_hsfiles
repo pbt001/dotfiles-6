@@ -20,8 +20,8 @@ dependencies:
 
 executables:
   {{name}}:
-    source-dirs:      src
-    main:             Main.hs
+    source-dirs: src
+    main:        Main.hs
 
 {-# START_FILE Setup.hs #-}
 import Distribution.Simple
