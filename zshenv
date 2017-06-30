@@ -85,7 +85,7 @@ function alias_value() {
   test $(alias "$1")
 }
 function hs() {
-  history | ag $*
+  history | rg $*
 }
 function man() {
   env \
