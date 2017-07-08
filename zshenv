@@ -56,8 +56,6 @@ alias py='python3'
 alias rd=rmdir
 alias runTL="sbt/sbt 'project timeline' 'run-main com.qf.timeline.TimeLineApp --env dev --signumServiceClient.host prod-signumservice-lb.mtv.quantifind.com'"
 alias s='fasd -si'
-alias sc='scalafmt && scalariform -p=$HOME/.scalariform.properties **/*.scala'
-alias scalariform='scalariform -p=$HOME/.scalariform.properties'
 alias sd='fasd -sid'
 alias sf='fasd -sif'
 alias ssh-init='pkill ssh-agent; eval $(ssh-agent); ssh-add'

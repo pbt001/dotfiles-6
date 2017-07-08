@@ -16,7 +16,6 @@ Plug 'kchmck/vim-coffee-script'
 Plug 'mileszs/ack.vim'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'rust-lang/rust.vim'
-Plug 'tomasr/molokai'
 Plug 'tpope/vim-commentary'
 Plug 'vim-airline/vim-airline'
 call plug#end()
@@ -32,7 +31,6 @@ set modelines=0
 "Colors
 set t_Co=256
 set background=dark
-colorscheme molokai
 
 "syntax coloring, other stuff
 syntax on
@@ -46,9 +44,6 @@ set autoindent
 
 "Don't indent access specifiers or labels in C, C++
 set cinoptions=L0,g0
-
-"Highlight 80th column
-set colorcolumn=80
 
 "Show matching parenthesis, etc.
 set showmatch

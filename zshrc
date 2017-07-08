@@ -6,7 +6,6 @@ if [ $(date +'%j') != $(stat -f '%Sm' -t '%j' ~/.zcompdump) ]; then
 else
   compinit -C
 fi
-source ~/SOURCE_ME
 bindkey -v
 fpath=(
   $HOME/site-functions
