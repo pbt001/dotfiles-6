@@ -8,6 +8,7 @@ dups: bin/dups
 genos_hsfiles: .stack/templates/genos.hsfiles
 ghci: .ghci
 gitconfig: .gitconfig
+gitignore_global: .gitignore_global
 gvimrc: .gvimrc
 haskeline: .haskeline
 imgcat: bin/imgcat
