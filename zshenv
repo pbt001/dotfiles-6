@@ -54,7 +54,6 @@ alias mv='nocorrect mv'
 alias o='a -e open'
 alias py='python3'
 alias rd=rmdir
-alias runTL="sbt/sbt 'project timeline' 'run-main com.qf.timeline.TimeLineApp --env dev --signumServiceClient.host prod-signumservice-lb.mtv.quantifind.com'"
 alias s='fasd -si'
 alias sd='fasd -sid'
 alias sf='fasd -sif'
