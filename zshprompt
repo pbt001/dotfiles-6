@@ -7,7 +7,7 @@
 PROMPT='$(dir) $(glyph) '
 RPROMPT='$(git_status) $(git_branch)'
 
-function glyph() { echo "%{$fg[green]%}∃%{$reset_color%}" }
+function glyph() { echo "%{$fg[green]%}=>%{$reset_color%}" }
 
 function dir() { echo "%{$fg[cyan]%}${PWD/#$HOME/~}%{$reset_color%}" }
 
