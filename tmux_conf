@@ -17,6 +17,7 @@ set -g status-bg '#455354'
 set -g status-fg '#C7C7C7'
 
 ## https://www.reddit.com/r/haskell/comments/2ky0d8/vim_keybindings_in_ghci/
+## https://github.com/neovim/neovim/wiki/FAQ#esc-in-tmux-or-gnu-screen-is-delayed
 set -sg escape-time 0
 
 ## https://robots.thoughtbot.com/tmux-copy-paste-on-os-x-a-better-future

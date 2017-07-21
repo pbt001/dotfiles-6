@@ -1,4 +1,4 @@
-fpath+=~/.site-functions
+source ~/SOURCE_ME
 autoload -U colors && colors
 autoload -Uz compinit
 if [ $(date +'%j') != $(stat -f '%Sm' -t '%j' ~/.zcompdump) ]; then
@@ -6,7 +6,6 @@ if [ $(date +'%j') != $(stat -f '%Sm' -t '%j' ~/.zcompdump) ]; then
 else
   compinit -C
 fi
-source ~/SOURCE_ME
 bindkey -v
 fpath=(
   $HOME/site-functions
@@ -31,7 +30,6 @@ path=(
   $path
 )
 typeset -U path
-#
 if [ $commands[fasd] ]; then # check if fasd is installed
   fasd_cache="$HOME/.fasd-init-cache"
   if [ "$(command -v fasd)" -nt "$fasd_cache" -o ! -s "$fasd_cache" ]; then
