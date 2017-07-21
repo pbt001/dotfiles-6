@@ -10,7 +10,7 @@ for repo in $HOME/qf/*; do
 done
 
 print "brew update => upgrade => cleanup…"
-brew update && brew upgrade && brew cleanup
+brew update && brew upgrade && brew cleanup && brew cask cleanup
 
 print "rustup update => reinstall cargo-clippy…"
 rustup update
