@@ -1,8 +1,5 @@
 #!/usr/bin/env zsh
 
-print "ssh initialization…"
-pkill ssh-agent; eval $(ssh-agent); ssh-add
-
 for repo in $HOME/qf/*; do
   print "git pull in ${repo:t}…"
   cd $repo
@@ -12,7 +9,7 @@ done
 print "brew update >>= upgrade >>= cleanup…"
 brew update && brew upgrade && brew cleanup && brew cask cleanup
 
-print "rustup update >>= reinstall cargo-clippy…"
+print "rustup update >> reinstall cargo-clippy…"
 rustup update
 cd $HOME/github/rust-clippy
 git pull --prune
@@ -22,9 +19,11 @@ cargo install --force
 print "stack update…"
 stack update
 
-print "pip3 update >>= pip_pypy update…"
+print "pip3 update >> pip_pypy update…"
 for pip in ('pip3' 'pip_pypy'); do
   $pip list --outdated --format=freeze | cut -d = -f 1 | parallel "$pip install -U {}"
 done
+
+cd $HOME/qf/qfish
 
 print "DONE!"
