@@ -1,6 +1,7 @@
 _cargo: site-functions/_cargo
 _rustup: site-functions/_rustup
 _stack: site-functions/_stack
+_tmuxinator: site-functions/_tmuxinator
 astylerc: .astylerc
 beamer_template_tex: .pandoc/templates/beamer_template.tex
 ctags: .ctags

@@ -77,7 +77,7 @@ export KEYTIMEOUT=1
 export LD_LIBRARY_PATH="$HOME/lib:$LD_LIBRARY_PATH"
 export LSCOLORS="Gxfxcxdxbxegedabagacad"
 export LESS='CiMQRX'
-export SHELL=$(which zsh)
+export SHELL="/usr/local/bin/zsh"
 export TERM=xterm-256color
 
 function alias_value() {
