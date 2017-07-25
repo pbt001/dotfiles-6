@@ -20,7 +20,7 @@ print "stack update…"
 stack update
 
 print "pip3 update >> pip_pypy update…"
-for pip in ('pip3' 'pip_pypy'); do
+for pip in 'pip3' 'pip_pypy'; do
   $pip list --outdated --format=freeze | cut -d = -f 1 | parallel "$pip install -U {}"
 done
 
