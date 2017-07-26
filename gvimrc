@@ -6,3 +6,6 @@ set lines=24 columns=90
 
 "Font
 set guifont=InputMonoCondensed\ ExLight:h12
+
+"Color
+colorscheme molokai
