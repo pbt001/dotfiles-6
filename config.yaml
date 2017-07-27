@@ -1,6 +1,7 @@
 _cargo: site-functions/_cargo
 _rustup: site-functions/_rustup
 _stack: site-functions/_stack
+_start_your_day: bin/_start_your_day
 _tmuxinator: ._tmuxinator
 astylerc: .astylerc
 beamer_template_tex: .pandoc/templates/beamer_template.tex
@@ -23,7 +24,6 @@ sbclrc: .sbclrc
 scalariform_properties: .scalariform.properties
 stack_config: .stack/config.yaml
 stack_global: .stack/global-project/stack.yaml
-start_your_day: bin/start_your_day
 stylish_haskell: .stylish-haskell.yaml
 tmux_conf: .tmux.conf
 tufte_template_tex: .pandoc/templates/tufte_template.tex
