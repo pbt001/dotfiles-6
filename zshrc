@@ -30,7 +30,6 @@ path=(
   $path
 )
 typeset -U path
-#
 if [ $commands[fasd] ]; then # check if fasd is installed
   fasd_cache="$HOME/.fasd-init-cache"
   if [ "$(command -v fasd)" -nt "$fasd_cache" -o ! -s "$fasd_cache" ]; then
@@ -39,3 +38,4 @@ if [ $commands[fasd] ]; then # check if fasd is installed
   source "$fasd_cache"
   unset fasd_cache
 fi
+source $HOME/._tmuxinator
