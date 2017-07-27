@@ -5,4 +5,7 @@ set background=dark
 set lines=24 columns=90
 
 "Font
-set guifont=Fira\ Code:h12
+set guifont=InputMonoCondensed\ ExLight:h12
+
+"Color
+colorscheme molokai
