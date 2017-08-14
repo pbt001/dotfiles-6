@@ -21,6 +21,7 @@ passive: bin/passive
 profiles_clj: .lein/profiles.clj
 pylintrc: .pylintrc
 sbclrc: .sbclrc
+scalafmt_conf: .scalafmt.conf
 scalariform_properties: .scalariform.properties
 stack_config: .stack/config.yaml
 stack_global: .stack/global-project/stack.yaml
