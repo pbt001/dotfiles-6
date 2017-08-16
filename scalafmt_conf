@@ -1,4 +1,3 @@
-align.arrowEnumeratorGenerator = true
 align.openParenCallSite = false
 align.tokens = [{code = "=>", owner = "Case"}]
 continuationIndent.callSite = 2
