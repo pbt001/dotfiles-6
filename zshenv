@@ -56,7 +56,7 @@ alias py='python3'
 alias rd=rmdir
 alias runTL="sbt/sbt 'project timeline' 'run-main com.qf.timeline.TimeLineApp --env dev --signumServiceClient.host prod-signumservice-lb.mtv.quantifind.com'"
 alias s='fasd -si'
-alias sc='scalariform -p=$HOME/.scalariform.properties **/*.scala'
+alias sc='scalafmt -c $HOME/.scalafmt.conf'
 alias scalariform='scalariform -p=$HOME/.scalariform.properties'
 alias sd='fasd -sid'
 alias sf='fasd -sif'

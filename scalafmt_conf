@@ -1,0 +1,4 @@
+align.openParenCallSite = false
+continuationIndent = 2
+danglingParentheses = true
+docstrings = JavaDoc
