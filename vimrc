@@ -7,6 +7,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'derekwyatt/vim-scala'
 Plug 'ervandew/supertab'
+Plug 'godlygeek/tabular'
 Plug 'jgdavey/tslime.vim'
 Plug 'joom/latex-unicoder.vim'
 Plug 'junegunn/goyo.vim'
