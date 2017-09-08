@@ -14,12 +14,9 @@ alias 6='cd -6'
 alias 7='cd -7'
 alias 8='cd -8'
 alias 9='cd -9'
-alias \:e='nvim'
-alias \:q='exit'
 alias a='fasd -a'
 alias cadt='cat'
 alias cp='nocorrect cp'
-alias d='dirs -v | head -10'
 alias d='fasd -d'
 alias e='nvim'
 alias f='fasd -f'
@@ -35,14 +32,14 @@ alias gl='git pull'
 alias glol='git log --graph --decorate --oneline'
 alias gm='git merge'
 alias gp='git push'
-alias grep='grep  --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn}'
+alias grep='grep --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn}'
 alias gst='git status'
 alias gwch='git whatchanged -p --abbrev-commit --pretty=medium'
 alias history='fc -il 1'
-alias ip=jupyter-console
-alias ipn=jupyter-notebook
-alias jc=$HOME/j64-805/bin/jconsole
-alias jqt=$HOME/j64-805/bin/jqt.command
+alias ip='jupyter-console'
+alias ipn='jupyter-notebook'
+alias jc='$HOME/j64-805/bin/jconsole'
+alias jqt='$HOME/j64-805/bin/jqt.command'
 alias l='ls -al'
 alias la='ls -a'
 alias ln='nocorrect ln'
@@ -53,7 +50,7 @@ alias mkdir='nocorrect mkdir'
 alias mv='nocorrect mv'
 alias o='a -e open'
 alias py='python3'
-alias rd=rmdir
+alias rd='rmdir'
 alias runTL="sbt/sbt 'project timeline' 'run-main com.qf.timeline.TimeLineApp --env dev --signumServiceClient.host prod-signumservice-lb.mtv.quantifind.com'"
 alias s='fasd -si'
 alias sc='scalafmt -c $HOME/.scalafmt.conf'
@@ -62,7 +59,7 @@ alias sd='fasd -sid'
 alias sf='fasd -sif'
 alias ssh-init='pkill ssh-agent; eval $(ssh-agent); ssh-add'
 alias touch='nocorrect touch'
-alias v="f -e $EDITOR"
+alias v='f -e $EDITOR'
 alias whihc='which'
 alias z='fasd_cd -d'
 alias zz='fasd_cd -d -i'
@@ -73,45 +70,60 @@ export CPLUS_INCLUDE_PATH="$C_INCLUDE_PATH:$CPLUS_INCLUDE_PATH"
 export C_INCLUDE_PATH="$HOME/include:$C_INCLUDE_PATH"
 export EDITOR='nvim'
 export GOPATH="$HOME/go"
+export HISTSIZE=10000
 export KEYTIMEOUT=1
 export LD_LIBRARY_PATH="$HOME/lib:$LD_LIBRARY_PATH"
 export LSCOLORS="Gxfxcxdxbxegedabagacad"
 export LESS='CiMQRX'
+export SAVEHIST=10000
 export SHELL="/usr/local/bin/zsh"
 export TERM=xterm-256color
 
-function alias_value() {
-  alias "$1" | sed "s/^$1='\(.*\)'$/\1/"
-  test $(alias "$1")
-}
+
 function hs() {
-  history | rg $*
+  history | rg "$*"
 }
 function man() {
   env \
-    LESS_TERMCAP_mb=$(printf "\e[1;31m") \
-    LESS_TERMCAP_md=$(printf "\e[1;31m") \
-    LESS_TERMCAP_me=$(printf "\e[0m") \
-    LESS_TERMCAP_se=$(printf "\e[0m") \
-    LESS_TERMCAP_so=$(printf "\e[1;44;33m") \
-    LESS_TERMCAP_ue=$(printf "\e[0m") \
-    LESS_TERMCAP_us=$(printf "\e[1;32m") \
+    LESS_TERMCAP_mb="$(printf "\e[1;31m")" \
+    LESS_TERMCAP_md="$(printf "\e[1;31m")" \
+    LESS_TERMCAP_me="$(printf "\e[0m")" \
+    LESS_TERMCAP_se="$(printf "\e[0m")" \
+    LESS_TERMCAP_so="$(printf "\e[1;44;33m")" \
+    LESS_TERMCAP_ue="$(printf "\e[0m")" \
+    LESS_TERMCAP_us="$(printf "\e[1;32m")" \
     PAGER="${commands[less]:-$PAGER}" \
     _NROFF_U=1 \
     PATH="$HOME/bin:$PATH" \
     man "$@"
 }
+function nix_haskell() {
+  # http://alpmestan.com/posts/2017-09-06-quick-haskell-hacking-with-nix.html
+  if [[ $# -lt 2 ]];
+  then
+    print "Must provide a ghc version (e.g ghc821) and at least one package"
+    return 1;
+  else
+    ghcver=$1
+    pkgs=${*:2}
+    print "Starting haskell shell, ghc = $ghcver, pkgs = $pkgs"
+    nix-shell -p "haskell.packages.$ghcver.ghcWithPackages (pkgs: with pkgs; [$pkgs])"
+	fi
+}
 function zsh_stats() {
-  fc -l 1 | awk '{CMD[$2]++;count++;}END{for (a in CMD)print CMD[a] " " CMD[a]/count*100 "% " a;}' | grep -v "./" | column -c3 -s " " -t | sort -nr | nl |  head -n20
+  fc -l 1 | \
+    awk '{CMD[$2]++;count++;}END{for (a in CMD)print CMD[a] " " CMD[a]/count*100 "% " a;}' | \
+    rg -v "./" | \
+    column -c3 -s " " -t | \
+    sort -nr | \
+    nl | \
+    head -n20
 }
 
 ## Command history configuration
 if [ -z "$HISTFILE" ]; then
   HISTFILE=$HOME/.zsh_history
 fi
-
-HISTSIZE=10000
-SAVEHIST=10000
 
 setopt auto_cd
 setopt auto_pushd
@@ -132,5 +144,5 @@ setopt inc_append_history
 setopt share_history # share command history data
 setopt prompt_subst
 
-zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
+zstyle ':completion:*' list-colors "${(s.:.)LSCOLORS}"
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
