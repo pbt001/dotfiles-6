@@ -22,8 +22,8 @@ cargo install --force
 ppprint "stack update…"
 stack update
 
-ppprint "pip3 update >> pip_pypy update…"
-for pip in 'pip3' 'pip_pypy'; do
+ppprint "pip3 update >> pip_pypy >> pip_pypy3 update…"
+for pip in 'pip3' 'pip_pypy' 'pip_pypy3'; do
   $pip list --outdated --format=freeze | cut -d = -f 1 | parallel "$pip install -U {}"
 done
 
