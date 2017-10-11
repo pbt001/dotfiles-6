@@ -80,6 +80,9 @@ export SHELL="/usr/local/bin/zsh"
 export TERM=xterm-256color
 
 
+function check_writing() {
+  weasel $@ && passive $@ && dups $@ && alex $@
+}
 function hs() {
   history | rg "$*"
 }
