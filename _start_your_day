@@ -27,6 +27,4 @@ for pip in 'pip3' 'pip_pypy' 'pip_pypy3'; do
   $pip list --outdated --format=freeze | cut -d = -f 1 | parallel "$pip install -U {}"
 done
 
-cd $HOME/qf/qfish
-
 ppppprint "DONE!"
