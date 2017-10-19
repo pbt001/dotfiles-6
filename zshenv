@@ -69,6 +69,9 @@ bindkey "^X^I" expand-or-complete-prefix
 export CPLUS_INCLUDE_PATH="$C_INCLUDE_PATH:$CPLUS_INCLUDE_PATH"
 export C_INCLUDE_PATH="$HOME/include:$C_INCLUDE_PATH"
 export EDITOR='nvim'
+export FZF_DEFAULT_COMMAND='rg --color never -g "" --files'
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+export FZF_ALT_C_COMMAND="$FZF_DEFAULT_COMMAND"
 export GOPATH="$HOME/go"
 export HISTSIZE=10000
 export KEYTIMEOUT=1
