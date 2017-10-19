@@ -4,17 +4,15 @@ endif
 
 " Plugin time: https://github.com/junegunn/vim-plug
 call plug#begin('~/.vim/plugged')
-Plug 'ctrlpvim/ctrlp.vim'
-Plug 'derekwyatt/vim-scala'
 Plug 'ervandew/supertab'
 Plug 'godlygeek/tabular'
 Plug 'jgdavey/tslime.vim'
 Plug 'joom/latex-unicoder.vim'
 Plug 'junegunn/goyo.vim'
-Plug 'lnl7/vim-nix'
+Plug 'junegunn/fzf'
 Plug 'mileszs/ack.vim'
 Plug 'ntpeters/vim-better-whitespace'
-Plug 'rust-lang/rust.vim'
+Plug 'sheerun/vim-polyglot'
 Plug 'tomasr/molokai'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-dispatch'
@@ -125,6 +123,27 @@ set wildmode=longest,full
 "Backspace all the things
 set backspace=indent,eol,start
 
+"Use the mouse!?
+set mouse=a
+
+"tslime.vim key mappings
+vmap <C-c><C-c> <Plug>SendSelectionToTmux
+nmap <C-c><C-c> <Plug>NormalModeSendToTmux
+nmap <C-c>r <Plug>SetTmuxVars
+
+
+"Move up the directory hierarchy until you find a tags file
+set tags=tags;/
+
+"Allow vim access to system clipboard
+set clipboard=unnamed
+
+"move backup to ~/.vim-tmp
+set backup
+set swapfile
+set backupdir=~/.vim-tmp
+set directory=~/.vim-tmp
+
 "Using Ack (well, ripgrep, formerly The_Silver_Searcher)
 nnoremap <leader>a :Ack<space>
 
@@ -135,47 +154,5 @@ cnoreabbrev rG Ack
 cnoreabbrev Rg Ack
 cnoreabbrev RG Ack
 
-"Less typing to enter a command
-nnoremap ; :
-
-"Use the mouse!?
-set mouse=a
-
-"tslime.vim key mappings
-vmap <C-c><C-c> <Plug>SendSelectionToTmux
-nmap <C-c><C-c> <Plug>NormalModeSendToTmux
-nmap <C-c>r <Plug>SetTmuxVars
-
-"Move up the directory hierarchy until you find a tags file
-set tags=tags;/
-
-"Allow vim access to system clipboard
-set clipboard=unnamed
-
-"Ctrl-P search mode
-let g:ctrlp_working_path_mode = 'ar'
-"Speed up Ctrl-P with git & ripgrep
-"http://snow-dev.com/the-power-of-vim-plugins-ctrlp/
-let g:ctrlp_use_caching = 0
-if executable('rg')
-set grepprg=ag\ --nogroup\ --nocolor
-let g:ctrlp_user_command = 'rg %s -l --color never -g ""'
-else
-let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
-let g:ctrlp_prompt_mappings = {
-\ 'AcceptSelection("e")': ['<space>', '<cr>', '<2-LeftMouse>'],
-\ }
-endif
-"Use CtrlP + CTags
-"https://andrew.stwrt.ca/posts/vim-ctags/
-nnoremap <leader>. :CtrlPTag<cr>
-
-"Ctags + Tagbar
-"https://andrew.stwrt.ca/posts/vim-ctags/
-nnoremap <silent> <Leader>b :TagbarToggle<CR>
-
-"move backup to ~/.vim-tmp
-set backup
-set swapfile
-set backupdir=~/.vim-tmp
-set directory=~/.vim-tmp
+"fzf speedily
+nnoremap <leader>f :FZF<CR>

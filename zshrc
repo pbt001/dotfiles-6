@@ -40,3 +40,5 @@ if [ $commands[fasd] ]; then # check if fasd is installed
   unset fasd_cache
 fi
 source $HOME/._tmuxinator
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
