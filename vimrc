@@ -155,6 +155,7 @@ cnoreabbrev Rg Ack
 cnoreabbrev RG Ack
 
 "fzf speedily
-nnoremap <leader>f :FZF<CR>
+nnoremap <leader>f :Files<CR>
+nnoremap <leader>g :GFiles<CR>
 nnoremap <Leader>b :Buffers<CR>
 nnoremap <Leader>t :Tags<CR>
