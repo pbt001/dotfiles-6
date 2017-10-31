@@ -1,6 +1,6 @@
 autoload -U colors && colors
 autoload -Uz compinit
-if [ $(date +'%j') != $(stat -f '%Sm' -t '%j' ~/.zcompdump) ]; then
+if [[  (-e ~/.zcompdump) && ($(date +'%j') != $(stat -f '%Sm' -t '%j' ~/.zcompdump)) ]]; then
   compinit
 else
   compinit -C
@@ -8,6 +8,7 @@ fi
 bindkey -v
 fpath=(
   $HOME/site-functions
+  /usr/share/zsh/5.2/functions
   $fpath
 )
 typeset -U fpath
@@ -38,3 +39,4 @@ if [ $commands[fasd] ]; then # check if fasd is installed
   unset fasd_cache
 fi
 source $HOME/._tmuxinator
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
