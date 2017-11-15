@@ -12,19 +12,19 @@ done
 ppprint "brew update >>= upgrade >>= cleanup…"
 brew update && brew upgrade && brew cleanup && brew cask cleanup
 
-ppprint "rustup update >> reinstall cargo-clippy…"
-rustup update
-cd $HOME/github/rust-clippy
-git pull --prune
-cargo update
-cargo install --force
+ppprint "rustup update >>= reinstall cargo-clippy >>= reinstall cargo-fmt"
+rustup update && \
+  cargo install clippy --force && \
+  cargo install rustfmt-nightly --force
 
 ppprint "stack update…"
 stack update
 
-ppprint "pip3 update >> pip_pypy >> pip_pypy3 update…"
-for pip in 'pip3' 'pip_pypy' 'pip_pypy3'; do
-  $pip list --outdated --format=freeze | cut -d = -f 1 | parallel "$pip install -U {}"
+ppprint "pip3 update >> pip_pypy3 update…"
+for pip in 'pip3' 'pip_pypy3'; do
+  $pip list --outdated --format=freeze | \
+    cut -d = -f 1 | \
+    parallel "$pip install -U {}"
 done
 
 ppppprint "DONE!"
