@@ -13,7 +13,7 @@ ppprint "brew update >>= upgrade >>= cleanup…"
 brew update && brew upgrade && brew cleanup && brew cask cleanup
 
 ppprint "rustup update >>= reinstall cargo-clippy >>= reinstall cargo-fmt"
-rustup update && \
+(rustup update | grep 'download') && \  # only do next if downloaded anything
   cargo install clippy --force && \
   cargo install rustfmt-nightly --force
 
