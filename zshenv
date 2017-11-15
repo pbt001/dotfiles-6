@@ -84,7 +84,11 @@ export TERM=xterm-256color
 
 
 function check_writing() {
-  weasel $@ && passive $@ && dups $@ && alex $@
+  if [[ -n $1 ]]; then
+    weasel $1 && passive $1 && dups $1 && alex $1
+  else
+    print "usage: $0 <file to check>"
+  fi
 }
 function hs() {
   history | rg "$*"
