@@ -67,8 +67,9 @@ $endif$
 % suppress caption label (e.g. "Figure", "Table", etc.)
 \setbeamertemplate{caption}{\insertcaption}
 
-% pandoc workaround
+% pandoc workarounds
 \def\tightlist{}
+\newcommand{\passthrough}[1]{#1}
 
 % set itemize symbol
 \mode<presentation> {

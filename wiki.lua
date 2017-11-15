@@ -172,6 +172,10 @@ function RawInline(s, attr)
   return a .. string.sub(attr, i + 1, string.len(attr) - 1) .. b
 end
 
+function DoubleQuoted(s, attr)
+  return s
+end
+
 -- Caption is a string, aligns is an array of strings,
 -- widths is an array of floats, headers is an array of
 -- strings, rows is an array of arrays of strings.
