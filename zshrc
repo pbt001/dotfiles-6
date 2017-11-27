@@ -9,7 +9,6 @@ fi
 bindkey -v
 fpath=(
   $HOME/site-functions
-  /usr/share/zsh/5.2/functions
   $fpath
 )
 typeset -U fpath
