@@ -72,7 +72,6 @@ export EDITOR='nvim'
 export FZF_DEFAULT_COMMAND='rg --color never -g "" --files'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_ALT_C_COMMAND="$FZF_DEFAULT_COMMAND"
-export GOPATH="$HOME/go"
 export HISTSIZE=10000
 export KEYTIMEOUT=1
 export LD_LIBRARY_PATH="$HOME/lib:$LD_LIBRARY_PATH"
