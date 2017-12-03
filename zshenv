@@ -69,7 +69,6 @@ export EDITOR='nvim'
 export FZF_DEFAULT_COMMAND='rg --color never -g "" --files'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_ALT_C_COMMAND="$FZF_DEFAULT_COMMAND"
-export GOPATH="$HOME/go"
 export HISTSIZE=10000
 export KEYTIMEOUT=1
 export LD_LIBRARY_PATH="$HOME/lib:$LD_LIBRARY_PATH"
@@ -81,7 +80,11 @@ export TERM=xterm-256color
 
 
 function check_writing() {
-  weasel $@ && passive $@ && dups $@ && alex $@
+  if [[ -n $1 ]]; then
+    weasel $1 && passive $1 && dups $1 && alex $1
+  else
+    print "usage: $0 <file to check>"
+  fi
 }
 function hs() {
   history | rg "$*"

@@ -12,10 +12,8 @@ function _glyph() { print "%{$fg[green]%}=>%{$reset_color%}" }
 function _dir() { print "%{$fg[cyan]%}${PWD/#$HOME/~}%{$reset_color%}" }
 
 function _git_branch() {
-  local ref
-  ref=$(command git symbolic-ref HEAD 2> /dev/null) || \
-    ref=$(command git rev-parse --short HEAD 2> /dev/null) || return 0
-  print "%{$fg[red]%}${ref#refs/heads/}%{$reset_color%}"
+  local branch=$(command git branch 2> /dev/null | grep '^[*]' | cut -d ' ' -f 2) || return 0
+  print "%{$fg[red]%}${branch}%{$reset_color%}"
 }
 
 function _git_status() {
