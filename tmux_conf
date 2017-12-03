@@ -32,7 +32,3 @@ bind-key -Tcopy-mode-vi 'y' send -X copy-selection
 ## https://superuser.com/a/1211928
 ## Scrolling in tmux
 set-option -g mouse on
-
-## https://github.com/tmux/tmux/issues/543#issuecomment-248980734
-set -g default-shell $SHELL
-set -g default-command "reattach-to-user-namespace -l ${SHELL}"
