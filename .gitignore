@@ -9,3 +9,4 @@ teardown
 *.hi
 *.o
 vim/.netrwhist
+vim/plugged
