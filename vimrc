@@ -32,6 +32,7 @@ set modelines=0
 "Colors
 set t_Co=256
 set background=dark
+highlight LineNr ctermfg=DarkGrey
 
 "syntax coloring, other stuff
 syntax on
@@ -63,6 +64,7 @@ set smarttab
 
 "Line numbers
 set number
+set numberwidth=5
 
 "Line and column position
 set ruler

@@ -9,3 +9,4 @@ set guifont=InputMonoCondensed\ ExLight:h12
 
 "Color
 colorscheme molokai
+highlight LineNr ctermfg=DarkGrey
