@@ -2,53 +2,47 @@
 # Finds duplicate adjacent words; modified from
 # http://matt.might.net/articles/shell-scripts-for-passive-voice-weasel-words-duplicates/
 
-use strict ;
+use Modern::Perl '2017';
+use autodie;
 
-my $DupCount = 0 ;
+my $dup_count = 0;
 
-if (!@ARGV) {
-  print "usage: dups <file> ...\n" ;
-  exit ;
+if ( !@ARGV ) {
+    print "usage: dups <file> ...\n";
+    exit;
 }
 
 while (1) {
-  my $FileName = shift @ARGV ;
+    my $file_name = shift @ARGV;
 
-  # Exit code = number of duplicates found.
-  exit $DupCount if (!$FileName) ;
+    # Exit code = number of duplicates found.
+    exit $dup_count if ( !$file_name );
+    open my $handle, '<', $file_name or die $!;
+    my $last_word = "";
+    my $line_num  = 0;
+    while (<$handle>) {
+        chomp;
+        $line_num++;
+        my @words = split(/(\W+)/);
+        foreach my $word (@words) {
 
-  open FILE, $FileName or die $!;
+            # Skip spaces:
+            next if $word =~ /^\s*$/;
 
-  my $LastWord = "" ;
-  my $LineNum = 0 ;
+            # Skip punctuation:
+            if ( $word =~ /^\W+$/ ) {
+                $last_word = "";
+                next;
+            }
 
-  while (<FILE>) {
-    chomp ;
-
-    $LineNum ++ ;
-
-    my @words = split (/(\W+)/) ;
-
-    foreach my $word (@words) {
-      # Skip spaces:
-      next if $word =~ /^\s*$/ ;
-
-      # Skip punctuation:
-      if ($word =~ /^\W+$/) {
-        $LastWord = "" ;
-        next ;
-      }
-
-      # Found a dup?
-      if (lc($word) eq lc($LastWord)) {
-        print "$FileName:$LineNum $word\n" ;
-        $DupCount ++ ;
-      } # Thanks to Sean Cronin for tip on case.
-
-      # Mark this as the last word:
-      $LastWord = $word ;
+            # Found a dup?
+            if ( lc($word) eq lc($last_word) ) {
+                print "$file_name:$line_num $word\n";
+                $dup_count++;
+            }    # Thanks to Sean Cronin for tip on case.
+                 # Mark this as the last word:
+            $last_word = $word;
+        }
     }
-  }
-
-  close FILE ;
+    close $handle;
 }
