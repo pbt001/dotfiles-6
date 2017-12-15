@@ -5,19 +5,19 @@
 use Modern::Perl '2017';
 use autodie;
 
-my $dup_count = 0;
-
 if ( !@ARGV ) {
     print "usage: dups <file> ...\n";
     exit;
 }
+
+my $dup_count = 0;
 
 while (1) {
     my $file_name = shift @ARGV;
 
     # Exit code = number of duplicates found.
     exit $dup_count if ( !$file_name );
-    open my $handle, '<', $file_name or die $!;
+    open my $handle, '<', $file_name;
     my $last_word = "";
     my $line_num  = 0;
     while (<$handle>) {
@@ -26,10 +26,10 @@ while (1) {
         my @words = split(/(\W+)/);
         foreach my $word (@words) {
 
-            # Skip spaces:
+            # Skip spaces
             next if $word =~ /^\s*$/;
 
-            # Skip punctuation:
+            # Skip punctuation
             if ( $word =~ /^\W+$/ ) {
                 $last_word = "";
                 next;
@@ -39,8 +39,9 @@ while (1) {
             if ( lc($word) eq lc($last_word) ) {
                 print "$file_name:$line_num $word\n";
                 $dup_count++;
-            }    # Thanks to Sean Cronin for tip on case.
-                 # Mark this as the last word:
+            }
+
+            # Mark this as the last word:
             $last_word = $word;
         }
     }
