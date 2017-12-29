@@ -32,3 +32,11 @@ bind-key -Tcopy-mode-vi 'y' send -X copy-selection
 ## https://superuser.com/a/1211928
 ## Scrolling in tmux
 set-option -g mouse on
+
+## https://robots.thoughtbot.com/how-to-copy-and-paste-with-tmux-on-mac-os-x
+## https://github.com/tmux/tmux/issues/909
+## https://unix.stackexchange.com/questions/362702/unable-to-copy-from-tmux-2-4-to-the-os-x-clipboard
+## copy uses system clipboard
+set-option -g default-command "reattach-to-user-namespace -l zsh"
+bind -T copy-mode-vi y send -X copy-pipe-and-cancel "reattach-to-user-namespace pbcopy"
+bind-key -T copy-mode M-w send-keys -X copy-pipe-and-cancel 'reattach-to-user-namespace pbcopy'
