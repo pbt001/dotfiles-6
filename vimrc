@@ -5,6 +5,7 @@ endif
 " Plugin time: https://github.com/junegunn/vim-plug
 call plug#begin('~/.vim/plugged')
 Plug 'ervandew/supertab'
+Plug 'godlygeek/tabular'
 Plug 'jgdavey/tslime.vim'
 Plug 'joom/latex-unicoder.vim'
 Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
@@ -31,6 +32,7 @@ set modelines=0
 "Colors
 set t_Co=256
 set background=dark
+highlight LineNr ctermfg=DarkGrey
 
 "syntax coloring, other stuff
 syntax on
@@ -62,6 +64,7 @@ set smarttab
 
 "Line numbers
 set number
+set numberwidth=5
 
 "Line and column position
 set ruler
