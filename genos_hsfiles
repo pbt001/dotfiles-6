@@ -57,6 +57,3 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 [The MIT License (MIT)]: https://opensource.org/licenses/MIT
-
-{-# START_FILE .ghci #-}
-:set -XOverloadedStrings

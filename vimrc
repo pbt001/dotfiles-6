@@ -23,6 +23,7 @@ call plug#end()
 
 "Turn on stuff
 filetype plugin indent on
+syntax on
 
 set laststatus=2  " always
 
@@ -33,10 +34,6 @@ set modelines=0
 set t_Co=256
 set background=dark
 highlight LineNr ctermfg=DarkGrey
-
-"syntax coloring, other stuff
-syntax on
-filetype plugin indent on
 
 "Set encoding to utf-8
 set enc=utf-8
