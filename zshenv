@@ -79,7 +79,6 @@ export LSCOLORS="Gxfxcxdxbxegedabagacad"
 export LESS='CiMQRX'
 export SAVEHIST=10000
 export SHELL="/usr/local/bin/zsh"
-export TERM=xterm-256color
 
 
 function check_writing() {
