@@ -15,7 +15,7 @@ parser = argPath "input.md" "Markdown file to convert & typeset"
 
 typeset :: FilePath -> FilePath -> Text
 typeset = format $
-  "pandoc -t beamer --data-dir=$HOME/.pandoc --template=beamer_template.tex --listings "
+  "pandoc -t beamer+smart --data-dir=$HOME/.pandoc --template=beamer_template.tex --listings "
   % fp % " -o " % fp
 
 main :: IO ExitCode

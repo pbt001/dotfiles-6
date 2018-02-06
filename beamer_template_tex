@@ -11,6 +11,12 @@
 \usepackage{color}
 \definecolor{BG}{RGB}{237, 237, 237}
 \definecolor{FG}{RGB}{50, 50, 50}
+% http://colorbrewer2.org/#type=diverging&scheme=Spectral&n=11
+\definecolor{BrewerRed}{RGB}{213, 62, 79}
+\definecolor{BrewerOrange}{RGB}{253, 174, 97}
+\definecolor{BrewerGreen}{RGB}{102, 194, 165}
+\definecolor{BrewerBlue}{RGB}{50, 136, 189}
+\setbeamercolor{alert text}{fg=BrewerRed, bg=BG}
 \setbeamercolor{title}{fg=FG, bg=BG}
 \setbeamercolor{titlelike}{fg=FG, bg=BG}
 \setbeamercolor{normal text}{fg=FG, bg=BG}
@@ -45,14 +51,12 @@
     \setkeys{Gin}{width=\ScaleWidthIfNeeded,%\linewidth,
                   totalheight=\ScaleHeightIfNeeded,%\textheight,
                   keepaspectratio}
-\definecolor{CommentGreen}{RGB}{39, 118, 76}
-\definecolor{KeywordBlue}{RGB}{16, 120, 168}
 \usepackage{listings}
     \lstset{basicstyle=\footnotesize\ttfamily,
             upquote=true,
             showstringspaces=false,
-            commentstyle=\color{CommentGreen},
-            keywordstyle=\color{KeywordBlue}}
+            commentstyle=\color{BrewerGreen},
+            keywordstyle=\color{BrewerBlue}}
 \usepackage{mathtools}
 \usepackage{units}
 \usepackage{xspace}
