@@ -4,7 +4,8 @@
 \usepackage[T1]{fontenc}
 \usepackage{libertine}
 \usepackage[libertine]{newtxmath}
-\usepackage[varqu]{inconsolata}
+\usepackage{fontspec}
+\setmonofont{Triplicate T4c}
 \usepackage{microtype}
 
 % colors
@@ -12,11 +13,12 @@
 \definecolor{BG}{RGB}{237, 237, 237}
 \definecolor{FG}{RGB}{50, 50, 50}
 % http://colorbrewer2.org/#type=diverging&scheme=Spectral&n=11
-\definecolor{BrewerRed}{RGB}{213, 62, 79}
-\definecolor{BrewerOrange}{RGB}{253, 174, 97}
-\definecolor{BrewerGreen}{RGB}{102, 194, 165}
-\definecolor{BrewerBlue}{RGB}{50, 136, 189}
-\setbeamercolor{alert text}{fg=BrewerRed, bg=BG}
+\definecolor{Red}{RGB}{213, 62, 79}
+\definecolor{Orange}{RGB}{253, 174, 97}
+\definecolor{Green}{RGB}{102, 194, 165}
+\definecolor{Blue}{RGB}{50, 136, 189}
+\definecolor{Purple}{RGB}{94, 79, 162}
+\setbeamercolor{alerted text}{fg=Red, bg=BG}
 \setbeamercolor{title}{fg=FG, bg=BG}
 \setbeamercolor{titlelike}{fg=FG, bg=BG}
 \setbeamercolor{normal text}{fg=FG, bg=BG}
@@ -41,22 +43,22 @@
   \fi
 }
 \def\ScaleHeightIfNeeded{%
-  \ifdim\Gin@nat@height>0.5\textheight
-    0.5\textheight
+  \ifdim\Gin@nat@height>0.75\textheight
+    0.75\textheight
   \else
     \Gin@nat@width
   \fi
 }
 \makeatother
-    \setkeys{Gin}{width=\ScaleWidthIfNeeded,%\linewidth,
-                  totalheight=\ScaleHeightIfNeeded,%\textheight,
+    \setkeys{Gin}{width=\ScaleWidthIfNeeded,
+                  totalheight=\ScaleHeightIfNeeded,
                   keepaspectratio}
 \usepackage{listings}
     \lstset{basicstyle=\footnotesize\ttfamily,
             upquote=true,
             showstringspaces=false,
-            commentstyle=\color{BrewerGreen},
-            keywordstyle=\color{BrewerBlue}}
+            commentstyle=\color{Green},
+            keywordstyle=\color{Blue}}
 \usepackage{mathtools}
 \usepackage{units}
 \usepackage{xspace}

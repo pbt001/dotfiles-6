@@ -1,10 +1,11 @@
 \documentclass[nofonts]{tufte-handout}
 
 % typography
-\usepackage[T1]{fontenc}
+\usepackage{fontenc}
 \usepackage{libertine}
 \usepackage[libertine]{newtxmath}
-\usepackage[varqu]{inconsolata}
+\usepackage{fontspec}
+\setmonofont{Triplicate T4c}
 \usepackage{microtype}
 
 % other packages
