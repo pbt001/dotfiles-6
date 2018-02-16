@@ -5,7 +5,7 @@ set background=dark
 set lines=24 columns=90
 
 "Font
-set guifont=InputMonoCondensed\ ExLight:h12
+set guifont=Triplicate\ T3c:h13
 
 "Color
 colorscheme molokai
