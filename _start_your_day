@@ -19,7 +19,7 @@ function brews() {
 function rusts() {
   ppprint "rustup update >>= reinstall cargo-clippy >>= reinstall cargo-fmt"
   (rustup update | grep 'download') && \  # only do next if downloaded anything
-    (cargo install clippy --force && cargo install rustfmt-nightly --force)
+    (cargo install clippy --force)
 }
 
 function stacks() {
@@ -36,4 +36,4 @@ function pips() {
   done
 }
 
-repos; brews; stacks; pips; ppppprint "DONE!"
+repos; brews; rusts; stacks; pips; ppppprint "DONE!"
