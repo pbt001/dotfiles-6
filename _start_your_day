@@ -18,8 +18,10 @@ function brews() {
 
 function rusts() {
   ppprint "rustup update >>= reinstall cargo-clippy"
-  (rustup update | grep 'download') && \  # only do next if downloaded anything
-    (cargo install clippy --force)
+  rustup update
+  if [ $? -eq 1 ]; then
+    cargo install clippy --force
+  fi
 }
 
 function stacks() {

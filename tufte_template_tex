@@ -28,6 +28,8 @@
 % pandoc workarounds
 \def\tightlist{}
 \newcommand{\passthrough}[1]{#1}
+\renewcommand\allcapsspacing[1]{{\addfontfeature{LetterSpace=15}#1}}
+\renewcommand\smallcapsspacing[1]{{\addfontfeature{LetterSpace=10}#1}}
 \usepackage{longtable}
 
 % citations
