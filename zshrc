@@ -25,8 +25,8 @@ path=(
   /Library/TeX/Distributions/Programs/texbin
   $HOME/.cargo/bin
   $GOPATH/bin
-  /Applications/Racket\ v6.6/bin
   /usr/local/opt/llvm/bin
+  /usr/local/opt/python@2/bin
   $path
 )
 typeset -U path
