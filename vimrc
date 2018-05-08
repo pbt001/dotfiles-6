@@ -158,3 +158,6 @@ nnoremap <leader>f :Files<CR>
 nnoremap <leader>g :GFiles<CR>
 nnoremap <Leader>b :Buffers<CR>
 nnoremap <Leader>t :Tags<CR>
+
+"Hoplon files
+au BufRead,BufNewFile *.hl setfiletype clojure
