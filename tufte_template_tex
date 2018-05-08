@@ -22,6 +22,7 @@
             upquote=true,
             showstringspaces=false}
 \usepackage{mathtools}
+\usepackage[normalem]{ulem}
 \usepackage{units}
 \usepackage{xspace}
 
@@ -39,6 +40,9 @@
 
 $if(title)$
 \title{$title$}
+$endif$
+$if(subtitle)$
+\subtitle{$subtitle$}
 $endif$
 $if(author)$
 \author{$for(author)$$author$$sep$ \and $endfor$}
