@@ -166,10 +166,14 @@ function OrderedList(items)
 end
 
 function RawInline(s, attr)
-  local i = string.find(attr, "{")
+  local i = string.find(attr, "{") or string.find(attr, " ") or 0
   local a = string.find(attr, "\\footnote{") ~= nil and " (" or ""
   local b = string.find(attr, "\\footnote{") ~= nil and ")" or ""
   return a .. string.sub(attr, i + 1, string.len(attr) - 1) .. b
+end
+
+function InlineMath(s, attr)
+  return string.sub(s, 1, string.len(s))
 end
 
 function DoubleQuoted(s, attr)
