@@ -66,6 +66,7 @@ alias zz='fasd_cd -d -i'
 
 bindkey "^X^I" expand-or-complete-prefix
 
+export CARP_DIR="$HOME/github/Carp"
 export CPLUS_INCLUDE_PATH="$C_INCLUDE_PATH:$CPLUS_INCLUDE_PATH"
 export C_INCLUDE_PATH="$HOME/include:$C_INCLUDE_PATH"
 export EDITOR='nvim'
