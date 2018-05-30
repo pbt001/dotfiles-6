@@ -20,7 +20,7 @@ function rusts() {
   ppprint "rustup update >>= reinstall cargo-clippy"
   rustup update
   if [ $? -ne 0 ]; then
-    cargo install clippy --force
+    cargo +nightly install --force clippy
   fi
 }
 
