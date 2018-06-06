@@ -29,6 +29,7 @@ function stacks() {
   stack update
 }
 
+# Don't include for now, may break current working python stuff
 function pips() {
   ppprint "pip3 update >> pip_pypy3 update…"
   for pip in 'pip3' 'pip_pypy3'; do
@@ -38,4 +39,4 @@ function pips() {
   done
 }
 
-repos; brews; rusts; stacks; pips; ppppprint "DONE!"
+repos; brews; rusts; stacks; ppppprint "DONE!"
