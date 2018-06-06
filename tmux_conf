@@ -36,3 +36,5 @@ set-option -g mouse on
 ## https://github.com/tmux/tmux/issues/543#issuecomment-248980734
 set -g default-shell $SHELL
 set -g default-command "reattach-to-user-namespace -l ${SHELL}"
+
+set -g default-terminal "xterm-256color-italic"
