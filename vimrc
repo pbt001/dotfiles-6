@@ -31,10 +31,11 @@ set laststatus=2  " always
 "Security exploits?
 set modelines=0
 
-"Colors
+"Colors & highlighting
 set t_Co=256
 set background=dark
 highlight LineNr ctermfg=DarkGrey
+highlight Comment cterm=italic
 
 "Set encoding to utf-8
 set enc=utf-8
