@@ -24,6 +24,7 @@ path=(
   /sbin
   /Library/TeX/Distributions/Programs/texbin
   $HOME/.cargo/bin
+  $HOME/.roswell/bin
   $GOPATH/bin
   /usr/local/opt/llvm/bin
   /usr/local/opt/python@2/bin
