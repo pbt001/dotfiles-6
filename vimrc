@@ -5,6 +5,7 @@ endif
 " Plugin time: https://github.com/junegunn/vim-plug
 call plug#begin('~/.vim/plugged')
 Plug 'bhurlow/vim-parinfer'
+Plug 'derekelkins/agda-vim'
 Plug 'ervandew/supertab'
 Plug 'godlygeek/tabular'
 Plug 'jgdavey/tslime.vim'
