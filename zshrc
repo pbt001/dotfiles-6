@@ -15,6 +15,7 @@ typeset -U fpath
 path=(
   $HOME/bin
   $HOME/.local/bin
+  /usr/local/opt/ccache/libexec
   /Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home/bin
   /usr/local/bin
   /usr/local/sbin
@@ -24,7 +25,6 @@ path=(
   /sbin
   /Library/TeX/Distributions/Programs/texbin
   $HOME/.cargo/bin
-  $HOME/.roswell/bin
   $GOPATH/bin
   /usr/local/opt/llvm/bin
   /usr/local/opt/python@2/bin
