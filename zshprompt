@@ -7,7 +7,7 @@
 PROMPT='$(_dir) $(_glyph) '
 RPROMPT='$(_git_status) $(_git_branch)'
 
-function _glyph() { print "%{$fg[green]%}=>%{$reset_color%}" }
+function _glyph() { print "%{$fg[green]%}⇒%{$reset_color%}" }
 
 function _dir() { print "%{$fg[cyan]%}${PWD/#$HOME/~}%{$reset_color%}" }
 
@@ -28,7 +28,7 @@ function _git_status() {
   "${(@f)$(git status --porcelain --ignore-submodules=dirty 2> /dev/null)}"
   )
   STATUS=""
-  for line in ${lines[1,3]}; do
+  for line in ${lines[1,5]}; do
     case ${line[1,2]} in
       '??')
         STATUS="$untracked$STATUS"
